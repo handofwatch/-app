@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9034D6CD20FE4B040012A6A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9034D6CC20FE4B040012A6A5 /* AppDelegate.swift */; };
+		9034D6CF20FE4B040012A6A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9034D6CE20FE4B040012A6A5 /* ViewController.swift */; };
+		9034D6D220FE4B040012A6A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9034D6D020FE4B040012A6A5 /* Main.storyboard */; };
+		9034D6D420FE4B040012A6A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9034D6D320FE4B040012A6A5 /* Assets.xcassets */; };
+		9034D6D720FE4B040012A6A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9034D6D520FE4B040012A6A5 /* LaunchScreen.storyboard */; };
+		9034D6E220FE4B050012A6A5 /* TouchStoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9034D6E120FE4B050012A6A5 /* TouchStoneTests.swift */; };
+		9034D6ED20FE4B050012A6A5 /* TouchStoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9034D6EC20FE4B050012A6A5 /* TouchStoneUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9034D6DE20FE4B050012A6A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9034D6C120FE4B040012A6A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9034D6C820FE4B040012A6A5;
+			remoteInfo = TouchStone;
+		};
+		9034D6E920FE4B050012A6A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9034D6C120FE4B040012A6A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9034D6C820FE4B040012A6A5;
+			remoteInfo = TouchStone;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9034D6C920FE4B040012A6A5 /* TouchStone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchStone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9034D6CC20FE4B040012A6A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9034D6CE20FE4B040012A6A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9034D6D120FE4B040012A6A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9034D6D320FE4B040012A6A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9034D6D620FE4B040012A6A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9034D6D820FE4B040012A6A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9034D6DD20FE4B050012A6A5 /* TouchStoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TouchStoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9034D6E120FE4B050012A6A5 /* TouchStoneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchStoneTests.swift; sourceTree = "<group>"; };
+		9034D6E320FE4B050012A6A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9034D6E820FE4B050012A6A5 /* TouchStoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TouchStoneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9034D6EC20FE4B050012A6A5 /* TouchStoneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchStoneUITests.swift; sourceTree = "<group>"; };
+		9034D6EE20FE4B050012A6A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9034D6C620FE4B040012A6A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9034D6DA20FE4B050012A6A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9034D6E520FE4B050012A6A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9034D6C020FE4B040012A6A5 = {
+			isa = PBXGroup;
+			children = (
+				9034D6CB20FE4B040012A6A5 /* TouchStone */,
+				9034D6E020FE4B050012A6A5 /* TouchStoneTests */,
+				9034D6EB20FE4B050012A6A5 /* TouchStoneUITests */,
+				9034D6CA20FE4B040012A6A5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9034D6CA20FE4B040012A6A5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9034D6C920FE4B040012A6A5 /* TouchStone.app */,
+				9034D6DD20FE4B050012A6A5 /* TouchStoneTests.xctest */,
+				9034D6E820FE4B050012A6A5 /* TouchStoneUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9034D6CB20FE4B040012A6A5 /* TouchStone */ = {
+			isa = PBXGroup;
+			children = (
+				9034D6CC20FE4B040012A6A5 /* AppDelegate.swift */,
+				9034D6CE20FE4B040012A6A5 /* ViewController.swift */,
+				9034D6D020FE4B040012A6A5 /* Main.storyboard */,
+				9034D6D320FE4B040012A6A5 /* Assets.xcassets */,
+				9034D6D520FE4B040012A6A5 /* LaunchScreen.storyboard */,
+				9034D6D820FE4B040012A6A5 /* Info.plist */,
+			);
+			path = TouchStone;
+			sourceTree = "<group>";
+		};
+		9034D6E020FE4B050012A6A5 /* TouchStoneTests */ = {
+			isa = PBXGroup;
+			children = (
+				9034D6E120FE4B050012A6A5 /* TouchStoneTests.swift */,
+				9034D6E320FE4B050012A6A5 /* Info.plist */,
+			);
+			path = TouchStoneTests;
+			sourceTree = "<group>";
+		};
+		9034D6EB20FE4B050012A6A5 /* TouchStoneUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9034D6EC20FE4B050012A6A5 /* TouchStoneUITests.swift */,
+				9034D6EE20FE4B050012A6A5 /* Info.plist */,
+			);
+			path = TouchStoneUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9034D6C820FE4B040012A6A5 /* TouchStone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9034D6F120FE4B050012A6A5 /* Build configuration list for PBXNativeTarget "TouchStone" */;
+			buildPhases = (
+				9034D6C520FE4B040012A6A5 /* Sources */,
+				9034D6C620FE4B040012A6A5 /* Frameworks */,
+				9034D6C720FE4B040012A6A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TouchStone;
+			productName = TouchStone;
+			productReference = 9034D6C920FE4B040012A6A5 /* TouchStone.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9034D6DC20FE4B050012A6A5 /* TouchStoneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9034D6F420FE4B050012A6A5 /* Build configuration list for PBXNativeTarget "TouchStoneTests" */;
+			buildPhases = (
+				9034D6D920FE4B050012A6A5 /* Sources */,
+				9034D6DA20FE4B050012A6A5 /* Frameworks */,
+				9034D6DB20FE4B050012A6A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9034D6DF20FE4B050012A6A5 /* PBXTargetDependency */,
+			);
+			name = TouchStoneTests;
+			productName = TouchStoneTests;
+			productReference = 9034D6DD20FE4B050012A6A5 /* TouchStoneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9034D6E720FE4B050012A6A5 /* TouchStoneUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9034D6F720FE4B050012A6A5 /* Build configuration list for PBXNativeTarget "TouchStoneUITests" */;
+			buildPhases = (
+				9034D6E420FE4B050012A6A5 /* Sources */,
+				9034D6E520FE4B050012A6A5 /* Frameworks */,
+				9034D6E620FE4B050012A6A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9034D6EA20FE4B050012A6A5 /* PBXTargetDependency */,
+			);
+			name = TouchStoneUITests;
+			productName = TouchStoneUITests;
+			productReference = 9034D6E820FE4B050012A6A5 /* TouchStoneUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9034D6C120FE4B040012A6A5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = cn.edu.tongji.1652977;
+				TargetAttributes = {
+					9034D6C820FE4B040012A6A5 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					9034D6DC20FE4B050012A6A5 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 9034D6C820FE4B040012A6A5;
+					};
+					9034D6E720FE4B050012A6A5 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 9034D6C820FE4B040012A6A5;
+					};
+				};
+			};
+			buildConfigurationList = 9034D6C420FE4B040012A6A5 /* Build configuration list for PBXProject "TouchStone" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9034D6C020FE4B040012A6A5;
+			productRefGroup = 9034D6CA20FE4B040012A6A5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9034D6C820FE4B040012A6A5 /* TouchStone */,
+				9034D6DC20FE4B050012A6A5 /* TouchStoneTests */,
+				9034D6E720FE4B050012A6A5 /* TouchStoneUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9034D6C720FE4B040012A6A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9034D6D720FE4B040012A6A5 /* LaunchScreen.storyboard in Resources */,
+				9034D6D420FE4B040012A6A5 /* Assets.xcassets in Resources */,
+				9034D6D220FE4B040012A6A5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9034D6DB20FE4B050012A6A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9034D6E620FE4B050012A6A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9034D6C520FE4B040012A6A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9034D6CF20FE4B040012A6A5 /* ViewController.swift in Sources */,
+				9034D6CD20FE4B040012A6A5 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9034D6D920FE4B050012A6A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9034D6E220FE4B050012A6A5 /* TouchStoneTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9034D6E420FE4B050012A6A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9034D6ED20FE4B050012A6A5 /* TouchStoneUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9034D6DF20FE4B050012A6A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9034D6C820FE4B040012A6A5 /* TouchStone */;
+			targetProxy = 9034D6DE20FE4B050012A6A5 /* PBXContainerItemProxy */;
+		};
+		9034D6EA20FE4B050012A6A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9034D6C820FE4B040012A6A5 /* TouchStone */;
+			targetProxy = 9034D6E920FE4B050012A6A5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9034D6D020FE4B040012A6A5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9034D6D120FE4B040012A6A5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9034D6D520FE4B040012A6A5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9034D6D620FE4B040012A6A5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9034D6EF20FE4B050012A6A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9034D6F020FE4B050012A6A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9034D6F220FE4B050012A6A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SYHLX35TA5;
+				INFOPLIST_FILE = TouchStone/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.edu.tongji.sse.wxz-1652977.TouchStone";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9034D6F320FE4B050012A6A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SYHLX35TA5;
+				INFOPLIST_FILE = TouchStone/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.edu.tongji.sse.wxz-1652977.TouchStone";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9034D6F520FE4B050012A6A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SYHLX35TA5;
+				INFOPLIST_FILE = TouchStoneTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.edu.tongji.sse.wxz-1652977.TouchStoneTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TouchStone.app/TouchStone";
+			};
+			name = Debug;
+		};
+		9034D6F620FE4B050012A6A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SYHLX35TA5;
+				INFOPLIST_FILE = TouchStoneTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.edu.tongji.sse.wxz-1652977.TouchStoneTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TouchStone.app/TouchStone";
+			};
+			name = Release;
+		};
+		9034D6F820FE4B050012A6A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SYHLX35TA5;
+				INFOPLIST_FILE = TouchStoneUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.edu.tongji.sse.wxz-1652977.TouchStoneUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TouchStone;
+			};
+			name = Debug;
+		};
+		9034D6F920FE4B050012A6A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SYHLX35TA5;
+				INFOPLIST_FILE = TouchStoneUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.edu.tongji.sse.wxz-1652977.TouchStoneUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TouchStone;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9034D6C420FE4B040012A6A5 /* Build configuration list for PBXProject "TouchStone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9034D6EF20FE4B050012A6A5 /* Debug */,
+				9034D6F020FE4B050012A6A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9034D6F120FE4B050012A6A5 /* Build configuration list for PBXNativeTarget "TouchStone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9034D6F220FE4B050012A6A5 /* Debug */,
+				9034D6F320FE4B050012A6A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9034D6F420FE4B050012A6A5 /* Build configuration list for PBXNativeTarget "TouchStoneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9034D6F520FE4B050012A6A5 /* Debug */,
+				9034D6F620FE4B050012A6A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9034D6F720FE4B050012A6A5 /* Build configuration list for PBXNativeTarget "TouchStoneUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9034D6F820FE4B050012A6A5 /* Debug */,
+				9034D6F920FE4B050012A6A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9034D6C120FE4B040012A6A5 /* Project object */;
+}
