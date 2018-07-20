@@ -18,7 +18,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
         DispatchQueue.main.async {
-            self.cellView.layer.cornerRadius = 13.0
+            self.cellView.layer.cornerRadius = 15.0
             self.cellView.layer.shadowColor = UIColor.gray.cgColor
             self.cellView.layer.shadowOpacity = 0.5
             self.cellView.layer.shadowOpacity = 10.0

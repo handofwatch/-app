@@ -23,7 +23,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         flowLayout.scrollDirection = .horizontal
         flowLayout.sideItemScale = 0.8
         flowLayout.sideItemAlpha = 1.8
-        flowLayout.spacingMode = .fixed(spacing: 5.0)
+        flowLayout.spacingMode = .fixed(spacing: 20.0)
         HomeCollectionView.collectionViewLayout = flowLayout
         HomeCollectionView.delegate=self
         HomeCollectionView.dataSource=self
