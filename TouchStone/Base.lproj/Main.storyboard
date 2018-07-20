@@ -10,31 +10,63 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TouchStone" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="TouchStone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sGZ-ut-QJO">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="底图" translatesAutoresizingMaskIntoConstraints="NO" id="sGZ-ut-QJO">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lPK-QQ-vIK">
+                                <rect key="frame" x="0.0" y="190" width="375" height="307"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kal-kV-7Ke">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="推荐" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pFu-Wa-shv">
+                                <rect key="frame" x="167" y="623" width="41" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.9361119923857868" green="0.80084619050708539" blue="0.30371757319023779" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="sGZ-ut-QJO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Jlt-MR-kTp"/>
-                            <constraint firstItem="sGZ-ut-QJO" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Mb9-lh-Has"/>
-                            <constraint firstAttribute="trailing" secondItem="sGZ-ut-QJO" secondAttribute="trailing" id="lgA-lQ-fY5"/>
-                            <constraint firstItem="sGZ-ut-QJO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pID-0c-AcY"/>
+                            <constraint firstItem="sGZ-ut-QJO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AXJ-CK-UAf"/>
+                            <constraint firstItem="sGZ-ut-QJO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Icb-22-max"/>
+                            <constraint firstItem="lPK-QQ-vIK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JVL-gC-zNT"/>
+                            <constraint firstAttribute="bottom" secondItem="lPK-QQ-vIK" secondAttribute="bottom" constant="170" id="O33-Sa-fDV"/>
+                            <constraint firstItem="sGZ-ut-QJO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="P1n-fc-g0W"/>
+                            <constraint firstItem="lPK-QQ-vIK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="R5h-26-tOs"/>
+                            <constraint firstAttribute="bottom" secondItem="pFu-Wa-shv" secondAttribute="bottom" constant="20" symbolic="YES" id="ea5-WU-AgQ"/>
+                            <constraint firstItem="lPK-QQ-vIK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="170" id="fBd-Fl-bYZ"/>
+                            <constraint firstItem="pFu-Wa-shv" firstAttribute="centerX" secondItem="lPK-QQ-vIK" secondAttribute="centerX" id="gLD-Ke-fbT"/>
+                            <constraint firstItem="sGZ-ut-QJO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="oHa-ye-qcr"/>
+                            <constraint firstItem="sGZ-ut-QJO" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="oWL-Ai-Lt8"/>
+                            <constraint firstItem="sGZ-ut-QJO" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="sog-Hx-BWl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="HomeCollectionView" destination="lPK-QQ-vIK" id="FEL-ds-zux"/>
+                        <outlet property="showLayout" destination="pFu-Wa-shv" id="P9U-t6-NQK"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="底图" width="375" height="667"/>
+    </resources>
 </document>

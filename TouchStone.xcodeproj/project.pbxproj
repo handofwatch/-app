@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		9034D6CD20FE4B040012A6A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9034D6CC20FE4B040012A6A5 /* AppDelegate.swift */; };
-		9034D6CF20FE4B040012A6A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9034D6CE20FE4B040012A6A5 /* ViewController.swift */; };
+		9034D6CF20FE4B040012A6A5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9034D6CE20FE4B040012A6A5 /* HomeViewController.swift */; };
 		9034D6D220FE4B040012A6A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9034D6D020FE4B040012A6A5 /* Main.storyboard */; };
 		9034D6D420FE4B040012A6A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9034D6D320FE4B040012A6A5 /* Assets.xcassets */; };
 		9034D6D720FE4B040012A6A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9034D6D520FE4B040012A6A5 /* LaunchScreen.storyboard */; };
 		9034D6E220FE4B050012A6A5 /* TouchStoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9034D6E120FE4B050012A6A5 /* TouchStoneTests.swift */; };
 		9034D6ED20FE4B050012A6A5 /* TouchStoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9034D6EC20FE4B050012A6A5 /* TouchStoneUITests.swift */; };
+		9034D6FC20FF935D0012A6A5 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9034D6FA20FF935D0012A6A5 /* HomeCollectionViewCell.swift */; };
+		9034D6FD20FF935D0012A6A5 /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9034D6FB20FF935D0012A6A5 /* HomeCollectionViewCell.xib */; };
+		9034D6FF20FF961C0012A6A5 /* UPCarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9034D6FE20FF961C0012A6A5 /* UPCarouselFlowLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,7 @@
 /* Begin PBXFileReference section */
 		9034D6C920FE4B040012A6A5 /* TouchStone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchStone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9034D6CC20FE4B040012A6A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9034D6CE20FE4B040012A6A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9034D6CE20FE4B040012A6A5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9034D6D120FE4B040012A6A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9034D6D320FE4B040012A6A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9034D6D620FE4B040012A6A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +50,9 @@
 		9034D6E820FE4B050012A6A5 /* TouchStoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TouchStoneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9034D6EC20FE4B050012A6A5 /* TouchStoneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchStoneUITests.swift; sourceTree = "<group>"; };
 		9034D6EE20FE4B050012A6A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9034D6FA20FF935D0012A6A5 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		9034D6FB20FF935D0012A6A5 /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		9034D6FE20FF961C0012A6A5 /* UPCarouselFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UPCarouselFlowLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +103,15 @@
 		9034D6CB20FE4B040012A6A5 /* TouchStone */ = {
 			isa = PBXGroup;
 			children = (
+				9034D6FE20FF961C0012A6A5 /* UPCarouselFlowLayout.swift */,
 				9034D6CC20FE4B040012A6A5 /* AppDelegate.swift */,
-				9034D6CE20FE4B040012A6A5 /* ViewController.swift */,
+				9034D6CE20FE4B040012A6A5 /* HomeViewController.swift */,
 				9034D6D020FE4B040012A6A5 /* Main.storyboard */,
 				9034D6D320FE4B040012A6A5 /* Assets.xcassets */,
 				9034D6D520FE4B040012A6A5 /* LaunchScreen.storyboard */,
 				9034D6D820FE4B040012A6A5 /* Info.plist */,
+				9034D6FA20FF935D0012A6A5 /* HomeCollectionViewCell.swift */,
+				9034D6FB20FF935D0012A6A5 /* HomeCollectionViewCell.xib */,
 			);
 			path = TouchStone;
 			sourceTree = "<group>";
@@ -232,6 +241,7 @@
 				9034D6D720FE4B040012A6A5 /* LaunchScreen.storyboard in Resources */,
 				9034D6D420FE4B040012A6A5 /* Assets.xcassets in Resources */,
 				9034D6D220FE4B040012A6A5 /* Main.storyboard in Resources */,
+				9034D6FD20FF935D0012A6A5 /* HomeCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +266,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9034D6CF20FE4B040012A6A5 /* ViewController.swift in Sources */,
+				9034D6CF20FE4B040012A6A5 /* HomeViewController.swift in Sources */,
 				9034D6CD20FE4B040012A6A5 /* AppDelegate.swift in Sources */,
+				9034D6FF20FF961C0012A6A5 /* UPCarouselFlowLayout.swift in Sources */,
+				9034D6FC20FF935D0012A6A5 /* HomeCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
