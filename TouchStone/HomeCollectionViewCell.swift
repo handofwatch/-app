@@ -14,18 +14,13 @@ class HomeCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var backgroundImageView: UIImageView!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-        DispatchQueue.main.async {
-            self.cellView.layer.cornerRadius = 15.0
-            self.cellView.layer.shadowColor = UIColor.gray.cgColor
-            self.cellView.layer.shadowOpacity = 0.5
-            self.cellView.layer.shadowOpacity = 10.0
-            self.cellView.layer.shadowOffset = .zero
-            self.cellView.layer.shadowPath = UIBezierPath(rect: self.cellView.bounds).cgPath
-            self.cellView.layer.shouldRasterize = true
-        }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        self.layer.cornerRadius = 15.0
+        self.layer.shouldRasterize = true
     }
+
 
 }
