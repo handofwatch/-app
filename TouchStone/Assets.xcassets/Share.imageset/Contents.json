@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "颜筋柳骨.png",
+      "filename" : "Share.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Share@2x.png",
       "scale" : "2x"
     },
     {
