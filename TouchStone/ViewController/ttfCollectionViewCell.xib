@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ttfCollectionViewCell" customModule="TouchStone" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="205" height="249"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="205" height="249"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kkk-yt-cta">
+                        <rect key="frame" x="0.0" y="0.0" width="205" height="249"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Rec_black" translatesAutoresizingMaskIntoConstraints="NO" id="nrw-6B-UaH">
+                        <rect key="frame" x="0.0" y="0.0" width="205" height="205"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="字体" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9V-Uo-65T">
+                        <rect key="frame" x="85" y="208" width="35" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="yz0-It-Eee"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.73725490199999999" green="0.62352941179999999" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8QT-lP-QyK">
+                        <rect key="frame" x="67" y="64" width="71" height="71"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                        <color key="textColor" red="0.73725490199999999" green="0.62352941179999999" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Kkk-yt-cta" firstAttribute="top" secondItem="nrw-6B-UaH" secondAttribute="top" id="Agy-I9-EMn"/>
+                <constraint firstItem="8QT-lP-QyK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="67" id="Cex-y1-Wnm"/>
+                <constraint firstItem="8QT-lP-QyK" firstAttribute="centerX" secondItem="B9V-Uo-65T" secondAttribute="centerX" id="EzR-jG-Fs4"/>
+                <constraint firstItem="Kkk-yt-cta" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="F0R-SF-ji0"/>
+                <constraint firstItem="8QT-lP-QyK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="64" id="Nl2-4X-WdX"/>
+                <constraint firstAttribute="bottom" secondItem="Kkk-yt-cta" secondAttribute="bottom" id="RDm-ym-Odc"/>
+                <constraint firstItem="B9V-Uo-65T" firstAttribute="top" secondItem="nrw-6B-UaH" secondAttribute="bottom" constant="3" id="Rqn-h0-V57"/>
+                <constraint firstAttribute="trailing" secondItem="Kkk-yt-cta" secondAttribute="trailing" id="Yin-Z3-JDn"/>
+                <constraint firstAttribute="bottom" secondItem="B9V-Uo-65T" secondAttribute="bottom" constant="20" id="bMp-rW-Z1r"/>
+                <constraint firstItem="B9V-Uo-65T" firstAttribute="top" secondItem="8QT-lP-QyK" secondAttribute="bottom" constant="73" id="c1p-ak-A8S"/>
+                <constraint firstItem="nrw-6B-UaH" firstAttribute="leading" secondItem="Kkk-yt-cta" secondAttribute="leading" id="fGE-S5-4ja"/>
+                <constraint firstItem="Kkk-yt-cta" firstAttribute="trailing" secondItem="nrw-6B-UaH" secondAttribute="trailing" id="twB-Tt-ncE"/>
+                <constraint firstItem="nrw-6B-UaH" firstAttribute="centerX" secondItem="8QT-lP-QyK" secondAttribute="centerX" id="u53-2Y-TOy"/>
+                <constraint firstItem="Kkk-yt-cta" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="yhQ-La-j34"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="205" height="249"/>
+            <connections>
+                <outlet property="ttfLabel" destination="B9V-Uo-65T" id="c1U-4g-QoU"/>
+                <outlet property="wordlabel" destination="8QT-lP-QyK" id="1bG-C0-wxZ"/>
+            </connections>
+            <point key="canvasLocation" x="104.5" y="65.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Rec_black" width="249" height="249"/>
+    </resources>
+</document>

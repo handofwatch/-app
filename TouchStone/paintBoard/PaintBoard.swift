@@ -18,7 +18,7 @@ open class DrawSignatureView: UIView {
         }
     }
     open var strokeColor: UIColor = UIColor.black
-    open var signatureBackgroundColor: UIColor = UIColor.white
+    open var signatureBackgroundColor: UIColor = UIColor.clear
     
     // 私有属性
     fileprivate var path = UIBezierPath()
@@ -27,8 +27,19 @@ open class DrawSignatureView: UIView {
     fileprivate var lineWidArray = [CGFloat]()
     fileprivate var lineColorArray = [CGColor]()
     
+    public override init(frame: CGRect) {
+        
+        super.init(frame: frame)
+        self.backgroundColor = signatureBackgroundColor
+    }
+    
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.backgroundColor = signatureBackgroundColor
+    }
     override open func draw(_ rect: CGRect)
     {
+        self.backgroundColor = signatureBackgroundColor
         let context = UIGraphicsGetCurrentContext()
         context?.setLineCap(.round)
         context?.setLineJoin(.round)
@@ -108,10 +119,13 @@ open class DrawSignatureView: UIView {
     //视图撤销
     open func backAStep()
     {
-        lines.removeLast()
-        lineColorArray.removeLast()
-        lineWidArray.removeLast()
-        setNeedsDisplay()
+        if lines.count != 0
+        {
+            lines.removeLast()
+            lineColorArray.removeLast()
+            lineWidArray.removeLast()
+            setNeedsDisplay()
+        }
     }
     
     // 将签名保存为UIImage
@@ -121,6 +135,10 @@ open class DrawSignatureView: UIView {
         self.layer.render(in: UIGraphicsGetCurrentContext()!)
         let signature: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
+        
+        print("getSignature!")
         return signature
     }
+    
+    
 }

@@ -48,39 +48,39 @@ class PaintBoardViewController: UIViewController {
         colorButton.layer.cornerRadius = colorButton.frame.height/2
         
         colorSelector.alpha = 0
-        blackButton = UIButton(frame: CGRect(x: Double(colorSelector.frame.minX + colorSelector.frame.size.width * 0.080), y: Double(colorSelector.frame.minY * 1.005), width: Double(colorSelector.frame.size.width / 10), height: Double(colorSelector.frame.size.height * 9 / 10)))
+        blackButton = UIButton(frame: CGRect(x: Double(colorSelector.frame.minX + colorSelector.frame.size.width * 0.095), y: Double(colorSelector.frame.minY * 1.15), width: Double(colorSelector.frame.size.width / 10), height: Double(colorSelector.frame.size.height * 9 / 10)))
         
         blackButton.backgroundColor = UIColor.clear
         blackButton.addTarget(self, action:#selector(blackButtonTapped(_:)), for: UIControlEvents.touchUpInside)
         
-        grayButton = UIButton(frame: CGRect(x: Double(colorSelector.frame.minX + colorSelector.frame.size.width * 0.185), y: Double(colorSelector.frame.minY * 1.005), width: Double(colorSelector.frame.size.width / 10), height: Double(colorSelector.frame.size.height * 9 / 10)))
+        grayButton = UIButton(frame: CGRect(x: Double(colorSelector.frame.minX + colorSelector.frame.size.width * 0.215), y: Double(colorSelector.frame.minY * 1.15), width: Double(colorSelector.frame.size.width / 10), height: Double(colorSelector.frame.size.height * 9 / 10)))
         
         grayButton.backgroundColor = UIColor.clear
         grayButton.addTarget(self, action:#selector(grayButtonTapped(_:)), for: UIControlEvents.touchUpInside)
 
-        blueButton = UIButton(frame: CGRect(x: Double(colorSelector.frame.minX + colorSelector.frame.size.width * 0.29), y: Double(colorSelector.frame.minY * 1.005), width: Double(colorSelector.frame.size.width / 10), height: Double(colorSelector.frame.size.height * 9 / 10)))
+        blueButton = UIButton(frame: CGRect(x: Double(colorSelector.frame.minX + colorSelector.frame.size.width * 0.33), y: Double(colorSelector.frame.minY * 1.15), width: Double(colorSelector.frame.size.width / 10), height: Double(colorSelector.frame.size.height * 9 / 10)))
         
         blueButton.backgroundColor = UIColor.clear
         blueButton.addTarget(self, action:#selector(blueButtonTapped(_:)), for: UIControlEvents.touchUpInside)
-        greenButton = UIButton(frame: CGRect(x: Double(colorSelector.frame.minX + colorSelector.frame.size.width * 0.395), y: Double(colorSelector.frame.minY * 1.005), width: Double(colorSelector.frame.size.width / 10), height: Double(colorSelector.frame.size.height * 9 / 10)))
+        greenButton = UIButton(frame: CGRect(x: Double(colorSelector.frame.minX + colorSelector.frame.size.width * 0.447), y: Double(colorSelector.frame.minY * 1.15), width: Double(colorSelector.frame.size.width / 10), height: Double(colorSelector.frame.size.height * 9 / 10)))
         
         greenButton.backgroundColor = UIColor.clear
         greenButton.addTarget(self, action:#selector(greenButtonTapped(_:)), for: UIControlEvents.touchUpInside)
-        purpleButton = UIButton(frame: CGRect(x: Double(colorSelector.frame.minX + colorSelector.frame.size.width * 0.5), y: Double(colorSelector.frame.minY * 1.005), width: Double(colorSelector.frame.size.width / 10), height: Double(colorSelector.frame.size.height * 9 / 10)))
+        purpleButton = UIButton(frame: CGRect(x: Double(colorSelector.frame.minX + colorSelector.frame.size.width * 0.564), y: Double(colorSelector.frame.minY * 1.15), width: Double(colorSelector.frame.size.width / 10), height: Double(colorSelector.frame.size.height * 9 / 10)))
         
         purpleButton.backgroundColor = UIColor.clear
         purpleButton.addTarget(self, action:#selector(purpleButtonTapped(_:)), for: UIControlEvents.touchUpInside)
-        redButton = UIButton(frame: CGRect(x: Double(colorSelector.frame.minX + colorSelector.frame.size.width * 0.605), y: Double(colorSelector.frame.minY * 1.005), width: Double(colorSelector.frame.size.width / 10), height: Double(colorSelector.frame.size.height * 9 / 10)))
+        redButton = UIButton(frame: CGRect(x: Double(colorSelector.frame.minX + colorSelector.frame.size.width * 0.68), y: Double(colorSelector.frame.minY * 1.15), width: Double(colorSelector.frame.size.width / 10), height: Double(colorSelector.frame.size.height * 9 / 10)))
         
         redButton.backgroundColor = UIColor.clear
         redButton.addTarget(self, action:#selector(redButtonTapped(_:)), for: UIControlEvents.touchUpInside)
 
-        yellowButton = UIButton(frame: CGRect(x: Double(colorSelector.frame.minX + colorSelector.frame.size.width * 0.711), y: Double(colorSelector.frame.minY * 1.005), width: Double(colorSelector.frame.size.width / 10), height: Double(colorSelector.frame.size.height * 9 / 10)))
+        yellowButton = UIButton(frame: CGRect(x: Double(colorSelector.frame.minX + colorSelector.frame.size.width * 0.8), y: Double(colorSelector.frame.minY * 1.15), width: Double(colorSelector.frame.size.width / 10), height: Double(colorSelector.frame.size.height * 9 / 10)))
         
         yellowButton.backgroundColor = UIColor.clear
         yellowButton.addTarget(self, action:#selector(yellowButtonTapped(_:)), for: UIControlEvents.touchUpInside)
 
-        brownButton = UIButton(frame: CGRect(x: Double(colorSelector.frame.minX + colorSelector.frame.size.width * 0.817), y: Double(colorSelector.frame.minY * 1.005), width: Double(colorSelector.frame.size.width / 10), height: Double(colorSelector.frame.size.height * 9 / 10)))
+        brownButton = UIButton(frame: CGRect(x: Double(colorSelector.frame.minX + colorSelector.frame.size.width * 0.914), y: Double(colorSelector.frame.minY * 1.15), width: Double(colorSelector.frame.size.width / 10), height: Double(colorSelector.frame.size.height * 9 / 10)))
         
         brownButton.backgroundColor = UIColor.clear
         brownButton.addTarget(self, action:#selector(brownButtonTapped(_:)), for: UIControlEvents.touchUpInside)
@@ -333,6 +333,20 @@ class PaintBoardViewController: UIViewController {
     }
     
     
+   override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        drawView.signatureBackgroundColor = UIColor(red: 49/255, green: 49/255, blue: 49/255, alpha: 1)
+        let yourDraw = drawView.getSignature()
+        if segue.identifier == "recognize"{
+            let vc = segue.destination as! RecognizeViewController
+            vc.yourDraw = yourDraw
+        }
+    }
+    
+    @IBAction func close(Segue:UIStoryboardSegue)
+    {
+        drawView.signatureBackgroundColor = UIColor.clear
+    }
     
     
 }
