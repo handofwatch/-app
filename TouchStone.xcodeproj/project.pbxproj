@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		901786F1210DEB7200A4A8DF /* DecorateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901786F0210DEB7200A4A8DF /* DecorateViewController.swift */; };
+		901786F3210E1D5000A4A8DF /* extentionUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901786F2210E1D5000A4A8DF /* extentionUIImage.swift */; };
+		901786F5210E31CA00A4A8DF /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901786F4210E31CA00A4A8DF /* PreviewViewController.swift */; };
+		901786F7210E382C00A4A8DF /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901786F6210E382C00A4A8DF /* ARViewController.swift */; };
 		9034D6CD20FE4B040012A6A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9034D6CC20FE4B040012A6A5 /* AppDelegate.swift */; };
 		9034D6CF20FE4B040012A6A5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9034D6CE20FE4B040012A6A5 /* HomeViewController.swift */; };
 		9034D6D220FE4B040012A6A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9034D6D020FE4B040012A6A5 /* Main.storyboard */; };
@@ -48,6 +52,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		901786F0210DEB7200A4A8DF /* DecorateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecorateViewController.swift; sourceTree = "<group>"; };
+		901786F2210E1D5000A4A8DF /* extentionUIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extentionUIImage.swift; sourceTree = "<group>"; };
+		901786F4210E31CA00A4A8DF /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		901786F6210E382C00A4A8DF /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		9034D6C920FE4B040012A6A5 /* TouchStone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchStone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9034D6CC20FE4B040012A6A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9034D6CE20FE4B040012A6A5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -159,6 +167,7 @@
 				9034D6CC20FE4B040012A6A5 /* AppDelegate.swift */,
 				9034D6D520FE4B040012A6A5 /* LaunchScreen.storyboard */,
 				9034D6D820FE4B040012A6A5 /* Info.plist */,
+				901786F2210E1D5000A4A8DF /* extentionUIImage.swift */,
 			);
 			path = "Support Souces";
 			sourceTree = "<group>";
@@ -178,6 +187,9 @@
 				909E050E21086A7E00D025BD /* wordCollectionViewCell.xib */,
 				909E051121086A8A00D025BD /* ttfCollectionViewCell.swift */,
 				909E051221086A8A00D025BD /* ttfCollectionViewCell.xib */,
+				901786F0210DEB7200A4A8DF /* DecorateViewController.swift */,
+				901786F4210E31CA00A4A8DF /* PreviewViewController.swift */,
+				901786F6210E382C00A4A8DF /* ARViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -335,14 +347,18 @@
 				909E044C2104521800D025BD /* CommendViewController.swift in Sources */,
 				9034D6CF20FE4B040012A6A5 /* HomeViewController.swift in Sources */,
 				909E04922105A71200D025BD /* PaintBoard.swift in Sources */,
+				901786F7210E382C00A4A8DF /* ARViewController.swift in Sources */,
 				909E051321086A8A00D025BD /* ttfCollectionViewCell.swift in Sources */,
 				9034D70421033E5C0012A6A5 /* CollectionBoardViewController.swift in Sources */,
 				9034D70621033E720012A6A5 /* CommendBoardViewController.swift in Sources */,
 				9034D6CD20FE4B040012A6A5 /* AppDelegate.swift in Sources */,
 				9034D6FF20FF961C0012A6A5 /* UPCarouselFlowLayout.swift in Sources */,
+				901786F5210E31CA00A4A8DF /* PreviewViewController.swift in Sources */,
+				901786F3210E1D5000A4A8DF /* extentionUIImage.swift in Sources */,
 				909E050F21086A7E00D025BD /* wordCollectionViewCell.swift in Sources */,
 				909E05082108289C00D025BD /* RecognizeViewController.swift in Sources */,
 				9034D6FC20FF935D0012A6A5 /* HomeCollectionViewCell.swift in Sources */,
+				901786F1210DEB7200A4A8DF /* DecorateViewController.swift in Sources */,
 				9034D70221033E380012A6A5 /* PaintBoardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

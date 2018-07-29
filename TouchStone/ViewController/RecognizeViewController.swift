@@ -9,19 +9,17 @@
 import UIKit
 
 class RecognizeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-    //返回页面调用
-    @IBAction func close(Segue:UIStoryboardSegue)
-    {
-        
-    }
-    
-    
-    //为点击yourDrawView添加单击手势
-    let singleTapGesture = UITapGestureRecognizer(target: self, action: #selector(imageViewClick))
-    
     
     //TODO::机器学习算法得到下列words
     var words = ["墨","笔","书","真","情"]
+    
+    
+    //
+    var order : Int!
+    
+    
+    //
+    var originalImage : UIImage!
     
     
     //ttfCollectionViewCell实时更新需要的字符
@@ -58,8 +56,13 @@ class RecognizeViewController: UIViewController, UICollectionViewDelegate, UICol
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //为点击yourDrawView添加单击手势
+        let singleTapGesture = UITapGestureRecognizer(target: self, action: #selector(imageViewClick))
+        
         //为yourDrawView添加手势
         yourDrawView.addGestureRecognizer(singleTapGesture)
+        yourDrawView.isUserInteractionEnabled = true
         
         //初始化显示文字
         wordsOnShow = words[0]
@@ -105,6 +108,9 @@ class RecognizeViewController: UIViewController, UICollectionViewDelegate, UICol
         ttfCollectionView.collectionViewLayout = flowLayout1
         ttfCollectionView.delegate = self
         ttfCollectionView.dataSource = self
+        
+        originalImage = yourDraw
+        order = nil
     }
     
     
@@ -169,26 +175,61 @@ class RecognizeViewController: UIViewController, UICollectionViewDelegate, UICol
             wordsOnShow = words[indexPath.row]
             //刷新ttfCollectionView
             ttfCollectionView.reloadData()
+            wordCollectionView.reloadData()
             //TODO::为不同文字添加不同说明
             
         }
         else if collectionView == ttfCollectionView
         {
             //响应ttfCollectionViewCell的点击方法
-            
+            order = indexPath.row
         }
     }
     
     //响应yourDraw的点击方法
     @objc func imageViewClick()
     {
-        
+        order = -1
+        print("order change to -1")
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "GoDecorate"
+        {
+            let vc = segue.destination as! DecorateViewController
+            let paintedImage = originalImage.imageByRemoveBlackBg()
+            vc.paintedImage = paintedImage
+            vc.order = order
+            vc.getWord = wordsOnShow
+        }
+    }
     
+
+    @IBAction func yulanButtonTapped(_ sender: Any) {
+        if order == nil
+        {
+            let alertController = UIAlertController(title: "", message: "请选择一个文字与它的字体，或者点击你创作的图片进行预览", preferredStyle: .alert)
+            self.present(alertController,animated: true,completion: nil)
+            //显示一秒后自动消失
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
+                self.presentedViewController?.dismiss(animated: false, completion: nil)
+            }
+        }
+        else
+        {
+            print("OK")
+            performSegue(withIdentifier: "GoDecorate", sender: nil)
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    
+    //返回页面调用
+    @IBAction func close(Segue:UIStoryboardSegue)
+    {
+        yourDrawView.image = originalImage
+    }
 }
