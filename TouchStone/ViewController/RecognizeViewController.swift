@@ -142,11 +142,13 @@ class RecognizeViewController: UIViewController, UICollectionViewDelegate, UICol
             let cell = ttfCollectionView.dequeueReusableCell(withReuseIdentifier: "ttfIdentifier", for: indexPath) as! ttfCollectionViewCell
             
             cell.wordlabel.text = wordsOnShow
-                self.view.bringSubview(toFront: cell.wordlabel)
-                cell.wordlabel.textColor = UIColor(red: 188/255, green: 159/255, blue: 115/255, alpha: 1)
-                cell.ttfLabel.text = ttfs[indexPath.row]
-                self.view.bringSubview(toFront: cell.ttfLabel)
-                return cell
+            self.view.bringSubview(toFront: cell.wordlabel)
+            cell.wordlabel.textColor = UIColor(red: 188/255, green: 159/255, blue: 115/255, alpha: 1)
+            cell.ttfLabel.text = ttfs[indexPath.row]
+            //TODO::添加字体文件并且改变文字的字体
+            
+            self.view.bringSubview(toFront: cell.ttfLabel)
+            return cell
         }
         else
         {

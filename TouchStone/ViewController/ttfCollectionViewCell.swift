@@ -9,7 +9,7 @@
 import UIKit
 
 class ttfCollectionViewCell: UICollectionViewCell {
-
+    
     //背景框
     @IBOutlet weak var background: UIImageView!
     //中央显示的文字
@@ -21,5 +21,5 @@ class ttfCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
 }

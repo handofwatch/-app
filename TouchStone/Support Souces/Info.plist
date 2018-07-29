@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>NSCameraUsageDescription</key>
-	<string>We needs your agreement to use your camera for AR</string>
+	<string>我们需要访问您的摄像机以使用AR功能</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>We needs your agreement to use add pic to your album</string>
+	<string>我们需要访问您的相册来添加图片</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

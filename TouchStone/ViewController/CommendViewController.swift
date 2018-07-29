@@ -28,7 +28,7 @@ class CommendViewController: UIViewController {
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
                 self.presentedViewController?.dismiss(animated: false, completion: nil)
             }
-            }else {
+        }else {
             //保存失败
             let alertController2 = UIAlertController(title: "", message: "保存失败", preferredStyle: .alert)
             self.present(alertController2,animated: true,completion: nil)

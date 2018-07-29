@@ -24,6 +24,6 @@ class HomeCollectionViewCell: UICollectionViewCell {
         self.layer.cornerRadius = 15.0
         self.layer.shouldRasterize = true
     }
-
-
+    
+    
 }

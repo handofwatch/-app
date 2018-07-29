@@ -74,7 +74,7 @@ class PaintBoardViewController: UIViewController {
         
         grayButton.backgroundColor = UIColor.clear
         grayButton.addTarget(self, action:#selector(grayButtonTapped(_:)), for: UIControlEvents.touchUpInside)
-
+        
         
         blueButton = UIButton(frame: CGRect(x: Double(colorSelector.frame.minX + colorSelector.frame.size.width * 0.33), y: Double(colorSelector.frame.minY * 1.15), width: Double(colorSelector.frame.size.width / 10), height: Double(colorSelector.frame.size.height * 9 / 10)))
         blueButton.backgroundColor = UIColor.clear
@@ -95,16 +95,16 @@ class PaintBoardViewController: UIViewController {
         redButton.backgroundColor = UIColor.clear
         redButton.addTarget(self, action:#selector(redButtonTapped(_:)), for: UIControlEvents.touchUpInside)
         
-
+        
         yellowButton = UIButton(frame: CGRect(x: Double(colorSelector.frame.minX + colorSelector.frame.size.width * 0.8), y: Double(colorSelector.frame.minY * 1.15), width: Double(colorSelector.frame.size.width / 10), height: Double(colorSelector.frame.size.height * 9 / 10)))
         yellowButton.backgroundColor = UIColor.clear
         yellowButton.addTarget(self, action:#selector(yellowButtonTapped(_:)), for: UIControlEvents.touchUpInside)
-
+        
         
         brownButton = UIButton(frame: CGRect(x: Double(colorSelector.frame.minX + colorSelector.frame.size.width * 0.914), y: Double(colorSelector.frame.minY * 1.15), width: Double(colorSelector.frame.size.width / 10), height: Double(colorSelector.frame.size.height * 9 / 10)))
         brownButton.backgroundColor = UIColor.clear
         brownButton.addTarget(self, action:#selector(brownButtonTapped(_:)), for: UIControlEvents.touchUpInside)
-
+        
         
         //撤销按钮设置背景图
         backAStepButton.setBackgroundImage(UIImage(named: "back_"), for: UIControlState.normal)
@@ -138,7 +138,7 @@ class PaintBoardViewController: UIViewController {
         //画板中笔触的粗细相应改变
         drawView.lineWidth = CGFloat(SliderForThickness.value)
     }
-
+    
     //响应各种颜色按钮的方法
     @objc func blackButtonTapped(_ sender:UIButton)
     {
@@ -235,7 +235,7 @@ class PaintBoardViewController: UIViewController {
     @objc func redButtonTapped(_ sender:UIButton)
     {
         print("redButtonTapped")
-         colorButton.backgroundColor = UIColor(red: 226 / 255, green: 85 / 255, blue: 64 / 255, alpha: 1)
+        colorButton.backgroundColor = UIColor(red: 226 / 255, green: 85 / 255, blue: 64 / 255, alpha: 1)
         colorSelector.alpha = 0
         SliderForThickness.alpha = 1
         SliderBackground.alpha = 1
@@ -256,7 +256,7 @@ class PaintBoardViewController: UIViewController {
     @objc func yellowButtonTapped(_ sender:UIButton)
     {
         print("yellowButtonTapped")
-         colorButton.backgroundColor = UIColor(red: 231 / 255, green: 184 / 255, blue: 81 / 255, alpha: 1)
+        colorButton.backgroundColor = UIColor(red: 231 / 255, green: 184 / 255, blue: 81 / 255, alpha: 1)
         colorSelector.alpha = 0
         SliderForThickness.alpha = 1
         SliderBackground.alpha = 1
@@ -277,7 +277,7 @@ class PaintBoardViewController: UIViewController {
     @objc func brownButtonTapped(_ sender:UIButton)
     {
         print("brownButtonTapped")
-         colorButton.backgroundColor = UIColor(red: 175 / 255, green: 149 / 255, blue: 113 / 255, alpha: 1)
+        colorButton.backgroundColor = UIColor(red: 175 / 255, green: 149 / 255, blue: 113 / 255, alpha: 1)
         colorSelector.alpha = 0
         SliderForThickness.alpha = 1
         SliderBackground.alpha = 1
@@ -315,7 +315,7 @@ class PaintBoardViewController: UIViewController {
         colorSelectorIsOpen = false
         drawView.strokeColor = colorButton.backgroundColor!
     }
-
+    
     
     //点击颜色选择按钮的事件
     @IBAction func TapColorSelector(_ sender: Any) {
@@ -334,7 +334,7 @@ class PaintBoardViewController: UIViewController {
             self.view.bringSubview(toFront: redButton)
             self.view.bringSubview(toFront: yellowButton)
             self.view.bringSubview(toFront: brownButton)
-
+            
             //设置颜色选择器状态为打开
             colorSelectorIsOpen = true
         }
@@ -380,7 +380,7 @@ class PaintBoardViewController: UIViewController {
     
     
     //为recognize面板准备搭桥
-   override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         //设置画板的颜色与recognize面板颜色一致
         drawView.signatureBackgroundColor = UIColor(red: 49/255, green: 49/255, blue: 49/255, alpha: 1)
