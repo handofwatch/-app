@@ -10,9 +10,13 @@ import UIKit
 
 class ttfCollectionViewCell: UICollectionViewCell {
 
+    //背景框
     @IBOutlet weak var background: UIImageView!
+    //中央显示的文字
     @IBOutlet weak var wordlabel: UILabel!
+    //下端字体文字
     @IBOutlet weak var ttfLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -10,14 +10,17 @@ import UIKit
 
 class HomeCollectionViewCell: UICollectionViewCell {
     
+    //Cell的View
     @IBOutlet weak var cellView: UIView!
     
+    //设置背景图片
     @IBOutlet weak var backgroundImageView: UIImageView!
     
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
+        //添加圆角
         self.layer.cornerRadius = 15.0
         self.layer.shouldRasterize = true
     }

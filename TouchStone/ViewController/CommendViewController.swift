@@ -23,8 +23,8 @@ class CommendViewController: UIViewController {
         if error == nil {
             //保存成功
             let alertController1 = UIAlertController(title: "", message: "保存成功", preferredStyle: .alert)
-            
             self.present(alertController1,animated: true,completion: nil)
+            //显示一秒后自动消失
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
                 self.presentedViewController?.dismiss(animated: false, completion: nil)
             }
@@ -32,12 +32,14 @@ class CommendViewController: UIViewController {
             //保存失败
             let alertController2 = UIAlertController(title: "", message: "保存失败", preferredStyle: .alert)
             self.present(alertController2,animated: true,completion: nil)
+            //显示一秒后自动消失
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
                 self.presentedViewController?.dismiss(animated: false, completion: nil)
             }
         }
     }
     
+    //点击下载按钮
     @IBAction func tapDownloadButton(_ sender: Any) {
         UIGraphicsBeginImageContextWithOptions(self.image.frame.size,false,UIScreen.main.scale)
         
@@ -51,8 +53,6 @@ class CommendViewController: UIViewController {
         let selector = #selector(CommendViewController.onCompleteCapture(image:error:contextInfo:))
         //保存
         UIImageWriteToSavedPhotosAlbum(image1!, self, selector, nil)
-        
-        
     }
     
     

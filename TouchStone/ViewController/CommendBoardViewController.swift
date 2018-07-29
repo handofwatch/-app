@@ -10,6 +10,7 @@ import UIKit
 
 class CommendBoardViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
+    //设置代理
     weak var pageDelegate: UIPageViewControllerDelegate?
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
@@ -17,6 +18,7 @@ class CommendBoardViewController: UIPageViewController, UIPageViewControllerData
             return nil
         }
         
+        //翻到顶时返回最后一张图片
         let previousIndex = viewControllerIndex - 1
         guard previousIndex >= 0 else {
             return allViewControllers.last
@@ -38,6 +40,7 @@ class CommendBoardViewController: UIPageViewController, UIPageViewControllerData
         let nextIndex = viewControllerIndex + 1
         let orderedViewControllersCount = allViewControllers.count
         
+        //翻到底时返回第一张图片
         guard orderedViewControllersCount != nextIndex else {
             return allViewControllers.first
         }
@@ -53,6 +56,7 @@ class CommendBoardViewController: UIPageViewController, UIPageViewControllerData
         return UIStoryboard(name: "Main", bundle: nil) .
             instantiateViewController(withIdentifier: "\(identifier)")
     }
+    
     //所有页面的视图控制器
     private(set) lazy var allViewControllers: [UIViewController] = {
         return [self.getViewController(identifier: "firstVC"),
@@ -65,24 +69,8 @@ class CommendBoardViewController: UIPageViewController, UIPageViewControllerData
         dataSource = self
         delegate = self
         if let firstViewController = allViewControllers.first {
-            setViewControllers([firstViewController],
-                               direction: .forward,
-                               animated: true,
-                               completion: nil)
-            // Do any additional setup after loading the view.
+            setViewControllers([firstViewController], direction: .forward,animated: true,completion: nil)
         }
-        
-        
-        /*
-         // MARK: - Navigation
-         
-         // In a storyboard-based application, you will often want to do a little preparation before navigation
-         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         // Get the new view controller using segue.destinationViewController.
-         // Pass the selected object to the new view controller.
-         }
-         */
-        
     }
 }
 

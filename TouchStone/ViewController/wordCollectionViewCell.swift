@@ -10,6 +10,7 @@ import UIKit
 
 class wordCollectionViewCell: UICollectionViewCell {
     
+    //中央显示的文字
     @IBOutlet weak var Wordlabel: UILabel!
     
     override func awakeFromNib() {

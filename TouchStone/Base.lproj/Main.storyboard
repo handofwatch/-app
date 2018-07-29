@@ -260,10 +260,17 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3UR-Pf-z1P">
                                 <rect key="frame" x="13" y="477" width="120" height="120"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cG-3z-DWV">
+                                <rect key="frame" x="328" y="14" width="31" height="30"/>
+                                <state key="normal" title="预览">
+                                    <color key="titleColor" red="0.73725490199999999" green="0.62352941179999999" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="vyX-zM-nSV" firstAttribute="leading" secondItem="nje-r0-hNT" secondAttribute="leadingMargin" id="7Fv-mx-Ahp"/>
+                            <constraint firstItem="vpn-zC-mgU" firstAttribute="top" secondItem="6cG-3z-DWV" secondAttribute="top" constant="6" id="9V2-G3-Iqt"/>
                             <constraint firstItem="vpn-zC-mgU" firstAttribute="bottom" secondItem="3UR-Pf-z1P" secondAttribute="bottom" constant="70" id="A6Y-hH-twP"/>
                             <constraint firstAttribute="trailing" secondItem="0kn-FD-por" secondAttribute="trailing" id="CQr-1i-y1v"/>
                             <constraint firstItem="wOv-Ld-aAn" firstAttribute="top" secondItem="WJp-Hn-7wo" secondAttribute="bottom" constant="8" symbolic="YES" id="Etm-lQ-5K0"/>
@@ -279,6 +286,7 @@
                             <constraint firstItem="WJp-Hn-7wo" firstAttribute="top" secondItem="vpn-zC-mgU" secondAttribute="top" id="bFM-gE-uvA"/>
                             <constraint firstItem="vpn-zC-mgU" firstAttribute="bottom" secondItem="0kn-FD-por" secondAttribute="bottom" constant="20" id="dUt-lI-DRb"/>
                             <constraint firstItem="EB5-Xt-HgJ" firstAttribute="leading" secondItem="nje-r0-hNT" secondAttribute="leadingMargin" constant="-16" id="ead-zP-Um4"/>
+                            <constraint firstItem="vpn-zC-mgU" firstAttribute="trailing" secondItem="6cG-3z-DWV" secondAttribute="trailing" constant="16" id="nl7-vN-kA5"/>
                             <constraint firstItem="3UR-Pf-z1P" firstAttribute="leading" secondItem="vpn-zC-mgU" secondAttribute="leading" constant="13" id="qnq-qY-add"/>
                             <constraint firstItem="3UR-Pf-z1P" firstAttribute="top" secondItem="vyX-zM-nSV" secondAttribute="bottom" constant="15" id="sNg-zc-fEV"/>
                             <constraint firstItem="0kn-FD-por" firstAttribute="top" secondItem="vyX-zM-nSV" secondAttribute="bottom" constant="8" id="sTJ-Aw-YnY"/>

@@ -37,6 +37,8 @@ open class DrawSignatureView: UIView {
         super.init(coder: aDecoder)
         self.backgroundColor = signatureBackgroundColor
     }
+    
+    
     override open func draw(_ rect: CGRect)
     {
         self.backgroundColor = signatureBackgroundColor
