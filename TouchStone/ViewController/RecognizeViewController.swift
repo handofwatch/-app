@@ -14,7 +14,12 @@ class RecognizeViewController: UIViewController, UICollectionViewDelegate, UICol
         
     }
     
-    var wordOnShow : String = ""
+    
+    var words = ["墨","笔","书","真","情"]
+    
+    var wordsOnShow : String = ""
+    
+    var ttfs = ["颜真卿体","柳公权体","行体","草体","行草","隶书","篆书","碑文","编不出来了"]
     
     @IBOutlet weak var wordCollectionView: UICollectionView!
     
@@ -23,8 +28,7 @@ class RecognizeViewController: UIViewController, UICollectionViewDelegate, UICol
     
     var yourDraw: UIImage!
     
-    
-//    @IBOutlet weak var yourDrawView: UIImageView!
+    @IBOutlet weak var yourDrawView : UIImageView!
     
     @IBOutlet weak var textForInstruct: UITextView!
     
@@ -32,8 +36,10 @@ class RecognizeViewController: UIViewController, UICollectionViewDelegate, UICol
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        yourDrawView.image = yourDraw
-        backButton.setBackgroundImage(UIImage(named: "back_white"), for: UIControlState.normal)
+        wordsOnShow = words[0]
+        yourDrawView.image = yourDraw
+        self.view.bringSubview(toFront: yourDrawView)
+            backButton.setBackgroundImage(UIImage(named: "back_white"), for: UIControlState.normal)
         textForInstruct.isUserInteractionEnabled = false
         
         wordCollectionView.register(UINib.init(nibName: "wordCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "wordIdentifier")
@@ -45,7 +51,7 @@ class RecognizeViewController: UIViewController, UICollectionViewDelegate, UICol
         flowLayout.sideItemAlpha = 1
         flowLayout.spacingMode = .fixed(spacing: 20.0)
         let flowLayout1 = UPCarouselFlowLayout()
-        flowLayout1.itemSize = CGSize(width: ttfCollectionView.frame.size.width / 3, height: ttfCollectionView.frame.size.height)
+        flowLayout1.itemSize = CGSize(width: ttfCollectionView.frame.size.width * 0.645, height: ttfCollectionView.frame.size.height)
         flowLayout1.scrollDirection = .horizontal
         flowLayout1.sideItemScale = 1
         flowLayout1.sideItemAlpha = 1
@@ -65,7 +71,7 @@ class RecognizeViewController: UIViewController, UICollectionViewDelegate, UICol
         }
         else if collectionView == ttfCollectionView
         {
-            return 10
+            return 9
         }
         else{
             return 0
@@ -77,7 +83,7 @@ class RecognizeViewController: UIViewController, UICollectionViewDelegate, UICol
         {
             let cell = wordCollectionView.dequeueReusableCell(withReuseIdentifier: "wordIdentifier", for: indexPath) as! wordCollectionViewCell
             
-            cell.Wordlabel.text = "墨"
+            cell.Wordlabel.text = words[indexPath.row]
             self.view.bringSubview(toFront: cell.Wordlabel)
             cell.Wordlabel.textColor = UIColor(red: 188/255, green: 159/255, blue: 115/255, alpha: 1)
             
@@ -88,12 +94,12 @@ class RecognizeViewController: UIViewController, UICollectionViewDelegate, UICol
         {
             let cell = ttfCollectionView.dequeueReusableCell(withReuseIdentifier: "ttfIdentifier", for: indexPath) as! ttfCollectionViewCell
             
-            cell.wordlabel.text = "书"
-            self.view.bringSubview(toFront: cell.wordlabel)
-            cell.wordlabel.textColor = UIColor(red: 188/255, green: 159/255, blue: 115/255, alpha: 1)
-            cell.ttfLabel.text = "字体"
-             self.view.bringSubview(toFront: cell.ttfLabel)
-            return cell
+            cell.wordlabel.text = wordsOnShow
+                self.view.bringSubview(toFront: cell.wordlabel)
+                cell.wordlabel.textColor = UIColor(red: 188/255, green: 159/255, blue: 115/255, alpha: 1)
+                cell.ttfLabel.text = ttfs[indexPath.row]
+                self.view.bringSubview(toFront: cell.ttfLabel)
+                return cell
         }
         else
         {
@@ -107,9 +113,11 @@ class RecognizeViewController: UIViewController, UICollectionViewDelegate, UICol
         if collectionView == wordCollectionView
         {
             let cell = wordCollectionView.dequeueReusableCell(withReuseIdentifier: "wordIdentifier", for: indexPath) as! wordCollectionViewCell
-            wordOnShow = cell.Wordlabel.text!
-            let cell1 = ttfCollectionView.dequeueReusableCell(withReuseIdentifier: "ttfIdentifier", for: indexPath) as! ttfCollectionViewCell
-            cell1.wordlabel.text = wordOnShow
+            cell.Wordlabel.text = words[indexPath.row]
+            wordsOnShow = words[indexPath.row]
+//            let cell1 = ttfCollectionView.dequeueReusableCell(withReuseIdentifier: "ttfIdentifier", for: indexPath) as! ttfCollectionViewCell
+//            cell1.wordlabel.text = wordsOnShow
+            ttfCollectionView.reloadData()
         }
         else if collectionView == ttfCollectionView
         {

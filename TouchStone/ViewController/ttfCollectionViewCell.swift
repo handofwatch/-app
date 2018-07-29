@@ -10,6 +10,7 @@ import UIKit
 
 class ttfCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var background: UIImageView!
     @IBOutlet weak var wordlabel: UILabel!
     @IBOutlet weak var ttfLabel: UILabel!
     override func awakeFromNib() {

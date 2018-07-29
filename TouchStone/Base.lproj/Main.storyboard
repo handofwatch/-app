@@ -228,7 +228,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0kn-FD-por">
-                                <rect key="frame" x="0.0" y="470" width="375" height="177"/>
+                                <rect key="frame" x="150" y="470" width="225" height="177"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="177" id="IM2-Gp-rec"/>
@@ -254,19 +254,33 @@
                                     <segue destination="fEy-rW-ZMu" kind="unwind" unwindAction="closeWithSegue:" id="FPg-lc-2cd"/>
                                 </connections>
                             </button>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Rec_black" translatesAutoresizingMaskIntoConstraints="NO" id="EB5-Xt-HgJ">
+                                <rect key="frame" x="0.0" y="470" width="146" height="145"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3UR-Pf-z1P">
+                                <rect key="frame" x="13" y="477" width="120" height="120"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="vyX-zM-nSV" firstAttribute="leading" secondItem="nje-r0-hNT" secondAttribute="leadingMargin" id="7Fv-mx-Ahp"/>
+                            <constraint firstItem="vpn-zC-mgU" firstAttribute="bottom" secondItem="3UR-Pf-z1P" secondAttribute="bottom" constant="70" id="A6Y-hH-twP"/>
                             <constraint firstAttribute="trailing" secondItem="0kn-FD-por" secondAttribute="trailing" id="CQr-1i-y1v"/>
                             <constraint firstItem="wOv-Ld-aAn" firstAttribute="top" secondItem="WJp-Hn-7wo" secondAttribute="bottom" constant="8" symbolic="YES" id="Etm-lQ-5K0"/>
-                            <constraint firstItem="0kn-FD-por" firstAttribute="centerX" secondItem="vyX-zM-nSV" secondAttribute="centerX" id="INl-Ty-NRg"/>
-                            <constraint firstItem="0kn-FD-por" firstAttribute="leading" secondItem="wOv-Ld-aAn" secondAttribute="leading" id="Jvb-yG-blb"/>
+                            <constraint firstItem="0kn-FD-por" firstAttribute="centerX" secondItem="vyX-zM-nSV" secondAttribute="centerX" constant="75" id="INl-Ty-NRg"/>
+                            <constraint firstItem="0kn-FD-por" firstAttribute="leading" secondItem="wOv-Ld-aAn" secondAttribute="leading" constant="150" id="Jvb-yG-blb"/>
                             <constraint firstItem="vyX-zM-nSV" firstAttribute="top" secondItem="wOv-Ld-aAn" secondAttribute="bottom" constant="8" symbolic="YES" id="Mak-wm-eKs"/>
-                            <constraint firstItem="0kn-FD-por" firstAttribute="leading" secondItem="nje-r0-hNT" secondAttribute="leading" id="Qng-KA-Rwb"/>
+                            <constraint firstItem="0kn-FD-por" firstAttribute="leading" secondItem="nje-r0-hNT" secondAttribute="leading" constant="150" id="Qng-KA-Rwb"/>
+                            <constraint firstItem="0kn-FD-por" firstAttribute="leading" secondItem="EB5-Xt-HgJ" secondAttribute="trailing" constant="4" id="RqW-p4-I3i"/>
+                            <constraint firstItem="EB5-Xt-HgJ" firstAttribute="centerX" secondItem="3UR-Pf-z1P" secondAttribute="centerX" id="Teo-YG-bcX"/>
+                            <constraint firstItem="vpn-zC-mgU" firstAttribute="bottom" secondItem="EB5-Xt-HgJ" secondAttribute="bottom" constant="52" id="UNE-BW-3mO"/>
                             <constraint firstItem="WJp-Hn-7wo" firstAttribute="leading" secondItem="vyX-zM-nSV" secondAttribute="leading" id="UoA-QO-Zfx"/>
+                            <constraint firstItem="EB5-Xt-HgJ" firstAttribute="top" secondItem="0kn-FD-por" secondAttribute="top" id="Yse-8e-J2h"/>
                             <constraint firstItem="WJp-Hn-7wo" firstAttribute="top" secondItem="vpn-zC-mgU" secondAttribute="top" id="bFM-gE-uvA"/>
                             <constraint firstItem="vpn-zC-mgU" firstAttribute="bottom" secondItem="0kn-FD-por" secondAttribute="bottom" constant="20" id="dUt-lI-DRb"/>
+                            <constraint firstItem="EB5-Xt-HgJ" firstAttribute="leading" secondItem="nje-r0-hNT" secondAttribute="leadingMargin" constant="-16" id="ead-zP-Um4"/>
+                            <constraint firstItem="3UR-Pf-z1P" firstAttribute="leading" secondItem="vpn-zC-mgU" secondAttribute="leading" constant="13" id="qnq-qY-add"/>
+                            <constraint firstItem="3UR-Pf-z1P" firstAttribute="top" secondItem="vyX-zM-nSV" secondAttribute="bottom" constant="15" id="sNg-zc-fEV"/>
                             <constraint firstItem="0kn-FD-por" firstAttribute="top" secondItem="vyX-zM-nSV" secondAttribute="bottom" constant="8" id="sTJ-Aw-YnY"/>
                             <constraint firstItem="vyX-zM-nSV" firstAttribute="top" secondItem="wOv-Ld-aAn" secondAttribute="bottom" constant="8" id="vb6-eZ-x8z"/>
                             <constraint firstItem="0kn-FD-por" firstAttribute="trailing" secondItem="wOv-Ld-aAn" secondAttribute="trailing" id="xEB-di-fiR"/>
@@ -278,6 +292,7 @@
                         <outlet property="textForInstruct" destination="vyX-zM-nSV" id="shC-E3-Pym"/>
                         <outlet property="ttfCollectionView" destination="0kn-FD-por" id="weg-6a-Wav"/>
                         <outlet property="wordCollectionView" destination="wOv-Ld-aAn" id="C8F-Ut-Pvh"/>
+                        <outlet property="yourDrawView" destination="3UR-Pf-z1P" id="0rk-cr-0G6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aZM-QM-OPa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -470,6 +485,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Rec_black" width="249" height="249"/>
         <image name="Recognize" width="30" height="30"/>
         <image name="back_golden" width="21" height="24"/>
         <image name="back_white" width="15" height="18"/>
