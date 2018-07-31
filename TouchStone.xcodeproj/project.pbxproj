@@ -11,6 +11,8 @@
 		901786F3210E1D5000A4A8DF /* extentionUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901786F2210E1D5000A4A8DF /* extentionUIImage.swift */; };
 		901786F5210E31CA00A4A8DF /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901786F4210E31CA00A4A8DF /* PreviewViewController.swift */; };
 		901786F7210E382C00A4A8DF /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901786F6210E382C00A4A8DF /* ARViewController.swift */; };
+		901786FA210EEF1300A4A8DF /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901786F8210EEF1300A4A8DF /* GalleryCollectionViewCell.swift */; };
+		901786FB210EEF1300A4A8DF /* GalleryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 901786F9210EEF1300A4A8DF /* GalleryCollectionViewCell.xib */; };
 		9034D6CD20FE4B040012A6A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9034D6CC20FE4B040012A6A5 /* AppDelegate.swift */; };
 		9034D6CF20FE4B040012A6A5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9034D6CE20FE4B040012A6A5 /* HomeViewController.swift */; };
 		9034D6D220FE4B040012A6A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9034D6D020FE4B040012A6A5 /* Main.storyboard */; };
@@ -25,7 +27,6 @@
 		9034D70421033E5C0012A6A5 /* CollectionBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9034D70321033E5C0012A6A5 /* CollectionBoardViewController.swift */; };
 		9034D70621033E720012A6A5 /* CommendBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9034D70521033E720012A6A5 /* CommendBoardViewController.swift */; };
 		909E044C2104521800D025BD /* CommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909E044B2104521800D025BD /* CommendViewController.swift */; };
-		909E048F2104C8D200D025BD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9034D6D820FE4B040012A6A5 /* Info.plist */; };
 		909E04922105A71200D025BD /* PaintBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909E04912105A71200D025BD /* PaintBoard.swift */; };
 		909E05082108289C00D025BD /* RecognizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909E05072108289C00D025BD /* RecognizeViewController.swift */; };
 		909E050F21086A7E00D025BD /* wordCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909E050D21086A7E00D025BD /* wordCollectionViewCell.swift */; };
@@ -56,6 +57,8 @@
 		901786F2210E1D5000A4A8DF /* extentionUIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extentionUIImage.swift; sourceTree = "<group>"; };
 		901786F4210E31CA00A4A8DF /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		901786F6210E382C00A4A8DF /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		901786F8210EEF1300A4A8DF /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
+		901786F9210EEF1300A4A8DF /* GalleryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryCollectionViewCell.xib; sourceTree = "<group>"; };
 		9034D6C920FE4B040012A6A5 /* TouchStone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchStone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9034D6CC20FE4B040012A6A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9034D6CE20FE4B040012A6A5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +112,95 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		901786FD210EEF5700A4A8DF /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				9034D6CE20FE4B040012A6A5 /* HomeViewController.swift */,
+				9034D6FA20FF935D0012A6A5 /* HomeCollectionViewCell.swift */,
+				9034D6FB20FF935D0012A6A5 /* HomeCollectionViewCell.xib */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		901786FE210EEF6300A4A8DF /* PaintBoard */ = {
+			isa = PBXGroup;
+			children = (
+				9034D70121033E380012A6A5 /* PaintBoardViewController.swift */,
+			);
+			path = PaintBoard;
+			sourceTree = "<group>";
+		};
+		901786FF210EEF6F00A4A8DF /* CollectionBoard */ = {
+			isa = PBXGroup;
+			children = (
+				9034D70321033E5C0012A6A5 /* CollectionBoardViewController.swift */,
+				901786F8210EEF1300A4A8DF /* GalleryCollectionViewCell.swift */,
+				901786F9210EEF1300A4A8DF /* GalleryCollectionViewCell.xib */,
+			);
+			path = CollectionBoard;
+			sourceTree = "<group>";
+		};
+		90178700210EEF7F00A4A8DF /* CommendBoard */ = {
+			isa = PBXGroup;
+			children = (
+				9034D70521033E720012A6A5 /* CommendBoardViewController.swift */,
+				909E044B2104521800D025BD /* CommendViewController.swift */,
+			);
+			path = CommendBoard;
+			sourceTree = "<group>";
+		};
+		90178701210EEF9000A4A8DF /* RecognizeBoard */ = {
+			isa = PBXGroup;
+			children = (
+				909E05072108289C00D025BD /* RecognizeViewController.swift */,
+				909E050D21086A7E00D025BD /* wordCollectionViewCell.swift */,
+				909E050E21086A7E00D025BD /* wordCollectionViewCell.xib */,
+				909E051121086A8A00D025BD /* ttfCollectionViewCell.swift */,
+				909E051221086A8A00D025BD /* ttfCollectionViewCell.xib */,
+			);
+			path = RecognizeBoard;
+			sourceTree = "<group>";
+		};
+		90178702210EEF9E00A4A8DF /* DecorateBoard */ = {
+			isa = PBXGroup;
+			children = (
+				901786F0210DEB7200A4A8DF /* DecorateViewController.swift */,
+			);
+			path = DecorateBoard;
+			sourceTree = "<group>";
+		};
+		90178703210EEFA800A4A8DF /* PreviewBoard */ = {
+			isa = PBXGroup;
+			children = (
+				901786F4210E31CA00A4A8DF /* PreviewViewController.swift */,
+			);
+			path = PreviewBoard;
+			sourceTree = "<group>";
+		};
+		90178704210EEFB500A4A8DF /* ARViewBoard */ = {
+			isa = PBXGroup;
+			children = (
+				901786F6210E382C00A4A8DF /* ARViewController.swift */,
+			);
+			path = ARViewBoard;
+			sourceTree = "<group>";
+		};
+		90178705210EF01300A4A8DF /* CollectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9034D6FE20FF961C0012A6A5 /* UPCarouselFlowLayout.swift */,
+			);
+			path = CollectionViewController;
+			sourceTree = "<group>";
+		};
+		90178706210EF03100A4A8DF /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				901786F2210E1D5000A4A8DF /* extentionUIImage.swift */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
 		9034D6C020FE4B040012A6A5 = {
 			isa = PBXGroup;
 			children = (
@@ -132,9 +224,7 @@
 		9034D6CB20FE4B040012A6A5 /* TouchStone */ = {
 			isa = PBXGroup;
 			children = (
-				909E05152109A15000D025BD /* RecognizeBoard */,
-				909E04902105A6F500D025BD /* paintBoard */,
-				909E048D210480D900D025BD /* Support Souces */,
+				909E048D210480D900D025BD /* Support Sources */,
 				909E048E2104810600D025BD /* ViewController */,
 				9034D6D020FE4B040012A6A5 /* Main.storyboard */,
 				9034D6D320FE4B040012A6A5 /* Assets.xcassets */,
@@ -160,36 +250,30 @@
 			path = TouchStoneUITests;
 			sourceTree = "<group>";
 		};
-		909E048D210480D900D025BD /* Support Souces */ = {
+		909E048D210480D900D025BD /* Support Sources */ = {
 			isa = PBXGroup;
 			children = (
-				9034D6FE20FF961C0012A6A5 /* UPCarouselFlowLayout.swift */,
+				909E04902105A6F500D025BD /* paintBoard */,
+				90178705210EF01300A4A8DF /* CollectionViewController */,
+				90178706210EF03100A4A8DF /* UIImage */,
 				9034D6CC20FE4B040012A6A5 /* AppDelegate.swift */,
 				9034D6D520FE4B040012A6A5 /* LaunchScreen.storyboard */,
 				9034D6D820FE4B040012A6A5 /* Info.plist */,
-				901786F2210E1D5000A4A8DF /* extentionUIImage.swift */,
 			);
-			path = "Support Souces";
+			path = "Support Sources";
 			sourceTree = "<group>";
 		};
 		909E048E2104810600D025BD /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				9034D6CE20FE4B040012A6A5 /* HomeViewController.swift */,
-				9034D6FA20FF935D0012A6A5 /* HomeCollectionViewCell.swift */,
-				9034D6FB20FF935D0012A6A5 /* HomeCollectionViewCell.xib */,
-				9034D70121033E380012A6A5 /* PaintBoardViewController.swift */,
-				9034D70321033E5C0012A6A5 /* CollectionBoardViewController.swift */,
-				9034D70521033E720012A6A5 /* CommendBoardViewController.swift */,
-				909E044B2104521800D025BD /* CommendViewController.swift */,
-				909E05072108289C00D025BD /* RecognizeViewController.swift */,
-				909E050D21086A7E00D025BD /* wordCollectionViewCell.swift */,
-				909E050E21086A7E00D025BD /* wordCollectionViewCell.xib */,
-				909E051121086A8A00D025BD /* ttfCollectionViewCell.swift */,
-				909E051221086A8A00D025BD /* ttfCollectionViewCell.xib */,
-				901786F0210DEB7200A4A8DF /* DecorateViewController.swift */,
-				901786F4210E31CA00A4A8DF /* PreviewViewController.swift */,
-				901786F6210E382C00A4A8DF /* ARViewController.swift */,
+				901786FD210EEF5700A4A8DF /* HomeView */,
+				901786FE210EEF6300A4A8DF /* PaintBoard */,
+				901786FF210EEF6F00A4A8DF /* CollectionBoard */,
+				90178700210EEF7F00A4A8DF /* CommendBoard */,
+				90178701210EEF9000A4A8DF /* RecognizeBoard */,
+				90178702210EEF9E00A4A8DF /* DecorateBoard */,
+				90178703210EEFA800A4A8DF /* PreviewBoard */,
+				90178704210EEFB500A4A8DF /* ARViewBoard */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -200,13 +284,6 @@
 				909E04912105A71200D025BD /* PaintBoard.swift */,
 			);
 			path = paintBoard;
-			sourceTree = "<group>";
-		};
-		909E05152109A15000D025BD /* RecognizeBoard */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = RecognizeBoard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,8 +393,8 @@
 				9034D6D720FE4B040012A6A5 /* LaunchScreen.storyboard in Resources */,
 				9034D6D420FE4B040012A6A5 /* Assets.xcassets in Resources */,
 				9034D6D220FE4B040012A6A5 /* Main.storyboard in Resources */,
-				909E048F2104C8D200D025BD /* Info.plist in Resources */,
 				909E051021086A7E00D025BD /* wordCollectionViewCell.xib in Resources */,
+				901786FB210EEF1300A4A8DF /* GalleryCollectionViewCell.xib in Resources */,
 				9034D6FD20FF935D0012A6A5 /* HomeCollectionViewCell.xib in Resources */,
 				909E051421086A8A00D025BD /* ttfCollectionViewCell.xib in Resources */,
 			);
@@ -348,6 +425,7 @@
 				9034D6CF20FE4B040012A6A5 /* HomeViewController.swift in Sources */,
 				909E04922105A71200D025BD /* PaintBoard.swift in Sources */,
 				901786F7210E382C00A4A8DF /* ARViewController.swift in Sources */,
+				901786FA210EEF1300A4A8DF /* GalleryCollectionViewCell.swift in Sources */,
 				909E051321086A8A00D025BD /* ttfCollectionViewCell.swift in Sources */,
 				9034D70421033E5C0012A6A5 /* CollectionBoardViewController.swift in Sources */,
 				9034D70621033E720012A6A5 /* CommendBoardViewController.swift in Sources */,
@@ -536,7 +614,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SYHLX35TA5;
-				INFOPLIST_FILE = "TouchStone/Support Souces/Info.plist";
+				INFOPLIST_FILE = "TouchStone/Support Sources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -554,7 +632,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SYHLX35TA5;
-				INFOPLIST_FILE = "TouchStone/Support Souces/Info.plist";
+				INFOPLIST_FILE = "TouchStone/Support Sources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
