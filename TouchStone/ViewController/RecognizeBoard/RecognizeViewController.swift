@@ -41,6 +41,7 @@ class RecognizeViewController: UIViewController, UICollectionViewDelegate, UICol
     //PaintBoard传入的image
     var yourDraw: UIImage!
     
+    var yourDrawToRecognize: UIImage!
     
     //yourDraw的容器
     @IBOutlet weak var yourDrawView : UIImageView!
@@ -61,16 +62,8 @@ class RecognizeViewController: UIViewController, UICollectionViewDelegate, UICol
         {
         case"墨":
             return "墨，是形声字，从土黑声，本义为书写用的黑色颜料，《说文》，“墨，书墨也”。墨也是黑色的别称，《广雅》，“墨，黑也”。引申为文墨、贪墨、绳墨等。墨刑为古代五刑之一，即脸上刺字并涂以黑色颜料。另有墨家学派，为诸子百家之一。又有墨姓。"
-        case"书":
-            return "这是书的说明"
-        case"笔":
-            return "这是笔的说明"
-        case"真":
-            return "这是真的说明"
-        case"情":
-            return "这是情的说明"
         default:
-            return "这个字我们没有收录"
+            return "这是\(word)的说明"
         }
     }
     

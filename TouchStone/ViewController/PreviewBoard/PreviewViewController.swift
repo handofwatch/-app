@@ -79,18 +79,20 @@ class PreviewViewController: UIViewController {
         }
     }
     
-    //为收藏进收藏页面搭桥
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "collectPaint"
-        {
-            let vc = segue.destination as! CollectionBoardViewController
-            vc.getImage = getImage
-        }
-    }
-    
     //点击收藏按钮
     @IBAction func collectButtonTapped(_ sender: Any) {
-        performSegue(withIdentifier: "collectPaint", sender: nil)
+        let manager = FileManager.default
+        let urlForDocument = manager.urls(for: .documentDirectory, in:.userDomainMask)
+        let url = urlForDocument[0] as URL
+        print(url)
+        let now = Date()
+        let timeInterval:TimeInterval = now.timeIntervalSince1970
+        let timeStamp = Int(timeInterval)
+        let filePath = NSHomeDirectory() + "/Documents/\(timeStamp).jpg"
+        let image = getImage
+        let data:Data = UIImagePNGRepresentation(image!)!
+        try? data.write(to: URL(fileURLWithPath: filePath))
+//        performSegue(withIdentifier: "collectPaint", sender: nil)
     }
     
     //返回方法

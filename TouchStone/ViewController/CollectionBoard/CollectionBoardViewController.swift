@@ -8,15 +8,33 @@
 
 import UIKit
 
+func findFiles(path: String, filterTypes: [String]) -> [String] {
+    do {
+        let files = try FileManager.default.contentsOfDirectory(atPath: path)
+        if filterTypes.count == 0 {
+            return files
+        }
+        else {
+            let filteredfiles = NSArray(array: files).pathsMatchingExtensions(filterTypes)
+            return filteredfiles
+        }
+    }
+    catch {
+        return []
+    }
+}
+
 class CollectionBoardViewController: UIViewController,UICollectionViewDataSource, UICollectionViewDelegate {
     
-    //TODO::功能尚未完善
-    //传入的图片
-    var getImage:UIImage!
     
+    
+    //TODO::功能尚未完善
     //点击不同cell发出的指令，暂时用不到
     var order:Int!
     
+    var getImages = ["","","","","","","","","","","","","","","","","","","",""]
+    
+    var Images : [UIImage] = []
     //发送给preview的图片
     var transImage:UIImage!
     
@@ -28,6 +46,17 @@ class CollectionBoardViewController: UIViewController,UICollectionViewDataSource
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        getImages = findFiles(path: NSHomeDirectory() + "/Documents", filterTypes: ["jpg"])
+        print(getImages)
+        
+        let number = getImages.count
+        for i in 0..<number
+        {
+            let picData: NSData = FileManager.default.contents(atPath: NSHomeDirectory() + "/Documents/\(getImages[i])")! as NSData
+            Images += [UIImage(data: picData as Data)!]
+        }
+        
         //注册cell
         collectionView.register(UINib.init(nibName: "GalleryCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "GalleryIdentifier")
         
@@ -43,9 +72,6 @@ class CollectionBoardViewController: UIViewController,UICollectionViewDataSource
         collectionView.collectionViewLayout = flowLayout
         collectionView.delegate=self
         collectionView.dataSource=self
-        
-        //传递图片设置
-        transImage = getImage
         
         //提供order
         for i in 0..<20
@@ -75,135 +101,18 @@ class CollectionBoardViewController: UIViewController,UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GalleryIdentifier", for: indexPath) as! GalleryCollectionViewCell
         
-        
+        var ShowImages = Images
         //对每个cell进行判断
-        switch indexPath.row
+        for i in 0..<Images.count
         {
-        case 0:
-            if order == 0
-            {
-                cell.image.image = getImage
-                attribute[0] = true
-                break
-            }
-        case 1:
-            if order == 1
-            {
-                cell.image.image = getImage
-            }
-            attribute[1] = true
-        case 2:
-            if order == 2
-            {
-                cell.image.image = getImage
-            }
-            attribute[2] = true
-        case 3:
-            if order == 3
-            {
-                cell.image.image = getImage
-            }
-            attribute[3] = true
-        case 4:
-            if order == 4
-            {
-                cell.image.image = getImage
-            }
-            attribute[4] = true
-        case 5:
-            if order == 5
-            {
-                cell.image.image = getImage
-            }
-            attribute[5] = true
-        case 6:
-            if order == 6
-            {
-                cell.image.image = getImage
-            }
-            attribute[6] = true
-        case 7:
-            if order == 7
-            {
-                cell.image.image = getImage
-            }
-            attribute[7] = true
-        case 8:
-            if order == 8
-            {
-                cell.image.image = getImage
-            }
-            attribute[8] = true
-        case 9:
-            if order == 9
-            {
-                cell.image.image = getImage
-            }
-            attribute[9] = true
-        case 10:
-            if order == 10
-            {
-                cell.image.image = getImage
-            }
-            attribute[10] = true
-        case 11:
-            if order == 11
-            {
-                cell.image.image = getImage
-            }
-            attribute[11] = true
-        case 12:
-            if order == 12
-            {
-                cell.image.image = getImage
-            }
-            attribute[12] = true
-        case 13:
-            if order == 13
-            {
-                cell.image.image = getImage
-            }
-            attribute[13] = true
-        case 14:
-            if order == 14
-            {
-                cell.image.image = getImage
-            }
-            attribute[14] = true
-        case 15:
-            if order == 15
-            {
-                cell.image.image = getImage
-            }
-            attribute[15] = true
-        case 16:
-            if order == 16
-            {
-                cell.image.image = getImage
-            }
-            attribute[16] = true
-        case 17:
-            if order == 17
-            {
-                cell.image.image = getImage
-            }
-            attribute[17] = true
-        case 18:
-            if order == 18
-            {
-                cell.image.image = getImage
-            }
-            attribute[18] = true
-        case 19:
-            if order == 19
-            {
-                cell.image.image = getImage
-            }
-            attribute[19] = true
-        default:
-            print("Wrong")
+            ShowImages[i] = ShowImages[i].scaleImage(scaleSize: 0.3)
         }
-        
+        for _ in Images.count..<20
+        {
+            ShowImages.append(UIImage(named: "3_add")!.scaleImage(scaleSize: 1))
+        }
+        cell.image.image = ShowImages[indexPath.row]
+        cell.image.contentMode = .center
         return cell
     }
     
@@ -211,7 +120,15 @@ class CollectionBoardViewController: UIViewController,UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GalleryIdentifier", for: indexPath) as! GalleryCollectionViewCell
         order = indexPath.row
-        performSegue(withIdentifier: "showCollection", sender: nil)
+        if order<Images.count
+        {
+            transImage = Images[order]
+            performSegue(withIdentifier: "showCollection", sender: nil)
+        }
+        else
+        {
+            performSegue(withIdentifier: "goToCreate", sender: nil)
+        }
     }
     
     

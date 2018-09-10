@@ -382,6 +382,13 @@ class PaintBoardViewController: UIViewController {
     //为recognize面板准备搭桥
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
+        let yourDrawToRecognize = drawView.getSignature()
+        
+        if segue.identifier == "recognize"{
+            let vc = segue.destination as! RecognizeViewController
+            vc.yourDrawToRecognize = yourDrawToRecognize
+        }
+        
         //设置画板的颜色与recognize面板颜色一致
         drawView.signatureBackgroundColor = UIColor(red: 49/255, green: 49/255, blue: 49/255, alpha: 1)
         

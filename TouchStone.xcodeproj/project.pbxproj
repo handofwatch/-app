@@ -33,6 +33,8 @@
 		909E051021086A7E00D025BD /* wordCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 909E050E21086A7E00D025BD /* wordCollectionViewCell.xib */; };
 		909E051321086A8A00D025BD /* ttfCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909E051121086A8A00D025BD /* ttfCollectionViewCell.swift */; };
 		909E051421086A8A00D025BD /* ttfCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 909E051221086A8A00D025BD /* ttfCollectionViewCell.xib */; };
+		90AA2A9D2144C46D0071F9A9 /* PlaneNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AA2A9C2144C46D0071F9A9 /* PlaneNode.swift */; };
+		90AA2A9F2144C65E0071F9A9 /* materals.png in Resources */ = {isa = PBXBuildFile; fileRef = 90AA2A9E2144C65E0071F9A9 /* materals.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,8 @@
 		909E050E21086A7E00D025BD /* wordCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = wordCollectionViewCell.xib; sourceTree = "<group>"; };
 		909E051121086A8A00D025BD /* ttfCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ttfCollectionViewCell.swift; sourceTree = "<group>"; };
 		909E051221086A8A00D025BD /* ttfCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ttfCollectionViewCell.xib; sourceTree = "<group>"; };
+		90AA2A9C2144C46D0071F9A9 /* PlaneNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaneNode.swift; sourceTree = "<group>"; };
+		90AA2A9E2144C65E0071F9A9 /* materals.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = materals.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +208,7 @@
 		9034D6C020FE4B040012A6A5 = {
 			isa = PBXGroup;
 			children = (
+				90AA2A9E2144C65E0071F9A9 /* materals.png */,
 				9034D6CB20FE4B040012A6A5 /* TouchStone */,
 				9034D6E020FE4B050012A6A5 /* TouchStoneTests */,
 				9034D6EB20FE4B050012A6A5 /* TouchStoneUITests */,
@@ -253,6 +258,7 @@
 		909E048D210480D900D025BD /* Support Sources */ = {
 			isa = PBXGroup;
 			children = (
+				90AA2A9B2144C4570071F9A9 /* ar */,
 				909E04902105A6F500D025BD /* paintBoard */,
 				90178705210EF01300A4A8DF /* CollectionViewController */,
 				90178706210EF03100A4A8DF /* UIImage */,
@@ -284,6 +290,14 @@
 				909E04912105A71200D025BD /* PaintBoard.swift */,
 			);
 			path = paintBoard;
+			sourceTree = "<group>";
+		};
+		90AA2A9B2144C4570071F9A9 /* ar */ = {
+			isa = PBXGroup;
+			children = (
+				90AA2A9C2144C46D0071F9A9 /* PlaneNode.swift */,
+			);
+			path = ar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,6 +404,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90AA2A9F2144C65E0071F9A9 /* materals.png in Resources */,
 				9034D6D720FE4B040012A6A5 /* LaunchScreen.storyboard in Resources */,
 				9034D6D420FE4B040012A6A5 /* Assets.xcassets in Resources */,
 				9034D6D220FE4B040012A6A5 /* Main.storyboard in Resources */,
@@ -425,6 +440,7 @@
 				9034D6CF20FE4B040012A6A5 /* HomeViewController.swift in Sources */,
 				909E04922105A71200D025BD /* PaintBoard.swift in Sources */,
 				901786F7210E382C00A4A8DF /* ARViewController.swift in Sources */,
+				90AA2A9D2144C46D0071F9A9 /* PlaneNode.swift in Sources */,
 				901786FA210EEF1300A4A8DF /* GalleryCollectionViewCell.swift in Sources */,
 				909E051321086A8A00D025BD /* ttfCollectionViewCell.swift in Sources */,
 				9034D70421033E5C0012A6A5 /* CollectionBoardViewController.swift in Sources */,
