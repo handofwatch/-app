@@ -11,17 +11,20 @@ import UIKit
 class PaintBoardViewController: UIViewController {
     
     //用于绘制的画板View
-    @IBOutlet weak var drawView: DrawSignatureView!
+    @IBOutlet weak var drawView: UIView!
     
+    var recognize = RecognizeView()
+
     //颜色选择器
     @IBOutlet weak var colorSelector: UIImageView!
     
     //笔触选择器的背景图
     @IBOutlet weak var SliderBackground: UIImageView!
     
-    //撤销按钮
-    @IBOutlet weak var backAStepButton: UIButton!
+//    //撤销按钮
+//    @IBOutlet weak var backAStepButton: UIButton!
     
+    var words = [String]()
     //下方毛笔墨盘的图片
     @IBOutlet weak var controller: UIImageView!
     
@@ -48,6 +51,14 @@ class PaintBoardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        recognize.frame = drawView.frame
+        recognize.backgroundColor = UIColor.white
+        recognize.reset()
+        self.view.addSubview(recognize)
+            
+//        self.view.sendSubview(toBack: RecognizeViewer)
+        
+        
         //笔触选择器添加事件
         SliderForThickness.addTarget(self, action:#selector(ThicknessChanged(_:)), for: UIControlEvents.valueChanged)
         
@@ -65,49 +76,50 @@ class PaintBoardViewController: UIViewController {
         
         //各种颜色的按钮添加到颜色选择器对应位置并设置为透明
         //各种颜色按钮添加点击事件
-        blackButton = UIButton(frame: CGRect(x: Double(colorSelector.frame.minX + colorSelector.frame.size.width * 0.095), y: Double(colorSelector.frame.minY * 1.15), width: Double(colorSelector.frame.size.width / 10), height: Double(colorSelector.frame.size.height * 9 / 10)))
+        blackButton = UIButton(frame: CGRect(x: Double(colorSelector.frame.minX + colorSelector.frame.size.width * 0.08), y: Double(colorSelector.frame.minY * 1), width: Double(colorSelector.frame.size.width / 10), height: Double(colorSelector.frame.size.height * 9 / 10)))
         blackButton.backgroundColor = UIColor.clear
         blackButton.addTarget(self, action:#selector(blackButtonTapped(_:)), for: UIControlEvents.touchUpInside)
         
         
-        grayButton = UIButton(frame: CGRect(x: Double(colorSelector.frame.minX + colorSelector.frame.size.width * 0.215), y: Double(colorSelector.frame.minY * 1.15), width: Double(colorSelector.frame.size.width / 10), height: Double(colorSelector.frame.size.height * 9 / 10)))
+        grayButton = UIButton(frame: CGRect(x: Double(colorSelector.frame.minX + colorSelector.frame.size.width * 0.18), y: Double(colorSelector.frame.minY * 1), width: Double(colorSelector.frame.size.width / 10), height: Double(colorSelector.frame.size.height * 9 / 10)))
         
         grayButton.backgroundColor = UIColor.clear
         grayButton.addTarget(self, action:#selector(grayButtonTapped(_:)), for: UIControlEvents.touchUpInside)
         
         
-        blueButton = UIButton(frame: CGRect(x: Double(colorSelector.frame.minX + colorSelector.frame.size.width * 0.33), y: Double(colorSelector.frame.minY * 1.15), width: Double(colorSelector.frame.size.width / 10), height: Double(colorSelector.frame.size.height * 9 / 10)))
+        blueButton = UIButton(frame: CGRect(x: Double(colorSelector.frame.minX + colorSelector.frame.size.width * 0.291), y: Double(colorSelector.frame.minY * 1), width: Double(colorSelector.frame.size.width / 10), height: Double(colorSelector.frame.size.height * 9 / 10)))
+            
         blueButton.backgroundColor = UIColor.clear
         blueButton.addTarget(self, action:#selector(blueButtonTapped(_:)), for: UIControlEvents.touchUpInside)
         
         
-        greenButton = UIButton(frame: CGRect(x: Double(colorSelector.frame.minX + colorSelector.frame.size.width * 0.447), y: Double(colorSelector.frame.minY * 1.15), width: Double(colorSelector.frame.size.width / 10), height: Double(colorSelector.frame.size.height * 9 / 10)))
+        greenButton = UIButton(frame: CGRect(x: Double(colorSelector.frame.minX + colorSelector.frame.size.width * 0.4), y: Double(colorSelector.frame.minY * 1), width: Double(colorSelector.frame.size.width / 10), height: Double(colorSelector.frame.size.height * 9 / 10)))
         greenButton.backgroundColor = UIColor.clear
         greenButton.addTarget(self, action:#selector(greenButtonTapped(_:)), for: UIControlEvents.touchUpInside)
         
         
-        purpleButton = UIButton(frame: CGRect(x: Double(colorSelector.frame.minX + colorSelector.frame.size.width * 0.564), y: Double(colorSelector.frame.minY * 1.15), width: Double(colorSelector.frame.size.width / 10), height: Double(colorSelector.frame.size.height * 9 / 10)))
+        purpleButton = UIButton(frame: CGRect(x: Double(colorSelector.frame.minX + colorSelector.frame.size.width * 0.5), y: Double(colorSelector.frame.minY * 1), width: Double(colorSelector.frame.size.width / 10), height: Double(colorSelector.frame.size.height * 9 / 10)))
         purpleButton.backgroundColor = UIColor.clear
         purpleButton.addTarget(self, action:#selector(purpleButtonTapped(_:)), for: UIControlEvents.touchUpInside)
         
         
-        redButton = UIButton(frame: CGRect(x: Double(colorSelector.frame.minX + colorSelector.frame.size.width * 0.68), y: Double(colorSelector.frame.minY * 1.15), width: Double(colorSelector.frame.size.width / 10), height: Double(colorSelector.frame.size.height * 9 / 10)))
+        redButton = UIButton(frame: CGRect(x: Double(colorSelector.frame.minX + colorSelector.frame.size.width * 0.616), y: Double(colorSelector.frame.minY * 1), width: Double(colorSelector.frame.size.width / 10), height: Double(colorSelector.frame.size.height * 9 / 10)))
         redButton.backgroundColor = UIColor.clear
         redButton.addTarget(self, action:#selector(redButtonTapped(_:)), for: UIControlEvents.touchUpInside)
         
         
-        yellowButton = UIButton(frame: CGRect(x: Double(colorSelector.frame.minX + colorSelector.frame.size.width * 0.8), y: Double(colorSelector.frame.minY * 1.15), width: Double(colorSelector.frame.size.width / 10), height: Double(colorSelector.frame.size.height * 9 / 10)))
+        yellowButton = UIButton(frame: CGRect(x: Double(colorSelector.frame.minX + colorSelector.frame.size.width * 0.712), y: Double(colorSelector.frame.minY * 1), width: Double(colorSelector.frame.size.width / 10), height: Double(colorSelector.frame.size.height * 9 / 10)))
         yellowButton.backgroundColor = UIColor.clear
         yellowButton.addTarget(self, action:#selector(yellowButtonTapped(_:)), for: UIControlEvents.touchUpInside)
         
         
-        brownButton = UIButton(frame: CGRect(x: Double(colorSelector.frame.minX + colorSelector.frame.size.width * 0.914), y: Double(colorSelector.frame.minY * 1.15), width: Double(colorSelector.frame.size.width / 10), height: Double(colorSelector.frame.size.height * 9 / 10)))
+        brownButton = UIButton(frame: CGRect(x: Double(colorSelector.frame.minX + colorSelector.frame.size.width * 0.83), y: Double(colorSelector.frame.minY * 1), width: Double(colorSelector.frame.size.width / 10), height: Double(colorSelector.frame.size.height * 9 / 10)))
         brownButton.backgroundColor = UIColor.clear
         brownButton.addTarget(self, action:#selector(brownButtonTapped(_:)), for: UIControlEvents.touchUpInside)
         
         
-        //撤销按钮设置背景图
-        backAStepButton.setBackgroundImage(UIImage(named: "back_"), for: UIControlState.normal)
+//        //撤销按钮设置背景图
+//        backAStepButton.setBackgroundImage(UIImage(named: "back_"), for: UIControlState.normal)
         
         
         //视图中添加所有按钮
@@ -136,7 +148,7 @@ class PaintBoardViewController: UIViewController {
     @objc func ThicknessChanged(_ sender:UISlider)
     {
         //画板中笔触的粗细相应改变
-        drawView.lineWidth = CGFloat(SliderForThickness.value)
+         recognize.lineWidth = CGFloat(SliderForThickness.value)
     }
     
     //响应各种颜色按钮的方法
@@ -166,7 +178,7 @@ class PaintBoardViewController: UIViewController {
         colorSelectorIsOpen = false
         
         //改变画板中笔触颜色
-        drawView.strokeColor = colorButton.backgroundColor!
+        recognize.pathColor = colorButton.backgroundColor!
     }
     
     @objc func grayButtonTapped(_ sender:UIButton)
@@ -187,7 +199,7 @@ class PaintBoardViewController: UIViewController {
         self.view.sendSubview(toBack: brownButton)
         
         colorSelectorIsOpen = false
-        drawView.strokeColor = colorButton.backgroundColor!
+        recognize.pathColor = colorButton.backgroundColor!
     }
     
     @objc func blueButtonTapped(_ sender:UIButton)
@@ -208,7 +220,7 @@ class PaintBoardViewController: UIViewController {
         self.view.sendSubview(toBack: brownButton)
         
         colorSelectorIsOpen = false
-        drawView.strokeColor = colorButton.backgroundColor!
+        recognize.pathColor = colorButton.backgroundColor!
     }
     
     @objc func greenButtonTapped(_ sender:UIButton)
@@ -229,7 +241,7 @@ class PaintBoardViewController: UIViewController {
         self.view.sendSubview(toBack: brownButton)
         
         colorSelectorIsOpen = false
-        drawView.strokeColor = colorButton.backgroundColor!
+        recognize.pathColor = colorButton.backgroundColor!
     }
     
     @objc func redButtonTapped(_ sender:UIButton)
@@ -250,7 +262,7 @@ class PaintBoardViewController: UIViewController {
         self.view.sendSubview(toBack: brownButton)
         
         colorSelectorIsOpen = false
-        drawView.strokeColor = colorButton.backgroundColor!
+        recognize.pathColor = colorButton.backgroundColor!
     }
     
     @objc func yellowButtonTapped(_ sender:UIButton)
@@ -271,7 +283,7 @@ class PaintBoardViewController: UIViewController {
         self.view.sendSubview(toBack: brownButton)
         
         colorSelectorIsOpen = false
-        drawView.strokeColor = colorButton.backgroundColor!
+        recognize.pathColor = colorButton.backgroundColor!
     }
     
     @objc func brownButtonTapped(_ sender:UIButton)
@@ -292,7 +304,7 @@ class PaintBoardViewController: UIViewController {
         self.view.sendSubview(toBack: brownButton)
         
         colorSelectorIsOpen = false
-        drawView.strokeColor = colorButton.backgroundColor!
+        recognize.pathColor = colorButton.backgroundColor!
     }
     
     @objc func purpleButtonTapped(_ sender:UIButton)
@@ -313,7 +325,7 @@ class PaintBoardViewController: UIViewController {
         self.view.sendSubview(toBack: brownButton)
         
         colorSelectorIsOpen = false
-        drawView.strokeColor = colorButton.backgroundColor!
+        recognize.pathColor = colorButton.backgroundColor!
     }
     
     
@@ -363,14 +375,14 @@ class PaintBoardViewController: UIViewController {
     
     
     
-    //撤销按钮方法
-    @IBAction func BackAStepButtonTapped(_ sender: Any) {
-        self.drawView.backAStep()
-    }
+//    //撤销按钮方法
+//    @IBAction func BackAStepButtonTapped(_ sender: Any) {
+//        self.drawView.backAStep()
+//    }
     
     //清空按钮方法
     @IBAction func clearSignature(_ sender: AnyObject) {
-        self.drawView.clearSignature()
+        recognize.reset()
     }
     
     override func didReceiveMemoryWarning() {
@@ -382,29 +394,39 @@ class PaintBoardViewController: UIViewController {
     //为recognize面板准备搭桥
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        let yourDrawToRecognize = drawView.getSignature()
-        
-        if segue.identifier == "recognize"{
-            let vc = segue.destination as! RecognizeViewController
-            vc.yourDrawToRecognize = yourDrawToRecognize
-        }
-        
         //设置画板的颜色与recognize面板颜色一致
-        drawView.signatureBackgroundColor = UIColor(red: 49/255, green: 49/255, blue: 49/255, alpha: 1)
+        recognize.backgroundColor = UIColor(red: 49/255, green: 49/255, blue: 49/255, alpha: 1)
         
         //截图
-        let yourDraw = drawView.getSignature()
+        let yourDraw = recognize.getSignature()
         
         //将图片作为yourDraw传递给recognizeViewController
         if segue.identifier == "recognize"{
             let vc = segue.destination as! RecognizeViewController
             vc.yourDraw = yourDraw
+            vc.words = words
+            recognize.reset()
         }
     }
     
+    @IBAction func recognizeButtonTapped(_ sender: Any) {
+        if(recognize.results.count >= 5)
+        {
+            words = recognize.results as! [String]
+            print(words[4])
+        }
+        else
+        {
+            for i in 0..<recognize.results.count
+            {
+                words[i] = recognize.results[i] as! String
+            }
+        }
+        performSegue(withIdentifier: "recognize", sender: nil)
+    }
     //返回方法
     @IBAction func close(Segue:UIStoryboardSegue)
     {
-        drawView.signatureBackgroundColor = UIColor.clear
+        recognize.signatureBackgroundColor = UIColor.clear
     }
 }

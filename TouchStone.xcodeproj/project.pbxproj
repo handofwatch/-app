@@ -27,7 +27,6 @@
 		9034D70421033E5C0012A6A5 /* CollectionBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9034D70321033E5C0012A6A5 /* CollectionBoardViewController.swift */; };
 		9034D70621033E720012A6A5 /* CommendBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9034D70521033E720012A6A5 /* CommendBoardViewController.swift */; };
 		909E044C2104521800D025BD /* CommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909E044B2104521800D025BD /* CommendViewController.swift */; };
-		909E04922105A71200D025BD /* PaintBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909E04912105A71200D025BD /* PaintBoard.swift */; };
 		909E05082108289C00D025BD /* RecognizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909E05072108289C00D025BD /* RecognizeViewController.swift */; };
 		909E050F21086A7E00D025BD /* wordCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909E050D21086A7E00D025BD /* wordCollectionViewCell.swift */; };
 		909E051021086A7E00D025BD /* wordCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 909E050E21086A7E00D025BD /* wordCollectionViewCell.xib */; };
@@ -35,6 +34,16 @@
 		909E051421086A8A00D025BD /* ttfCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 909E051221086A8A00D025BD /* ttfCollectionViewCell.xib */; };
 		90AA2A9D2144C46D0071F9A9 /* PlaneNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AA2A9C2144C46D0071F9A9 /* PlaneNode.swift */; };
 		90AA2A9F2144C65E0071F9A9 /* materals.png in Resources */ = {isa = PBXBuildFile; fileRef = 90AA2A9E2144C65E0071F9A9 /* materals.png */; };
+		90AA2AA12146C5C30071F9A9 /* 柳公权体.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90AA2AA02146C5C30071F9A9 /* 柳公权体.ttf */; };
+		90AA2AA32146C5DC0071F9A9 /* 行书.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 90AA2AA22146C5DB0071F9A9 /* 行书.TTF */; };
+		90AA2AA52146C5E50071F9A9 /* 草书.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90AA2AA42146C5E40071F9A9 /* 草书.ttf */; };
+		90AA2AA72146C5EF0071F9A9 /* 隶书.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90AA2AA62146C5EF0071F9A9 /* 隶书.ttf */; };
+		90AA2AA92146C5FB0071F9A9 /* 颜真卿体.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90AA2AA82146C5FB0071F9A9 /* 颜真卿体.ttf */; };
+		90AA2AAB2146C6070071F9A9 /* 郑板桥体.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90AA2AAA2146C6060071F9A9 /* 郑板桥体.ttf */; };
+		90AA2AB121477CE10071F9A9 /* 楷书.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 90AA2AB021477CE00071F9A9 /* 楷书.TTF */; };
+		90AA2AB621477F280071F9A9 /* HandWriteRecognizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 90AA2AB421477F280071F9A9 /* HandWriteRecognizer.cpp */; };
+		90AA2AB721477F280071F9A9 /* handwrite.model in Resources */ = {isa = PBXBuildFile; fileRef = 90AA2AB521477F280071F9A9 /* handwrite.model */; };
+		90AA2ABA21478E0B0071F9A9 /* RecognizeView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 90AA2AB821478E0B0071F9A9 /* RecognizeView.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,7 +90,6 @@
 		9034D70321033E5C0012A6A5 /* CollectionBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionBoardViewController.swift; sourceTree = "<group>"; };
 		9034D70521033E720012A6A5 /* CommendBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommendBoardViewController.swift; sourceTree = "<group>"; };
 		909E044B2104521800D025BD /* CommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommendViewController.swift; sourceTree = "<group>"; };
-		909E04912105A71200D025BD /* PaintBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintBoard.swift; sourceTree = "<group>"; };
 		909E05072108289C00D025BD /* RecognizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognizeViewController.swift; sourceTree = "<group>"; };
 		909E050D21086A7E00D025BD /* wordCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wordCollectionViewCell.swift; sourceTree = "<group>"; };
 		909E050E21086A7E00D025BD /* wordCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = wordCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -89,6 +97,19 @@
 		909E051221086A8A00D025BD /* ttfCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ttfCollectionViewCell.xib; sourceTree = "<group>"; };
 		90AA2A9C2144C46D0071F9A9 /* PlaneNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaneNode.swift; sourceTree = "<group>"; };
 		90AA2A9E2144C65E0071F9A9 /* materals.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = materals.png; sourceTree = "<group>"; };
+		90AA2AA02146C5C30071F9A9 /* 柳公权体.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "柳公权体.ttf"; sourceTree = "<group>"; };
+		90AA2AA22146C5DB0071F9A9 /* 行书.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "行书.TTF"; sourceTree = "<group>"; };
+		90AA2AA42146C5E40071F9A9 /* 草书.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "草书.ttf"; sourceTree = "<group>"; };
+		90AA2AA62146C5EF0071F9A9 /* 隶书.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "隶书.ttf"; sourceTree = "<group>"; };
+		90AA2AA82146C5FB0071F9A9 /* 颜真卿体.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "颜真卿体.ttf"; sourceTree = "<group>"; };
+		90AA2AAA2146C6060071F9A9 /* 郑板桥体.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "郑板桥体.ttf"; sourceTree = "<group>"; };
+		90AA2AB021477CE00071F9A9 /* 楷书.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "楷书.TTF"; sourceTree = "<group>"; };
+		90AA2AB221477F270071F9A9 /* TouchStone-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TouchStone-Bridging-Header.h"; sourceTree = "<group>"; };
+		90AA2AB421477F280071F9A9 /* HandWriteRecognizer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HandWriteRecognizer.cpp; sourceTree = "<group>"; };
+		90AA2AB521477F280071F9A9 /* handwrite.model */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = handwrite.model; sourceTree = "<group>"; };
+		90AA2AB821478E0B0071F9A9 /* RecognizeView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RecognizeView.mm; sourceTree = "<group>"; };
+		90AA2AB921478E0B0071F9A9 /* RecognizeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecognizeView.h; sourceTree = "<group>"; };
+		90AA2ABB21478F180071F9A9 /* HandWriteRecognizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HandWriteRecognizer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +279,13 @@
 		909E048D210480D900D025BD /* Support Sources */ = {
 			isa = PBXGroup;
 			children = (
+				90AA2AA02146C5C30071F9A9 /* 柳公权体.ttf */,
+				90AA2AAA2146C6060071F9A9 /* 郑板桥体.ttf */,
+				90AA2AA82146C5FB0071F9A9 /* 颜真卿体.ttf */,
+				90AA2AA62146C5EF0071F9A9 /* 隶书.ttf */,
+				90AA2AA42146C5E40071F9A9 /* 草书.ttf */,
+				90AA2AA22146C5DB0071F9A9 /* 行书.TTF */,
+				90AA2AB021477CE00071F9A9 /* 楷书.TTF */,
 				90AA2A9B2144C4570071F9A9 /* ar */,
 				909E04902105A6F500D025BD /* paintBoard */,
 				90178705210EF01300A4A8DF /* CollectionViewController */,
@@ -287,7 +315,12 @@
 		909E04902105A6F500D025BD /* paintBoard */ = {
 			isa = PBXGroup;
 			children = (
-				909E04912105A71200D025BD /* PaintBoard.swift */,
+				90AA2AB521477F280071F9A9 /* handwrite.model */,
+				90AA2AB921478E0B0071F9A9 /* RecognizeView.h */,
+				90AA2AB821478E0B0071F9A9 /* RecognizeView.mm */,
+				90AA2ABB21478F180071F9A9 /* HandWriteRecognizer.h */,
+				90AA2AB421477F280071F9A9 /* HandWriteRecognizer.cpp */,
+				90AA2AB221477F270071F9A9 /* TouchStone-Bridging-Header.h */,
 			);
 			path = paintBoard;
 			sourceTree = "<group>";
@@ -368,6 +401,7 @@
 				TargetAttributes = {
 					9034D6C820FE4B040012A6A5 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 					9034D6DC20FE4B050012A6A5 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -404,14 +438,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90AA2AA32146C5DC0071F9A9 /* 行书.TTF in Resources */,
 				90AA2A9F2144C65E0071F9A9 /* materals.png in Resources */,
+				90AA2AAB2146C6070071F9A9 /* 郑板桥体.ttf in Resources */,
+				90AA2AA72146C5EF0071F9A9 /* 隶书.ttf in Resources */,
+				90AA2AB721477F280071F9A9 /* handwrite.model in Resources */,
 				9034D6D720FE4B040012A6A5 /* LaunchScreen.storyboard in Resources */,
 				9034D6D420FE4B040012A6A5 /* Assets.xcassets in Resources */,
+				90AA2AA92146C5FB0071F9A9 /* 颜真卿体.ttf in Resources */,
 				9034D6D220FE4B040012A6A5 /* Main.storyboard in Resources */,
 				909E051021086A7E00D025BD /* wordCollectionViewCell.xib in Resources */,
 				901786FB210EEF1300A4A8DF /* GalleryCollectionViewCell.xib in Resources */,
 				9034D6FD20FF935D0012A6A5 /* HomeCollectionViewCell.xib in Resources */,
 				909E051421086A8A00D025BD /* ttfCollectionViewCell.xib in Resources */,
+				90AA2AA12146C5C30071F9A9 /* 柳公权体.ttf in Resources */,
+				90AA2AA52146C5E50071F9A9 /* 草书.ttf in Resources */,
+				90AA2AB121477CE10071F9A9 /* 楷书.TTF in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,9 +480,9 @@
 			files = (
 				909E044C2104521800D025BD /* CommendViewController.swift in Sources */,
 				9034D6CF20FE4B040012A6A5 /* HomeViewController.swift in Sources */,
-				909E04922105A71200D025BD /* PaintBoard.swift in Sources */,
 				901786F7210E382C00A4A8DF /* ARViewController.swift in Sources */,
 				90AA2A9D2144C46D0071F9A9 /* PlaneNode.swift in Sources */,
+				90AA2AB621477F280071F9A9 /* HandWriteRecognizer.cpp in Sources */,
 				901786FA210EEF1300A4A8DF /* GalleryCollectionViewCell.swift in Sources */,
 				909E051321086A8A00D025BD /* ttfCollectionViewCell.swift in Sources */,
 				9034D70421033E5C0012A6A5 /* CollectionBoardViewController.swift in Sources */,
@@ -452,6 +494,7 @@
 				909E050F21086A7E00D025BD /* wordCollectionViewCell.swift in Sources */,
 				909E05082108289C00D025BD /* RecognizeViewController.swift in Sources */,
 				9034D6FC20FF935D0012A6A5 /* HomeCollectionViewCell.swift in Sources */,
+				90AA2ABA21478E0B0071F9A9 /* RecognizeView.mm in Sources */,
 				901786F1210DEB7200A4A8DF /* DecorateViewController.swift in Sources */,
 				9034D70221033E380012A6A5 /* PaintBoardViewController.swift in Sources */,
 			);
@@ -514,7 +557,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -534,9 +577,9 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = NO;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = NO;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -545,7 +588,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -553,6 +596,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -575,7 +619,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -595,9 +639,9 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = NO;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = NO;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -606,8 +650,9 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -628,7 +673,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = SYHLX35TA5;
 				INFOPLIST_FILE = "TouchStone/Support Sources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -637,6 +684,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "cn.edu.tongji.sse.wxz-1652977.TouchStone";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TouchStone/Support Sources/paintBoard/TouchStone-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -646,7 +695,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = SYHLX35TA5;
 				INFOPLIST_FILE = "TouchStone/Support Sources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -655,6 +706,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "cn.edu.tongji.sse.wxz-1652977.TouchStone";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TouchStone/Support Sources/paintBoard/TouchStone-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

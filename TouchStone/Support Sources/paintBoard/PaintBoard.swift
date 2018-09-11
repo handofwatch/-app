@@ -9,10 +9,10 @@
 import Foundation
 import UIKit
 
-open class DrawSignatureView: UIView {
+open class DrawSignatureView: RecognizeView {
     
     // 公共属性
-    open var lineWidth: CGFloat = 5.0 {
+    open var lineWidths: CGFloat = 5.0 {
         didSet {
             self.path.lineWidth = lineWidth
         }

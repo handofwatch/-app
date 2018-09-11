@@ -37,6 +37,18 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>行书.TTF</string>
+		<string>草书.ttf</string>
+		<string>隶书.ttf</string>
+		<string>颜真卿体.ttf</string>
+		<string>柳公权体.ttf</string>
+		<string>郑板桥体.ttf</string>
+		<string>楷书.TTF</string>
+	</array>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

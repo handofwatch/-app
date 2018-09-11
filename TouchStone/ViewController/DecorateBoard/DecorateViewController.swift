@@ -92,15 +92,15 @@ class DecorateViewController: UIViewController {
         case"墨":
             return "丰沛曾为社稷臣，赐书名画墨犹新。"
         case"书":
-            return "这是书的诗"
+            return "故书不厌百回读，熟读深思子自知。"
         case"笔":
-            return "这是笔的诗"
+            return "宣城之人采为笔，千万毛中拣一毫。"
         case"真":
-            return "这是真的诗"
+            return "真子今将命，苍生福可传。"
         case"情":
-            return "这是情的诗"
+            return "暗淡轻黄体性柔，情疏迹远只香留。"
         default:
-            return "这个字我们没有收录"
+            return "一笔书画，一份传承。"
         }
     }
     
@@ -161,31 +161,25 @@ class DecorateViewController: UIViewController {
         //wordLabel.font.familyName = ""
         case 1:
             wordLabel.text = getWord
-        //wordLabel.font.familyName = ""
+        wordLabel.font = UIFont(name: "经典行书简", size: 150)
         case 2:
             wordLabel.text = getWord
-        //wordLabel.font.familyName = ""
+        wordLabel.font = UIFont(name: "HYSunWanMinCaoShu", size: 150)
         case 3:
             wordLabel.text = getWord
-        //wordLabel.font.familyName = ""
+        wordLabel.font = UIFont(name: "YuWeiLiShuJT", size: 150)
         case 4:
             wordLabel.text = getWord
-        //wordLabel.font.familyName = ""
+        wordLabel.font = UIFont(name: "w", size: 150)
         case 5:
             wordLabel.text = getWord
-        //wordLabel.font.familyName = ""
+        wordLabel.font = UIFont(name: "FZSuXinShiLiuKaiS-R-GB", size: 150)
         case 6:
             wordLabel.text = getWord
-        //wordLabel.font.familyName = ""
+        wordLabel.font = UIFont(name: "zktzbqxst", size: 150)
         case 7:
             wordLabel.text = getWord
-        //wordLabel.font.familyName = ""
-        case 8:
-            wordLabel.text = getWord
-        //wordLabel.font.familyName = ""
-        case 9:
-            wordLabel.text = getWord
-        //wordLabel.font.familyName = ""
+        wordLabel.font = UIFont(name: "FZShengShiKaiShuS-EB-GB", size: 150)
         default:
             print("Wrong")
         }

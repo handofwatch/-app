@@ -12,18 +12,19 @@ import UIKit
 class ARViewController: UIViewController, ARSCNViewDelegate {
     
     @IBOutlet weak var sharebutton: UIButton!
-    
+    @IBOutlet weak var gestureButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var ARView: ARSCNView!
     
     //TODO::ARKit
-    private var _scnView: ARSCNView?
-    private var scnView: ARSCNView? {
-        if nil == _scnView {
-            // 创建AR视图
-            _scnView = ARSCNView(frame: view.bounds)
-        }
-        return _scnView
-    }
+//    private var _scnView: ARSCNView?
+//    private var scnView: ARSCNView? {
+//        if nil == _scnView {
+//            // 创建AR视图
+//            _scnView = ARSCNView(frame: view.bounds)
+//        }
+//        return _scnView
+//    }
     // 会话配置
     private var sessionConfiguration: ARConfiguration?
     // 遮罩视图
@@ -44,7 +45,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         if nil == _tipLabel {
             // 创建提示信息的Label
             _tipLabel = UILabel()
-            _tipLabel?.frame = CGRect(x: 0, y: 30, width: (scnView?.frame.width)!, height: 50)
+            _tipLabel?.frame = CGRect(x: 0, y: 30, width: (ARView?.frame.width)!, height: 50)
             _tipLabel?.numberOfLines = 0
             _tipLabel?.textColor = UIColor.black
         }
@@ -58,7 +59,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         super.viewDidLoad()
         sharebutton.setBackgroundImage(UIImage(named: "Share"), for: UIControlState.normal)
         // Do any additional setup after loading the view.
-        if let aView = scnView {
+        if let aView = ARView {
             view.addSubview(aView)
         }
         if let aView = maskView {
@@ -68,24 +69,27 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
             view.addSubview(aLabel)
         }
         // 设置AR视图代理
-        scnView?.delegate = self
+        ARView?.delegate = self
         // 显示视图的FPS信息
-        scnView?.showsStatistics = true
+        ARView?.showsStatistics = true
         // 显示检测到的特征点
-        scnView?.debugOptions = ARSCNDebugOptions.showFeaturePoints
+        ARView?.debugOptions = ARSCNDebugOptions.showFeaturePoints
         // 添加手势
         addGestureOfSceneView()
+        self.view.bringSubview(toFront: backButton)
+        self.view.bringSubview(toFront: gestureButton)
+        self.view.bringSubview(toFront: sharebutton)
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         // 运行视图中自带的会话
-        scnView?.session.run(sessionConfig()!)
+        ARView?.session.run(sessionConfig()!)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         // 暂停会话
-        scnView?.session.pause()
+        ARView?.session.pause()
     }
     
     // MARK: - TapGesture
@@ -93,12 +97,12 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         // 添加单击手势
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ARViewController.addARGeometry(fromGesture:)))
         tapGesture.numberOfTapsRequired = 1
-        scnView?.addGestureRecognizer(tapGesture)
+        ARView?.addGestureRecognizer(tapGesture)
     }
     @objc func addARGeometry(fromGesture tapGestureRecognizer: UITapGestureRecognizer?) {
-        let point: CGPoint? = tapGestureRecognizer?.location(in: scnView)
+        let point: CGPoint? = tapGestureRecognizer?.location(in: ARView)
         // 命中测试，类型为已存在的平面
-        let resultArray = scnView?.hitTest(point ?? CGPoint.zero, types: .existingPlaneUsingExtent)
+        let resultArray = ARView?.hitTest(point ?? CGPoint.zero, types: .existingPlaneUsingExtent)
         if nil != resultArray && (resultArray?.count ?? 0) > 0 {
             // 拿到命中测试结果，取出位置
             let result: ARHitTestResult? = resultArray?.first
@@ -114,7 +118,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
             }
             // 添加到根节点中
             if let aNode = node {
-                scnView?.scene.rootNode.addChildNode(aNode)
+                ARView?.scene.rootNode.addChildNode(aNode)
             }
         }
     }
@@ -125,7 +129,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         return SCNVector3Make(worldTransform.columns.3.x, worldTransform.columns.3.y, worldTransform.columns.3.z)
     }
     
-    // MARK: - ARSCNViewDelegate
+    // MARK: - ARARViewDelegate
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
         // 判断场景内添加的锚点是否为平面锚点
         if (anchor is ARPlaneAnchor) {
@@ -214,7 +218,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     func sessionInterruptionEnded(_ session: ARSession) {
         tipLabel?.text = "会话中断结束，已重置会话"
         if let aConfig = sessionConfig() {
-            scnView?.session.run(aConfig, options: .resetTracking)
+            ARView?.session.run(aConfig, options: .resetTracking)
         }
     }
     

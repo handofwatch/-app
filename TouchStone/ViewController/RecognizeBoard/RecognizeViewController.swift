@@ -8,10 +8,11 @@
 
 import UIKit
 
+
 class RecognizeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     //TODO::机器学习算法得到下列words
-    var words = ["墨","笔","书","真","情"]
+    var words : [String]!
     
     
     //判断传入下一级的字体的指令
@@ -27,7 +28,7 @@ class RecognizeViewController: UIViewController, UICollectionViewDelegate, UICol
     
     
     //MARK::字体
-    var ttfs = ["颜真卿体","柳公权体","行体","草体","行草","隶书","篆书","碑文","编不出来了"]
+    var ttfs = ["默认字体", "行书","草书","隶书","颜真卿体","柳公权体","郑板桥体","楷书"]
     
     
     //字的CollectionView
@@ -62,8 +63,16 @@ class RecognizeViewController: UIViewController, UICollectionViewDelegate, UICol
         {
         case"墨":
             return "墨，是形声字，从土黑声，本义为书写用的黑色颜料，《说文》，“墨，书墨也”。墨也是黑色的别称，《广雅》，“墨，黑也”。引申为文墨、贪墨、绳墨等。墨刑为古代五刑之一，即脸上刺字并涂以黑色颜料。另有墨家学派，为诸子百家之一。又有墨姓。"
+        case"书":
+            return "《说文》:“书,箸也。”箸(著)即显明。合起来表示用笔使文字显明,“者、箸”音近,故“者”有表意作用。本义:书写,记录,记载。"
+        case"笔":
+            return "古时毛笔笔杆都是以竹制成,故从竹。简化字“笔”,“从竹从毛”会意,指旧时用的毛笔。此字最早见于北齐隽修罗碑,是六朝时的俗字。也见于《集韵》。本义:毛笔"
+        case"真":
+            return "《说文》:“仙人变形而登天也。”匕,变化。目,眼睛。乚,隐藏。八,乘载的工具。本义:道家称存养本性或修真得道的人为真人"
+        case"情":
+            return "外界事物所引起的喜、怒、爱、憎、哀、惧等心理状态。形声字。从心,青声。本义:感情"
         default:
-            return "这是\(word)的说明"
+            return "这个字我们没有收录"
         }
     }
     
@@ -80,8 +89,10 @@ class RecognizeViewController: UIViewController, UICollectionViewDelegate, UICol
         yourDrawView.isUserInteractionEnabled = true
         
         //初始化显示文字
-        wordsOnShow = words[0]
-        
+        if words.count > 0
+        {
+            wordsOnShow = words[0]
+        }
         //设置说明文字
         textForInstruct.text = changeInstruction(word: wordsOnShow)
         
@@ -140,7 +151,7 @@ class RecognizeViewController: UIViewController, UICollectionViewDelegate, UICol
         }
         else if collectionView == ttfCollectionView
         {
-            return 9
+            return 8
         }
         else
         {
@@ -154,6 +165,7 @@ class RecognizeViewController: UIViewController, UICollectionViewDelegate, UICol
         if collectionView == wordCollectionView
         {
             let cell = wordCollectionView.dequeueReusableCell(withReuseIdentifier: "wordIdentifier", for: indexPath) as! wordCollectionViewCell
+            
             
             cell.Wordlabel.text = words[indexPath.row]
             self.view.bringSubview(toFront: cell.Wordlabel)
@@ -171,29 +183,27 @@ class RecognizeViewController: UIViewController, UICollectionViewDelegate, UICol
             cell.wordlabel.textColor = UIColor(red: 188/255, green: 159/255, blue: 115/255, alpha: 1)
             cell.ttfLabel.text = ttfs[indexPath.row]
             //TODO::添加字体文件并且改变文字的字体
-            //            switch indexPath.row
-            //            {
-            //            case 0:
+            switch indexPath.row
+            {
+                //            case 0:
             //                cell.wordlabel.font.familyName = ""
-            //            case 1:
-            //                cell.wordlabel.font.familyName = ""
-            //            case 2:
-            //                cell.wordlabel.font.familyName = ""
-            //            case 3:
-            //                cell.wordlabel.font.familyName = ""
-            //            case 4:
-            //                cell.wordlabel.font.familyName = ""
-            //            case 5:
-            //                cell.wordlabel.font.familyName = ""
-            //            case 6:
-            //                cell.wordlabel.font.familyName = ""
-            //            case 7:
-            //                cell.wordlabel.font.familyName = ""
-            //            case 8:
-            //                cell.wordlabel.font.familyName = ""
-            //            default:
-            //                cell.wordlabel.font.familyName = ""
-            //            }
+            case 1:
+                cell.wordlabel.font = UIFont(name: "经典行书简", size: 60)
+            case 2:
+                cell.wordlabel.font = UIFont(name: "HYSunWanMinCaoShu", size: 60)
+            case 3:
+                cell.wordlabel.font = UIFont(name: "YuWeiLiShuJT", size: 60)
+            case 4:
+                cell.wordlabel.font = UIFont(name: "w", size: 60)
+            case 5:
+                cell.wordlabel.font = UIFont(name: "FZSuXinShiLiuKaiS-R-GB", size: 60)
+            case 6:
+                cell.wordlabel.font = UIFont(name: "zktzbqxst", size: 60)
+            case 7:
+                cell.wordlabel.font = UIFont(name: "FZShengShiKaiShuS-EB-GB", size: 60)
+            default: break
+//                cell.wordlabel.font = UIFont(name: "默认字体", size: 60)
+            }
             self.view.bringSubview(toFront: cell.ttfLabel)
             return cell
         }
