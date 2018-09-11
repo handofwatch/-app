@@ -92,6 +92,7 @@ class PreviewViewController: UIViewController {
         let image = getImage
         let data:Data = UIImagePNGRepresentation(image!)!
         try? data.write(to: URL(fileURLWithPath: filePath))
+        _ = #selector(PreviewViewController.onCompleteCapture(image:error:contextInfo:))
 //        performSegue(withIdentifier: "collectPaint", sender: nil)
     }
     

@@ -412,21 +412,27 @@ class PaintBoardViewController: UIViewController {
     @IBAction func recognizeButtonTapped(_ sender: Any) {
         if(recognize.results.count >= 5)
         {
-            words = recognize.results as! [String]
+            let num = recognize.results.count / 10
+            var wordsShowing:[String] = ["","","","",""]
+            for i in (num-1)*10..<(num-1)*10+5
+            {
+                wordsShowing[i % 10] = recognize.results[i] as! String
+            }
+            
+            words = wordsShowing
             print(words[4])
+            recognize.results.removeAllObjects()
+            performSegue(withIdentifier: "recognize", sender: nil)
         }
         else
         {
-            for i in 0..<recognize.results.count
-            {
-                words[i] = recognize.results[i] as! String
-            }
+           
         }
-        performSegue(withIdentifier: "recognize", sender: nil)
+        
     }
     //返回方法
     @IBAction func close(Segue:UIStoryboardSegue)
     {
-        recognize.signatureBackgroundColor = UIColor.clear
+        recognize.backgroundColor = UIColor.clear
     }
 }

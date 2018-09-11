@@ -672,14 +672,23 @@
         <!--View Controller-->
         <scene sceneID="QDH-iV-ecE">
             <objects>
-                <viewController storyboardIdentifier="firstVC" id="EAV-kb-P4f" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="1" id="EAV-kb-P4f" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yUJ-yz-zPl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="文字底图1" translatesAutoresizingMaskIntoConstraints="NO" id="o54-7a-4tH">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend1" translatesAutoresizingMaskIntoConstraints="NO" id="o54-7a-4tH">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nrc-nD-JbB">
+                                <rect key="frame" x="0.0" y="587" width="414" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">王羲之是中国最著名的、成就最高的书法家，他广采众长，自成一家，不仅作为中国书法史上一座极具象征性的丰碑深远影响着中国千年书法，还留下了大量的丰富多样的书法精品。书法兼善隶、草、楷、行各体，精研体势，心摹手追，广采众长，备精诸体，冶于一炉，摆脱了汉魏笔风，自成一家，影响深远。
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -693,19 +702,30 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KB8-B8-m7J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2046" y="2624"/>
+            <point key="canvasLocation" x="2022" y="2697"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="L9q-n4-HNG">
             <objects>
-                <viewController storyboardIdentifier="secondVC" id="dpa-MW-mtQ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="2" id="dpa-MW-mtQ" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nUl-tx-TYh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="文字底图2" translatesAutoresizingMaskIntoConstraints="NO" id="Fiz-3E-GSA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend2" translatesAutoresizingMaskIntoConstraints="NO" id="Fiz-3E-GSA">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dSl-7y-UEp">
+                                <rect key="frame" x="0.0" y="581" width="414" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">“天下第一行书”《兰亭序》的书法精美奇妙。
+现存的临摹本以冯承素的“双钩填廓”摹本为最好。古人称王羲之作《兰亭序》，如“清风出袖，明月入怀”。全文二十八行，三百二十四字，字字“飘若浮云，娇如游龙，波谲云诡，变化无穷”，一改汉魏以来质朴稳拙的书风，开妍美流便的先河，其雄秀之气，似出天然。作者的风度、气质、襟怀、情操，亦糅进了作品之中。章法、结构、笔法都很完美，是他三十三岁时的得意之作，标志着王羲之的书法艺术达到了最高的境界。
+
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -719,19 +739,31 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8o4-5R-9Ow" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2860" y="2630"/>
+            <point key="canvasLocation" x="2859.4202898550725" y="2629.8913043478265"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="bXK-ox-Hpe">
             <objects>
-                <viewController storyboardIdentifier="thirdVC" id="WZH-CL-afX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="3" id="WZH-CL-afX" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SHI-S0-dI2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="文字底图3" translatesAutoresizingMaskIntoConstraints="NO" id="DPf-O4-mYk">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend3" translatesAutoresizingMaskIntoConstraints="NO" id="DPf-O4-mYk">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ifb-bK-5ts">
+                                <rect key="frame" x="0.0" y="581" width="414" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">王羲之《二谢帖》
+《二谢帖》是王羲之的一封信札。其开头的“二谢面未比面”可以说是行楷笔意，用直线条比较多，字比较挺。《二谢帖》笔法精妙，结体多欹侧取姿，有奇宕潇洒之致，是王羲之所创造的最新体势的典型作品。此帖书法自然洒脱，纵笔迅疾，恰如惊猿脱兔；驭笔徐缓，又如虎踞龙盘，抑扬顿挫，极有节奏感，是纵擒有度之作。 　　
+
+
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -745,12 +777,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="knf-Sk-gM5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3839" y="2630"/>
+            <point key="canvasLocation" x="3562" y="2630"/>
         </scene>
         <!--Commend Board View Controller-->
         <scene sceneID="1Zy-8A-KTL">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="1cp-ed-mrn" customClass="CommendBoardViewController" customModule="TouchStone" customModuleProvider="target" sceneMemberID="viewController">
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="1cp-ed-mrn" customClass="CommendBoardViewController" customModule="TouchStone" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="ziC-zV-7VB"/>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GLN-fJ-CNx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -808,6 +840,1803 @@
             </objects>
             <point key="canvasLocation" x="2860" y="1054"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="L8g-c9-bVa">
+            <objects>
+                <viewController storyboardIdentifier="4" id="bMb-A5-gE8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="97b-Dc-Wxq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend4" translatesAutoresizingMaskIntoConstraints="NO" id="aVp-Zd-wtP">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GdW-ez-d2y">
+                                <rect key="frame" x="0.0" y="581" width="414" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">《快雪时晴帖》其点画俯仰生情，钩挑都不露锋。其着重表现在用笔尤为圆劲，提按顿挫的节奏起伏与弹性感较平和，以圆笔藏锋为主，起笔与收笔匀整安稳，或轻或重，或快或慢，提按得当，从容不迫，神态自如，骨力中藏。整帖看来雍容古雅，圆浑研媚，其中或行或楷，或流而止，或止而流，无一笔掉以轻心，无一字不表现出意致的流利秀美。
+
+
+
+
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aVp-Zd-wtP" firstAttribute="top" secondItem="97b-Dc-Wxq" secondAttribute="top" id="ZeO-0C-l3m"/>
+                            <constraint firstItem="aVp-Zd-wtP" firstAttribute="trailing" secondItem="AUa-Cz-pKg" secondAttribute="trailing" id="h4C-BZ-bD6"/>
+                            <constraint firstItem="aVp-Zd-wtP" firstAttribute="leading" secondItem="AUa-Cz-pKg" secondAttribute="leading" id="tRD-bp-sja"/>
+                            <constraint firstItem="aVp-Zd-wtP" firstAttribute="bottom" secondItem="AUa-Cz-pKg" secondAttribute="bottom" id="xrj-bW-dU7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AUa-Cz-pKg"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o0x-Ty-ghY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4228" y="2663"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="E3c-eu-JfN">
+            <objects>
+                <viewController storyboardIdentifier="5" id="nPV-vl-K0w" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AMz-4x-69t">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend5" translatesAutoresizingMaskIntoConstraints="NO" id="GxP-Pi-zvm">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rTM-oc-T9H">
+                                <rect key="frame" x="0.0" y="581" width="414" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">王羲之《丧乱帖》
+《丧乱帖》是王羲之法帖之一，唐摹，行草体。传世为唐代响拓本，共八行，计六十二字。
+字势如斜而反正，笔意形断意连，原帖在中唐时期流入日本，现有影印本问世。
+
+
+
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GxP-Pi-zvm" firstAttribute="top" secondItem="AMz-4x-69t" secondAttribute="top" id="Cso-pP-a5t"/>
+                            <constraint firstItem="GxP-Pi-zvm" firstAttribute="bottom" secondItem="kFM-EZ-SbM" secondAttribute="bottom" id="dsr-fg-2WJ"/>
+                            <constraint firstItem="GxP-Pi-zvm" firstAttribute="trailing" secondItem="kFM-EZ-SbM" secondAttribute="trailing" id="gPR-Iv-h2u"/>
+                            <constraint firstItem="GxP-Pi-zvm" firstAttribute="leading" secondItem="kFM-EZ-SbM" secondAttribute="leading" id="pIR-Zw-zy4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kFM-EZ-SbM"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Azd-4t-J6M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4907" y="2630"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="IuZ-SA-1US">
+            <objects>
+                <viewController storyboardIdentifier="8" id="Xib-aY-boY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2kD-CM-VqK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend8" translatesAutoresizingMaskIntoConstraints="NO" id="oJv-5H-CRr">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aue-IE-zVX">
+                                <rect key="frame" x="0.0" y="573" width="414" height="163"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">颜真卿《祭侄文稿》
+颜真卿《祭侄文稿》是在极度悲愤的情绪下书写，顾不得笔墨的工拙，故字随书家情绪起伏，纯是精神和平时工力的自然流露。这在整个书法史上都是不多见的。可以说，《祭侄文稿》是极具史料价值和艺术价值的墨迹原作之一，至为宝贵。
+《祭侄文稿》打破了晋唐以来结体茂密、字形稍长的娟秀飘逸之风
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oJv-5H-CRr" firstAttribute="bottom" secondItem="x7E-gt-Uf4" secondAttribute="bottom" id="MTN-WL-YcC"/>
+                            <constraint firstItem="oJv-5H-CRr" firstAttribute="leading" secondItem="x7E-gt-Uf4" secondAttribute="leading" id="O7O-JC-ZCM"/>
+                            <constraint firstItem="oJv-5H-CRr" firstAttribute="trailing" secondItem="x7E-gt-Uf4" secondAttribute="trailing" id="aDF-xC-k3L"/>
+                            <constraint firstItem="oJv-5H-CRr" firstAttribute="top" secondItem="2kD-CM-VqK" secondAttribute="top" id="pGj-CG-Nzb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="x7E-gt-Uf4"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hJV-dJ-0qh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4227.536231884058" y="3310.597826086957"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zGr-SS-VNW">
+            <objects>
+                <viewController storyboardIdentifier="9" id="cwC-HN-GWE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nV7-OK-Oe5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend9" translatesAutoresizingMaskIntoConstraints="NO" id="Cfi-BO-IkP">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gTp-gX-GhM">
+                                <rect key="frame" x="0.0" y="571" width="414" height="165"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">颜真卿《麻姑仙坛记》
+此碑楷书，庄严雄秀，历来为人所重。此时颜真卿楷书风格已基本完善，不但结体紧结，开张一任自然，而且在笔画上也从光亮规整向“屋漏痕”的意趣迈进了。欧阳修《集古录》中说：“此碑遒峻紧结，尤为精悍，笔画巨细皆有法。”
+《善本碑帖录》称：所使拓本为横刻帖本，传宋时有原墨迹木刻本。
+
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Cfi-BO-IkP" firstAttribute="trailing" secondItem="2ER-an-OUD" secondAttribute="trailing" id="73t-tn-c2X"/>
+                            <constraint firstItem="Cfi-BO-IkP" firstAttribute="top" secondItem="nV7-OK-Oe5" secondAttribute="top" id="Fhy-BO-PFu"/>
+                            <constraint firstItem="Cfi-BO-IkP" firstAttribute="leading" secondItem="2ER-an-OUD" secondAttribute="leading" id="NSN-Jf-hFg"/>
+                            <constraint firstItem="Cfi-BO-IkP" firstAttribute="bottom" secondItem="2ER-an-OUD" secondAttribute="bottom" id="nQC-ca-RMU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2ER-an-OUD"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="91h-Sm-7DV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4905.7971014492759" y="3284.5108695652175"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="rY9-nv-WQn">
+            <objects>
+                <viewController storyboardIdentifier="7" id="Fda-9v-9B4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9BC-8O-VGy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend7" translatesAutoresizingMaskIntoConstraints="NO" id="Jah-yC-8B4">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fYZ-zC-Phe">
+                                <rect key="frame" x="0.0" y="581" width="414" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">颜真卿是继王羲之后成就最高，影响最大的书法家。他的行草传递出沉着痛快、豪迈洒脱的大师气象。颜真卿在书学史上以“颜体”缔造了一个独特的书学境界。
+颜鲁公书法既以卓越的灵性系之，境界自然瑰丽；既以其坚强的魂魄铸之，境界自然雄健；又以其丰富的人生育之，境界自然阔大。晚年犹求炉火纯青，出神入化的境界。其“颜体”在书坛巍然屹立。
+
+
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Jah-yC-8B4" firstAttribute="leading" secondItem="UCV-w0-VZu" secondAttribute="leading" id="6Nd-ne-d2d"/>
+                            <constraint firstItem="Jah-yC-8B4" firstAttribute="trailing" secondItem="UCV-w0-VZu" secondAttribute="trailing" id="I7w-E3-Dat"/>
+                            <constraint firstItem="Jah-yC-8B4" firstAttribute="top" secondItem="9BC-8O-VGy" secondAttribute="top" id="Kan-Dc-F6W"/>
+                            <constraint firstItem="Jah-yC-8B4" firstAttribute="bottom" secondItem="UCV-w0-VZu" secondAttribute="bottom" id="MQO-IY-9hc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UCV-w0-VZu"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gy6-CF-5J9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3561" y="3285"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="W0S-Wl-fR5">
+            <objects>
+                <viewController storyboardIdentifier="6" id="t4q-XM-uc0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tiO-RX-mlZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend6" translatesAutoresizingMaskIntoConstraints="NO" id="9Ec-zg-ghR">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mQz-Rq-o1o">
+                                <rect key="frame" x="0.0" y="581" width="414" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">王羲之《乐毅论》
+《乐毅论》王羲之书。小楷。褚遂良在《晋右军王羲之书目》将其列为第一。梁陶弘景说：“右军名迹，合有数首：《黄庭经》、《曹娥碑》、《乐毅论》是也。”王羲之书皆有真迹，惟此帖只有石刻。
+《乐毅论》是三国时期魏夏侯玄（字泰初）撰写的一篇文章，文中论述的是战国时代燕国名将乐 毅及其征讨各国之事。
+
+
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9Ec-zg-ghR" firstAttribute="bottom" secondItem="7hC-k1-84h" secondAttribute="bottom" id="7Dl-hN-oVx"/>
+                            <constraint firstItem="9Ec-zg-ghR" firstAttribute="top" secondItem="tiO-RX-mlZ" secondAttribute="top" id="WsJ-qg-n75"/>
+                            <constraint firstItem="9Ec-zg-ghR" firstAttribute="leading" secondItem="7hC-k1-84h" secondAttribute="leading" id="qMM-na-rqL"/>
+                            <constraint firstItem="9Ec-zg-ghR" firstAttribute="trailing" secondItem="7hC-k1-84h" secondAttribute="trailing" id="r6V-Fx-mxU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7hC-k1-84h"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Ba-xe-3fF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2858" y="3311"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Qus-nx-Tvs">
+            <objects>
+                <viewController storyboardIdentifier="29" id="Dfe-3b-MtH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YZ4-WE-drd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend29" translatesAutoresizingMaskIntoConstraints="NO" id="aVC-7p-ykN">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iGi-zc-CWU">
+                                <rect key="frame" x="0.0" y="571" width="414" height="165"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">米芾《岁丰帖》
+此帖所言内容乃紧系县民生计，从艺术的角度来看此帖的字，似乎有些拘仅，和米芾之前游山玩水，抒发己志的书风截然不同。尤其是前三行，从一些僵硬的笔画中不难想象米芾书写之状是紧握着笔，心有挂念，心情沉重。后四行稍好，但是从后三行始，字与字的间格太开，使行气不饱满，呈现一个个行楷的字，这是比较缺憾的。
+
+
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aVC-7p-ykN" firstAttribute="top" secondItem="YZ4-WE-drd" secondAttribute="top" id="Fob-Bo-Uuy"/>
+                            <constraint firstItem="aVC-7p-ykN" firstAttribute="leading" secondItem="R5E-ZR-be0" secondAttribute="leading" id="HKg-tX-sXN"/>
+                            <constraint firstItem="aVC-7p-ykN" firstAttribute="bottom" secondItem="R5E-ZR-be0" secondAttribute="bottom" id="niC-Jp-R61"/>
+                            <constraint firstItem="aVC-7p-ykN" firstAttribute="trailing" secondItem="R5E-ZR-be0" secondAttribute="trailing" id="uEI-Wk-g9h"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="R5E-ZR-be0"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hFi-3F-fTX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4227.536231884058" y="1997.2826086956522"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="edL-fY-Bht">
+            <objects>
+                <viewController storyboardIdentifier="28" id="15K-AX-Ae1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yFI-Jg-ESC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend28" translatesAutoresizingMaskIntoConstraints="NO" id="YRt-nx-60b">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dGh-y3-LUc">
+                                <rect key="frame" x="0.0" y="581" width="414" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">米芾《乡石帖》
+
+
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YRt-nx-60b" firstAttribute="leading" secondItem="M9b-gg-ybn" secondAttribute="leading" id="DhE-V4-XX7"/>
+                            <constraint firstItem="YRt-nx-60b" firstAttribute="top" secondItem="yFI-Jg-ESC" secondAttribute="top" id="SnM-Tq-c6f"/>
+                            <constraint firstItem="YRt-nx-60b" firstAttribute="bottom" secondItem="M9b-gg-ybn" secondAttribute="bottom" id="Vk0-Fk-nEI"/>
+                            <constraint firstItem="YRt-nx-60b" firstAttribute="trailing" secondItem="M9b-gg-ybn" secondAttribute="trailing" id="fFB-nR-z10"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="M9b-gg-ybn"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yhM-eb-di2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3516" y="2010"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Ky2-5D-J52">
+            <objects>
+                <viewController storyboardIdentifier="30" id="f6w-ZV-E9s" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BwK-f2-f7m">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend30" translatesAutoresizingMaskIntoConstraints="NO" id="kjL-bk-rXw">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="epm-JZ-VhP">
+                                <rect key="frame" x="0.0" y="581" width="414" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">柳公权，官至太子少师，世称“柳少师”，吸取了颜，欧之长，在晋人劲媚和颜书雍容雄浑之间，形成了自己的柳体，以骨力劲健见长，后世有 “颜筋柳骨”的美誉。柳公权的书法在唐朝当时即负盛名，民间更有“柳字一字值千金”的说法。
+
+
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kjL-bk-rXw" firstAttribute="bottom" secondItem="Zio-2q-JCh" secondAttribute="bottom" id="895-Na-4HR"/>
+                            <constraint firstItem="kjL-bk-rXw" firstAttribute="top" secondItem="BwK-f2-f7m" secondAttribute="top" id="8GI-7Y-44F"/>
+                            <constraint firstItem="kjL-bk-rXw" firstAttribute="leading" secondItem="Zio-2q-JCh" secondAttribute="leading" id="ixX-Nr-aCn"/>
+                            <constraint firstItem="kjL-bk-rXw" firstAttribute="trailing" secondItem="Zio-2q-JCh" secondAttribute="trailing" id="rMn-N2-vfy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Zio-2q-JCh"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ea3-Eb-lzu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4906" y="1936"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hc5-27-xv0">
+            <objects>
+                <viewController storyboardIdentifier="32" id="5H6-1K-P3S" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qh4-pE-JrQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend32" translatesAutoresizingMaskIntoConstraints="NO" id="yuK-Eq-df3">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZqJ-cV-MG7">
+                                <rect key="frame" x="0.0" y="581" width="414" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">柳公权《玄秘塔碑》
+明王世贞云：“此碑柳书中最露筋骨者。”其骨力矫健，筋骨特露，刚健遒媚；结字瘦长，且大小颇有错落，巧富变化，顾盼神飞，行间气脉流贯。全碑无一懈笔，可谓精绝。
+
+
+
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yuK-Eq-df3" firstAttribute="trailing" secondItem="yat-Gd-uSG" secondAttribute="trailing" id="1To-XW-XN0"/>
+                            <constraint firstItem="yuK-Eq-df3" firstAttribute="leading" secondItem="yat-Gd-uSG" secondAttribute="leading" id="Au5-NI-tOn"/>
+                            <constraint firstItem="yuK-Eq-df3" firstAttribute="bottom" secondItem="yat-Gd-uSG" secondAttribute="bottom" id="EFM-Mk-Rcs"/>
+                            <constraint firstItem="yuK-Eq-df3" firstAttribute="top" secondItem="Qh4-pE-JrQ" secondAttribute="top" id="GkF-ud-DnP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yat-Gd-uSG"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JoB-OD-Ktf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4228" y="1335"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mZH-fg-al6">
+            <objects>
+                <viewController storyboardIdentifier="31" id="3He-ov-piX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IUx-Zd-Vje">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend31" translatesAutoresizingMaskIntoConstraints="NO" id="yQE-I0-xjf">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CXV-Dp-Yqw">
+                                <rect key="frame" x="0.0" y="581" width="414" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">纵观《神策军碑》全帖，其独特的艺术气息扑面而来，使人一望便知是柳公权的手笔。
+瘦硬通神，刚柔相济。《神策军碑》中的字，并非一味追求“骨感”，而是“颜筋”与“柳骨”均有不同程度的体现，表现出刚柔相济、筋骨并存的特点。其刚劲挺拔之态、森严锋利之势呼之欲出而无“露骨”之嫌，如右图中“森”、“武”、“朱”、“被”四字。
+
+
+
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yQE-I0-xjf" firstAttribute="top" secondItem="IUx-Zd-Vje" secondAttribute="top" id="HCM-DU-Z6c"/>
+                            <constraint firstItem="yQE-I0-xjf" firstAttribute="bottom" secondItem="oye-j8-lbS" secondAttribute="bottom" id="c6b-WN-0vb"/>
+                            <constraint firstItem="yQE-I0-xjf" firstAttribute="trailing" secondItem="oye-j8-lbS" secondAttribute="trailing" id="tC0-J3-Thr"/>
+                            <constraint firstItem="yQE-I0-xjf" firstAttribute="leading" secondItem="oye-j8-lbS" secondAttribute="leading" id="zvH-dO-qbf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oye-j8-lbS"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RJa-Vl-94r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4906" y="1262"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="pLF-Tk-Mao">
+            <objects>
+                <viewController storyboardIdentifier="33" id="2wm-xv-oSt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Ub-2v-itw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend33" translatesAutoresizingMaskIntoConstraints="NO" id="iUQ-bB-chP">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h9h-IT-AGf">
+                                <rect key="frame" x="0.0" y="581" width="414" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">柳公权《金刚经》
+唐代柳公权楷书《金刚经》唐拓本是柳公权早期的书法作品，原石于宋代已被毁，现仅见敦煌石窟发现的“唐拓孤本”。柳公权早年曾广采众家之长，而且特别注意向前辈书家学习。从《金刚经》中，我们可以看出他取法诸家的痕迹。《广川书跋》云：“此经本出于西明寺。今考其书，诚为绝艺，尤可贵也。”
+
+
+
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iUQ-bB-chP" firstAttribute="bottom" secondItem="iaX-9u-HLA" secondAttribute="bottom" id="416-hO-yEc"/>
+                            <constraint firstItem="iUQ-bB-chP" firstAttribute="top" secondItem="3Ub-2v-itw" secondAttribute="top" id="DtN-gM-qG9"/>
+                            <constraint firstItem="iUQ-bB-chP" firstAttribute="trailing" secondItem="iaX-9u-HLA" secondAttribute="trailing" id="T4L-rV-SFu"/>
+                            <constraint firstItem="iUQ-bB-chP" firstAttribute="leading" secondItem="iaX-9u-HLA" secondAttribute="leading" id="qV5-aK-QAv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iaX-9u-HLA"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Umg-XX-e7d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3516" y="1335"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cx4-4f-yyP">
+            <objects>
+                <viewController storyboardIdentifier="21" id="CZC-hM-bfj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="abw-Pb-G75">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend21" translatesAutoresizingMaskIntoConstraints="NO" id="d7O-Gs-fFF">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p1L-hg-x1r">
+                                <rect key="frame" x="0.0" y="587" width="414" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">张旭的《草书心经》最早见于《碑刻拔萃》，其《唐草心经》碑目下写明张旭，此前碑林中有明成化年间知府孙仁从百塔寺移来的《草书心经》，《关中金石文字存逸考》对这两种草书“心经”都录，其“心经、肚痛帖、千文断碑”条下注“均张旭草书，无年月”，并称“右三石均在西安碑林”。张旭的《草书心经》最晚见于民国三年（1914年)
+
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="d7O-Gs-fFF" firstAttribute="leading" secondItem="abw-Pb-G75" secondAttribute="leading" id="F4y-Ru-QMf"/>
+                            <constraint firstItem="d7O-Gs-fFF" firstAttribute="bottom" secondItem="IB8-2o-mfB" secondAttribute="bottom" id="Oc5-Jq-P9P"/>
+                            <constraint firstAttribute="trailing" secondItem="d7O-Gs-fFF" secondAttribute="trailing" id="OfC-MZ-FNk"/>
+                            <constraint firstItem="d7O-Gs-fFF" firstAttribute="top" secondItem="abw-Pb-G75" secondAttribute="top" id="ZXw-Rp-ztr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IB8-2o-mfB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fzo-TO-eVn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2045" y="1997"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Ufa-rT-8w0">
+            <objects>
+                <viewController storyboardIdentifier="20" id="2Vx-6Q-pnS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NJS-W6-vlC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend20" translatesAutoresizingMaskIntoConstraints="NO" id="y77-nh-mmf">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F1G-Dm-HSq">
+                                <rect key="frame" x="0.0" y="587" width="414" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">张旭肚子痛，一时有感，发于笔端，随手写下一个字条，竟成了千古名帖《肚痛帖》。全帖六行30字，文日：“忽肚痛不可堪，不知是冷热所致，欲服大黄汤，冷热俱有益。如何为计，非临床。”这幅作品开头的三个字，写得还比较规正，字与字之间不相连接。
+
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="y77-nh-mmf" firstAttribute="bottom" secondItem="sGG-aL-U5i" secondAttribute="bottom" id="3rG-Vd-i7K"/>
+                            <constraint firstItem="y77-nh-mmf" firstAttribute="top" secondItem="NJS-W6-vlC" secondAttribute="top" id="Ubk-Ft-33G"/>
+                            <constraint firstItem="y77-nh-mmf" firstAttribute="leading" secondItem="NJS-W6-vlC" secondAttribute="leading" id="b3v-eH-668"/>
+                            <constraint firstAttribute="trailing" secondItem="y77-nh-mmf" secondAttribute="trailing" id="iaz-IW-2nV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sGG-aL-U5i"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U7H-gq-cDL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1354" y="2697"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="KfF-tY-qeE">
+            <objects>
+                <viewController storyboardIdentifier="17" id="3Qo-lg-e5c" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CzS-df-mF8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend17" translatesAutoresizingMaskIntoConstraints="NO" id="ZmV-nW-3of">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FWm-Nh-LVg">
+                                <rect key="frame" x="0.0" y="587" width="414" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">欧阳询《仲尼梦奠帖》
+欧阳询《梦奠帖》，全称《仲尼梦奠帖》，纸本，行书，七十八字，无款，但流传有序，曾入南宋内府收藏，钤有南宋御府法书朱文印记两方，绍兴朱文连珠印记，后经南宋贾似道，元郭天锡、乔篑成，明杨士奇、项元汴，清高士奇、清内府等递藏。
+
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZmV-nW-3of" firstAttribute="bottom" secondItem="IVW-qG-STk" secondAttribute="bottom" id="3wG-4a-NEu"/>
+                            <constraint firstItem="ZmV-nW-3of" firstAttribute="leading" secondItem="CzS-df-mF8" secondAttribute="leading" id="JLS-s4-cdU"/>
+                            <constraint firstItem="ZmV-nW-3of" firstAttribute="top" secondItem="CzS-df-mF8" secondAttribute="top" id="KpX-Sm-dgg"/>
+                            <constraint firstAttribute="trailing" secondItem="ZmV-nW-3of" secondAttribute="trailing" id="sl0-rh-Dgb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IVW-qG-STk"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7hI-jc-NB5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1426" y="3359"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="A7v-1h-XWR">
+            <objects>
+                <viewController storyboardIdentifier="16" id="jFM-6y-2wN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jlp-No-Mak">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend16" translatesAutoresizingMaskIntoConstraints="NO" id="tnS-X8-ETE">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h5p-m0-l4d">
+                                <rect key="frame" x="0.0" y="587" width="414" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">清光绪二十二年（1896年）敦煌石室曾发现唐拓本，为法国人伯希和携往国外，分存于法国巴黎图书馆、英国伦敦博物馆。近年敦煌石室，发现一个残本，存236字，摹拓颇精彩。一般人所称道的《化度寺碑》，多指遗落在宋时的唐原石，其临模镌石的确精绝。可是后人误把宋人翻刻的当作唐朝原石，仍声称唐石宋拓，这主要是翁方纲的错误。
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tnS-X8-ETE" firstAttribute="top" secondItem="Jlp-No-Mak" secondAttribute="top" id="W2D-3h-zWF"/>
+                            <constraint firstAttribute="trailing" secondItem="tnS-X8-ETE" secondAttribute="trailing" id="afl-qR-MWP"/>
+                            <constraint firstItem="tnS-X8-ETE" firstAttribute="bottom" secondItem="xw9-He-504" secondAttribute="bottom" id="crd-pv-3Em"/>
+                            <constraint firstItem="tnS-X8-ETE" firstAttribute="leading" secondItem="Jlp-No-Mak" secondAttribute="leading" id="x3n-Ir-SVH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xw9-He-504"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N9I-OF-N8t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2159" y="3359"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="l50-27-rTb">
+            <objects>
+                <viewController storyboardIdentifier="22" id="k7Y-im-xyU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RvD-vO-kxr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend22" translatesAutoresizingMaskIntoConstraints="NO" id="eCU-ff-jQN">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="evZ-7Y-j5Q">
+                                <rect key="frame" x="0.0" y="587" width="414" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">《郎官石拄记》书，原石久佚，传世仅王世贞旧藏“宋拓孤本”，弥足珍贵。张旭草书纵放奇宕，而此序楷势精劲凝重，法度森严，雍容闲雅兼而有之，是张旭存世的唯一楷书作品。有影印本行世。
+
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="eCU-ff-jQN" secondAttribute="trailing" id="3De-ko-kyZ"/>
+                            <constraint firstItem="eCU-ff-jQN" firstAttribute="top" secondItem="RvD-vO-kxr" secondAttribute="top" id="NMU-9J-Dur"/>
+                            <constraint firstItem="eCU-ff-jQN" firstAttribute="bottom" secondItem="6x2-ks-NCB" secondAttribute="bottom" id="Ohv-Tp-W6N"/>
+                            <constraint firstItem="eCU-ff-jQN" firstAttribute="leading" secondItem="RvD-vO-kxr" secondAttribute="leading" id="vZG-6y-Uat"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6x2-ks-NCB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e6R-5O-USq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1354" y="2010"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="KAJ-Ih-upc">
+            <objects>
+                <viewController storyboardIdentifier="25" id="a9N-Vk-Mf5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pkA-ko-izU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend25" translatesAutoresizingMaskIntoConstraints="NO" id="j7D-jv-NEX">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GeS-mB-a2l">
+                                <rect key="frame" x="0.0" y="587" width="414" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">米芾《蜀素帖》 墨迹绢本 台北故宫博物馆藏
+《蜀素帖》书于乌丝栏内，但气势丝毫不受局限，率意放纵，用笔俊迈，笔势飞动，提按转折挑，曲尽变化。董其昌跋曰：“此卷如狮子搏象，以全力赴之，当为生平合作”。
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="j7D-jv-NEX" firstAttribute="top" secondItem="pkA-ko-izU" secondAttribute="top" id="16w-4n-kv0"/>
+                            <constraint firstItem="j7D-jv-NEX" firstAttribute="bottom" secondItem="lQC-eL-Vqp" secondAttribute="bottom" id="FAY-SA-tzl"/>
+                            <constraint firstAttribute="trailing" secondItem="j7D-jv-NEX" secondAttribute="trailing" id="QOv-kL-UMJ"/>
+                            <constraint firstItem="j7D-jv-NEX" firstAttribute="leading" secondItem="pkA-ko-izU" secondAttribute="leading" id="lbS-sV-BVu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lQC-eL-Vqp"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f9y-Db-o0g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2045" y="1335"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="D8d-6Y-FBq">
+            <objects>
+                <viewController storyboardIdentifier="24" id="tQY-U4-9W4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uvN-ea-5pq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iud-lp-WNw">
+                                <rect key="frame" x="0.0" y="587" width="414" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">他是“宋四书法家”（苏、米、黄、蔡）之一，又首屈一指，擅篆、隶、楷、行、草等书体，长于临摹古人书法，达到乱真程度。其书体潇散奔放，又严于法度。《宋史·文苑传》说：“芾特妙于翰墨，沈著飞，得王献之笔意。”因其衣着行为以及迷恋书画珍石的态度皆被当世视为癫狂，故又有“米颠”之称。
+
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend24" translatesAutoresizingMaskIntoConstraints="NO" id="J0e-t9-fsd">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="J0e-t9-fsd" secondAttribute="trailing" id="GVB-tv-ZMF"/>
+                            <constraint firstItem="J0e-t9-fsd" firstAttribute="bottom" secondItem="OJ1-YA-XIP" secondAttribute="bottom" id="fRe-qU-MBh"/>
+                            <constraint firstItem="J0e-t9-fsd" firstAttribute="leading" secondItem="uvN-ea-5pq" secondAttribute="leading" id="of2-gs-by5"/>
+                            <constraint firstItem="J0e-t9-fsd" firstAttribute="top" secondItem="uvN-ea-5pq" secondAttribute="top" id="qvU-0U-yro"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OJ1-YA-XIP"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SJz-8T-wCk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1354" y="1335"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="qlL-5g-YkT">
+            <objects>
+                <viewController storyboardIdentifier="26" id="k9I-3S-lpN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DjE-E1-Z9f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend26" translatesAutoresizingMaskIntoConstraints="NO" id="97r-X7-kjA">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u7i-aa-a5s">
+                                <rect key="frame" x="0.0" y="587" width="414" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">米芾《苕溪诗》
+此卷用笔中锋直下，浓纤兼出，落笔迅疾，纵横恣肆。尤其运锋，正、侧、藏、露变化丰富，点画波折过渡连贯，提按起伏自然超逸，毫无雕琢之痕。其结体舒畅，中宫微敛，保持了重心的平衡。同时长画纵横，舒展自如，富抑扬起伏变化。通篇字体微向左倾，多攲侧之势，于险劲中求平夷。
+
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="97r-X7-kjA" firstAttribute="bottom" secondItem="2hH-Ft-z8L" secondAttribute="bottom" id="HUc-s8-aO9"/>
+                            <constraint firstItem="97r-X7-kjA" firstAttribute="top" secondItem="DjE-E1-Z9f" secondAttribute="top" id="P2e-Bq-dxF"/>
+                            <constraint firstAttribute="trailing" secondItem="97r-X7-kjA" secondAttribute="trailing" id="Uqh-5f-bhs"/>
+                            <constraint firstItem="97r-X7-kjA" firstAttribute="leading" secondItem="DjE-E1-Z9f" secondAttribute="leading" id="YiN-nf-JRn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2hH-Ft-z8L"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2gT-kB-vEd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2045" y="728"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7Fn-BZ-aF1">
+            <objects>
+                <viewController storyboardIdentifier="27" id="dwi-Mr-Bzg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Md6-oZ-7rU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend27" translatesAutoresizingMaskIntoConstraints="NO" id="chI-7Y-BBO">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AdL-4w-bGx">
+                                <rect key="frame" x="0.0" y="587" width="414" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">《清和帖》是米芾写给友人窦先生的一封信，应是晚年的友人。信中提到与窦先生很久未见，表达倾慕敬仰之意。米芾并藉由描述夏初气候，询问对方起居生活如何？他接着自述年事衰老，却必须赴任官职，因此不能久留，恭敬地希望对方保重。当时米芾正准备前往汴京（河南开封）接任书画学博士。信中内容虽然简单，却表现了即将接下官职的心情。
+
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="chI-7Y-BBO" firstAttribute="top" secondItem="Md6-oZ-7rU" secondAttribute="top" id="2yn-YR-wXl"/>
+                            <constraint firstItem="chI-7Y-BBO" firstAttribute="bottom" secondItem="KbU-dG-Jza" secondAttribute="bottom" id="GlI-6y-ICV"/>
+                            <constraint firstAttribute="trailing" secondItem="chI-7Y-BBO" secondAttribute="trailing" id="SQH-kM-kCh"/>
+                            <constraint firstItem="chI-7Y-BBO" firstAttribute="leading" secondItem="Md6-oZ-7rU" secondAttribute="leading" id="nyd-R7-5l1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KbU-dG-Jza"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kT8-i7-FIK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1354" y="728"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2JC-bU-VB3">
+            <objects>
+                <viewController storyboardIdentifier="19" id="IW7-gp-hsz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sLw-es-cup">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend19" translatesAutoresizingMaskIntoConstraints="NO" id="Dzk-um-Nhb">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KTK-eG-FTs">
+                                <rect key="frame" x="0.0" y="587" width="414" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">张旭以草书著名，与李白诗歌，裴旻剑舞，称为“三绝”。诗亦别具一格，以七绝见长，与李白、贺知章等人共列饮中八仙之一。与贺知章、张若虚、包融号称“吴中四士”。书法与怀素齐名。
+张旭传世书迹有《肚痛帖》《古诗四帖》等。
+
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Dzk-um-Nhb" secondAttribute="trailing" id="Qzc-yo-ycx"/>
+                            <constraint firstItem="Dzk-um-Nhb" firstAttribute="bottom" secondItem="fBJ-sm-ktF" secondAttribute="bottom" id="ox2-AI-y9o"/>
+                            <constraint firstItem="Dzk-um-Nhb" firstAttribute="leading" secondItem="sLw-es-cup" secondAttribute="leading" id="rYd-e1-lbO"/>
+                            <constraint firstItem="Dzk-um-Nhb" firstAttribute="top" secondItem="sLw-es-cup" secondAttribute="top" id="zVh-js-4Jk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fBJ-sm-ktF"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mhY-I0-5yW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="661" y="2697"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="KBe-ke-Szo">
+            <objects>
+                <viewController storyboardIdentifier="23" id="ec7-ig-yKr" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="reS-PB-YRt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend23" translatesAutoresizingMaskIntoConstraints="NO" id="vhu-Je-Bqs">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kLf-hA-vfG">
+                                <rect key="frame" x="0.0" y="587" width="414" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">《古诗四帖》通篇笔画丰满，绝无纤弱浮滑之笔。行文跌宕起伏，动静交错，满纸如云烟缭绕，实乃草书颠峰之篇。今人郭子绪云：“《古诗四帖》，可以说是张旭全部生命的结晶，是天才美和自然美的典型，民族艺术的精华，永恒美的象征。”
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vhu-Je-Bqs" firstAttribute="leading" secondItem="reS-PB-YRt" secondAttribute="leading" id="GSw-Um-2wD"/>
+                            <constraint firstAttribute="trailing" secondItem="vhu-Je-Bqs" secondAttribute="trailing" id="HeL-fg-bm8"/>
+                            <constraint firstItem="vhu-Je-Bqs" firstAttribute="bottom" secondItem="j0V-rp-pcY" secondAttribute="bottom" id="aeZ-ao-ZZk"/>
+                            <constraint firstItem="vhu-Je-Bqs" firstAttribute="top" secondItem="reS-PB-YRt" secondAttribute="top" id="ueX-5f-cnB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="j0V-rp-pcY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nqx-dO-QqB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="661" y="2010"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="XOM-va-IsX">
+            <objects>
+                <viewController storyboardIdentifier="18" id="lKT-8V-iw2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kao-z5-po2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend18" translatesAutoresizingMaskIntoConstraints="NO" id="tcm-Rx-xCO">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cN1-Uz-VeS">
+                                <rect key="frame" x="0.0" y="587" width="414" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">欧阳询《行书千字文》
+唐代欧阳询《行书千字文》墨迹本，附跋文，辽宁省博物馆藏。
+此帖是流传有绪的名帖之一。此帖曾归宋王诜所有，其后经贾似道等收藏，明代入项元汴天籁阁，清乾隆初归安岐所有，并摹勒上石。后入清内府。 经浦仪带出清宫，成为“东北货”。现藏辽宁省博物馆。
+
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tcm-Rx-xCO" firstAttribute="top" secondItem="Kao-z5-po2" secondAttribute="top" id="Kfk-ot-YwW"/>
+                            <constraint firstAttribute="trailing" secondItem="tcm-Rx-xCO" secondAttribute="trailing" id="TeR-Go-6O0"/>
+                            <constraint firstItem="tcm-Rx-xCO" firstAttribute="bottom" secondItem="UWk-72-maj" secondAttribute="bottom" id="lJm-p6-aKe"/>
+                            <constraint firstItem="tcm-Rx-xCO" firstAttribute="leading" secondItem="Kao-z5-po2" secondAttribute="leading" id="oeA-1d-5Tk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UWk-72-maj"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JfC-r4-1qZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="716" y="3443"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="FRk-jX-8oJ">
+            <objects>
+                <viewController storyboardIdentifier="14" id="03a-wX-vSR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nsa-yM-9DB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend14" translatesAutoresizingMaskIntoConstraints="NO" id="31H-wD-5I9">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YRt-AE-7yM">
+                                <rect key="frame" x="0.0" y="587" width="414" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">《九成宫醴泉铭》充分体现了欧阳询的书法结构严谨、圆润中见秀劲的特点，此碑书法，高华庄重，法度森严，笔画似方似圆，结构布置精严，上承下覆，左揖右让，局部险劲而整体端庄，无一处紊乱，无一笔松塌。用笔方整，紧凑，平稳而险绝。明陈继儒曾评论说：“此帖如深山至人，瘦硬清寒，而神气充腴，能令王者屈膝，非他刻可方驾也。”
+
+
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="31H-wD-5I9" firstAttribute="top" secondItem="nsa-yM-9DB" secondAttribute="top" id="24b-0W-plP"/>
+                            <constraint firstItem="31H-wD-5I9" firstAttribute="leading" secondItem="nsa-yM-9DB" secondAttribute="leading" id="53P-Nw-VER"/>
+                            <constraint firstAttribute="trailing" secondItem="31H-wD-5I9" secondAttribute="trailing" id="Mvv-Io-7cz"/>
+                            <constraint firstItem="31H-wD-5I9" firstAttribute="bottom" secondItem="cEL-bH-4mO" secondAttribute="bottom" id="Zkv-a4-5U5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cEL-bH-4mO"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lZM-Gr-OT6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2158" y="4071"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="RwU-AF-QMK">
+            <objects>
+                <viewController storyboardIdentifier="13" id="jAN-be-4NW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1gV-dJ-Ydf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend13" translatesAutoresizingMaskIntoConstraints="NO" id="fW2-hU-FMD">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2dn-hb-qUR">
+                                <rect key="frame" x="0.0" y="587" width="414" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">欧阳询为史上著名楷书四大家之一，对书法有其独到的见解，有书法“八诀”。他的书法成就以楷书为最，笔力险劲，结构独异，后人称为“欧体”。其楷书法度之严谨，笔力之险峻，世无所匹，被称之为唐人楷书第一。其源出于汉隶，骨气劲峭，法度谨严，于平正中见险绝，于规矩中见飘逸，笔画穿插，安排妥贴。
+
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fW2-hU-FMD" firstAttribute="bottom" secondItem="fKx-n3-hYx" secondAttribute="bottom" id="0s3-mC-7SW"/>
+                            <constraint firstItem="fW2-hU-FMD" firstAttribute="leading" secondItem="1gV-dJ-Ydf" secondAttribute="leading" id="1hx-dm-kEN"/>
+                            <constraint firstItem="fW2-hU-FMD" firstAttribute="top" secondItem="1gV-dJ-Ydf" secondAttribute="top" id="350-vb-2BL"/>
+                            <constraint firstAttribute="trailing" secondItem="fW2-hU-FMD" secondAttribute="trailing" id="EqC-rJ-KqY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fKx-n3-hYx"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wwp-yn-F57" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2859" y="4011"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="x69-Jl-ZGx">
+            <objects>
+                <viewController storyboardIdentifier="15" id="3gM-yu-gZb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TDr-UK-xT1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend15" translatesAutoresizingMaskIntoConstraints="NO" id="Dbd-MY-fYL">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Ou-Hz-jq8">
+                                <rect key="frame" x="0.0" y="587" width="414" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">欧阳询—皇甫诞碑全称《隋柱国左光禄大夫弘义明公皇甫府君之碑》，亦称《皇甫君碑》。 
+《皇甫诞碑》用笔紧密内敛，刚劲不挠。点画重在提笔刻入，此为唐初未脱魏碑及隋碑的瘦劲书风所特有的笔法特点。杨士奇云：“询书骨气劲峭，法度严整，论者谓虞（世南）得晋之飘遗，欧（阳询）得晋之严整。"
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Dbd-MY-fYL" firstAttribute="bottom" secondItem="419-lZ-J98" secondAttribute="bottom" id="631-JX-l4a"/>
+                            <constraint firstItem="Dbd-MY-fYL" firstAttribute="top" secondItem="TDr-UK-xT1" secondAttribute="top" id="7Al-av-Xhx"/>
+                            <constraint firstItem="Dbd-MY-fYL" firstAttribute="leading" secondItem="TDr-UK-xT1" secondAttribute="leading" id="G0X-fb-z0S"/>
+                            <constraint firstAttribute="trailing" secondItem="Dbd-MY-fYL" secondAttribute="trailing" id="M2b-Bc-vIw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="419-lZ-J98"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pbd-sI-47P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1425" y="4121"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="vWb-UL-VCO">
+            <objects>
+                <viewController storyboardIdentifier="12" id="nmQ-oE-pUN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9MF-JX-Dez">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend12" translatesAutoresizingMaskIntoConstraints="NO" id="XUo-1n-KJE">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oKE-KK-SVX">
+                                <rect key="frame" x="0.0" y="587" width="414" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">颜真卿《乞米帖》，约书于永泰元年（765年）。拓本。行书，信札。凡4行，计44字。浙江省博物馆藏南宋留元刚《忠义堂帖》本。
+据宋欧阳修《集古录》云：“此本墨迹在余亡友王子野家。子野生于相家而清苦甚寒士，尝模帖刻石遗于朋友。”米芾《宝章待访录》云：《乞米帖》“真帖楮纸在朝请郎苏　处，度支郎中舜元子也。"
+
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XUo-1n-KJE" firstAttribute="bottom" secondItem="j7q-o5-MAZ" secondAttribute="bottom" id="CXv-hC-s6c"/>
+                            <constraint firstItem="XUo-1n-KJE" firstAttribute="top" secondItem="9MF-JX-Dez" secondAttribute="top" id="Jyn-zO-mOT"/>
+                            <constraint firstAttribute="trailing" secondItem="XUo-1n-KJE" secondAttribute="trailing" id="PHt-xp-EPo"/>
+                            <constraint firstItem="XUo-1n-KJE" firstAttribute="leading" secondItem="9MF-JX-Dez" secondAttribute="leading" id="pvD-kJ-7O6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="j7q-o5-MAZ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YwR-b3-w2O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3516" y="4070"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="T6p-B6-Wjo">
+            <objects>
+                <viewController storyboardIdentifier="11" id="Dk9-li-Ld5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bdc-R3-xgp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend11" translatesAutoresizingMaskIntoConstraints="NO" id="OSG-9g-mMz">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ace-7i-1Tg">
+                                <rect key="frame" x="0.0" y="587" width="414" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">《争座位帖》为颜真卿行草书精品，唐广德二年（公元764）颜真卿写给仆射郭英又的书信手稿。颜真卿引历代及唐代成规抗争之，写下此长信。此稿系颜真卿因不满权奸的骄横跋扈而奋笔直书的作品，故通篇刚烈之气跃然纸上。许多字与行还写得豪宕尽兴，姿态飞动，虎虎有生气，似乎也显示了他刚强耿直而朴实敦厚的性格。
+
+
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="OSG-9g-mMz" secondAttribute="trailing" id="654-41-sV5"/>
+                            <constraint firstItem="OSG-9g-mMz" firstAttribute="leading" secondItem="Bdc-R3-xgp" secondAttribute="leading" id="iTZ-5Z-q3k"/>
+                            <constraint firstItem="OSG-9g-mMz" firstAttribute="bottom" secondItem="ghR-yd-5QP" secondAttribute="bottom" id="tcY-0W-Ur0"/>
+                            <constraint firstItem="OSG-9g-mMz" firstAttribute="top" secondItem="Bdc-R3-xgp" secondAttribute="top" id="uzS-Hp-MXl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ghR-yd-5QP"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e39-lT-eng" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4228" y="4070"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="DqB-SY-ANI">
+            <objects>
+                <viewController storyboardIdentifier="10" id="z3E-gz-cqw" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jKh-fZ-ddn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend10" translatesAutoresizingMaskIntoConstraints="NO" id="Skx-VY-iXM">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Che-Gn-n4U">
+                                <rect key="frame" x="0.0" y="587" width="414" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">《多宝塔碑》此碑是颜真卿44岁时书，整篇结构严密，点画圆整，秀丽刚劲，虽尚未形成刚劲雄强、沉雄浑厚、大气磅礴的颜楷风格，但此碑已奠定了颜真卿书风的基本格调，它是留传下来的颜书中最早的楷书作品，结构平稳端正，严谨庄重，是唐代“尚法”的代表碑刻之一，学颜体者多从此碑下手，入其堂奥。
+
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Skx-VY-iXM" secondAttribute="trailing" id="16U-tp-KnX"/>
+                            <constraint firstItem="Skx-VY-iXM" firstAttribute="leading" secondItem="jKh-fZ-ddn" secondAttribute="leading" id="bwi-bN-dHC"/>
+                            <constraint firstItem="Skx-VY-iXM" firstAttribute="top" secondItem="jKh-fZ-ddn" secondAttribute="top" id="rL0-Ma-GLp"/>
+                            <constraint firstItem="Skx-VY-iXM" firstAttribute="bottom" secondItem="hmN-mk-CYK" secondAttribute="bottom" id="szZ-aH-2ps"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hmN-mk-CYK"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5q3-7y-EHz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4975" y="4070"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="krC-rL-B6d">
+            <objects>
+                <viewController storyboardIdentifier="36" id="xar-Zv-IUY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VAP-LV-KhQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend36" translatesAutoresizingMaskIntoConstraints="NO" id="kWr-4F-L5O">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WlW-Zo-J9b">
+                                <rect key="frame" x="0.0" y="581" width="414" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">《黄州寒食帖》是苏轼行书的上乘之作。这是一首遣兴的诗作，是苏轼被贬黄州第三年的寒食节所发的人生之叹。通篇书法起伏跌宕，光彩照人，气势奔放，而无荒率之笔，被誉为"天下第三行书"。
+此帖是苏轼行书的代表作。这是一首遣兴的诗作，是苏轼被贬黄州第三年的寒食节所发的 人生之叹。诗写得苍凉多情，表达了苏轼此时惆怅孤独的心情。
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kWr-4F-L5O" firstAttribute="top" secondItem="VAP-LV-KhQ" secondAttribute="top" id="5GW-O7-ShM"/>
+                            <constraint firstItem="kWr-4F-L5O" firstAttribute="leading" secondItem="mVm-d6-j2t" secondAttribute="leading" id="I23-kT-kgU"/>
+                            <constraint firstItem="kWr-4F-L5O" firstAttribute="bottom" secondItem="mVm-d6-j2t" secondAttribute="bottom" id="T56-5S-I22"/>
+                            <constraint firstItem="kWr-4F-L5O" firstAttribute="trailing" secondItem="mVm-d6-j2t" secondAttribute="trailing" id="fa5-46-O9z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mVm-d6-j2t"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oqI-hY-H4E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5593" y="567"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="IJq-bK-RMW">
+            <objects>
+                <viewController storyboardIdentifier="35" id="M9a-EW-tvY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d4z-fE-uAh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend35" translatesAutoresizingMaskIntoConstraints="NO" id="9J4-P7-hxM">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fid-hX-xMP">
+                                <rect key="frame" x="0.0" y="581" width="414" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">苏轼擅长行、楷书，用笔丰腴跌宕，有天真烂漫之趣。自云：“我书造意本无法”；人书并尊，在当时其弟兄子侄子由、迈、过，友人王定国、赵令畤均向他学习；其后历史名人如李纲、韩世忠、陆游，以及的吴宽，清代的张之洞，亦均向他学习，可见影响之大。
+
+
+
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9J4-P7-hxM" firstAttribute="trailing" secondItem="lhq-Jo-ecW" secondAttribute="trailing" id="RZ7-16-TNr"/>
+                            <constraint firstItem="9J4-P7-hxM" firstAttribute="bottom" secondItem="lhq-Jo-ecW" secondAttribute="bottom" id="cH6-gh-M2u"/>
+                            <constraint firstItem="9J4-P7-hxM" firstAttribute="leading" secondItem="lhq-Jo-ecW" secondAttribute="leading" id="d3O-yJ-gCV"/>
+                            <constraint firstItem="9J4-P7-hxM" firstAttribute="top" secondItem="d4z-fE-uAh" secondAttribute="top" id="y0i-0h-6iF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lhq-Jo-ecW"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="04w-RN-A0Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4906" y="567"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="MxH-TD-2eP">
+            <objects>
+                <viewController storyboardIdentifier="37" id="wwh-yy-Q2f" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ny8-yH-rKb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend37" translatesAutoresizingMaskIntoConstraints="NO" id="nHG-pi-W4u">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D3b-vN-akc">
+                                <rect key="frame" x="0.0" y="479" width="414" height="257"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">《李白仙诗卷》
+该帖为宋神宗元祐八年（公元1093年）苏轼58岁时书。
+清高士奇《江村销夏录》著录。后有蔡松年、施宜生、刘沂、高衍及张弼、高士奇、沈德潜等明、清人跋。此帖已流入日本。施宜生谓“颂太白此语。则人间无诗，观东坡此笔则人间无字。”此两诗为逸诗《李太白文集》所不载。 太白之诗共两首。第一首娓娓道来，仙气拂拂，引人入胜。第二首凄清空逸超脱人寰。书则第一首灵秀清妍，姿致翩翩，后十句渐入奇境，变化多端，神妙莫测。第二首驰骋纵逸，纯以神行人书合一，仙气飘渺，心随书走，非复人间之世矣。此书境界，颇难企及。
+
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nHG-pi-W4u" firstAttribute="leading" secondItem="xda-PQ-o3J" secondAttribute="leading" id="9xy-Sh-8FZ"/>
+                            <constraint firstItem="nHG-pi-W4u" firstAttribute="top" secondItem="ny8-yH-rKb" secondAttribute="top" id="GpY-yh-dAL"/>
+                            <constraint firstItem="nHG-pi-W4u" firstAttribute="bottom" secondItem="xda-PQ-o3J" secondAttribute="bottom" id="URh-CG-slP"/>
+                            <constraint firstItem="nHG-pi-W4u" firstAttribute="trailing" secondItem="xda-PQ-o3J" secondAttribute="trailing" id="hiE-3c-QTX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xda-PQ-o3J"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iy0-3M-HXa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4905.7971014492759" y="-141.03260869565219"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="C8O-Hv-btR">
+            <objects>
+                <viewController storyboardIdentifier="39" id="m2z-6p-acm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yto-PL-iaW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend39" translatesAutoresizingMaskIntoConstraints="NO" id="rOU-AB-2UW">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2wq-9z-1Zg">
+                                <rect key="frame" x="0.0" y="581" width="414" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">苏轼《近人帖》
+
+
+
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rOU-AB-2UW" firstAttribute="bottom" secondItem="CoE-JW-TlF" secondAttribute="bottom" id="D0p-rv-wqq"/>
+                            <constraint firstItem="rOU-AB-2UW" firstAttribute="leading" secondItem="CoE-JW-TlF" secondAttribute="leading" id="P0E-ZG-i7i"/>
+                            <constraint firstItem="rOU-AB-2UW" firstAttribute="trailing" secondItem="CoE-JW-TlF" secondAttribute="trailing" id="U4D-dI-8Tx"/>
+                            <constraint firstItem="rOU-AB-2UW" firstAttribute="top" secondItem="Yto-PL-iaW" secondAttribute="top" id="ty4-mA-tJe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CoE-JW-TlF"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DsV-ZG-SzS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5728" y="-702"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2fc-If-1vF">
+            <objects>
+                <viewController storyboardIdentifier="38" id="raD-rh-NtJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HD5-g2-ujT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend38" translatesAutoresizingMaskIntoConstraints="NO" id="49d-8q-kRM">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dgc-Xf-YQz">
+                                <rect key="frame" x="0.0" y="581" width="414" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">《北游帖》是苏轼给朋友可久法师的复信，共9行，凡61字。此帖写于苏轼贬谪黄州前，书风尚未明显变化，流露出早年学习二王的痕迹，用笔精致雅逸，清劲遒媚。
+
+
+
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="49d-8q-kRM" firstAttribute="leading" secondItem="8gY-ws-Cyd" secondAttribute="leading" id="3Og-Bj-peC"/>
+                            <constraint firstItem="49d-8q-kRM" firstAttribute="bottom" secondItem="8gY-ws-Cyd" secondAttribute="bottom" id="X9R-Nc-cJk"/>
+                            <constraint firstItem="49d-8q-kRM" firstAttribute="trailing" secondItem="8gY-ws-Cyd" secondAttribute="trailing" id="mfI-lG-MbI"/>
+                            <constraint firstItem="49d-8q-kRM" firstAttribute="top" secondItem="HD5-g2-ujT" secondAttribute="top" id="sFs-Yj-ef4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8gY-ws-Cyd"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bGt-z9-5Zc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4812" y="-772"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ThJ-fj-0tM">
+            <objects>
+                <viewController storyboardIdentifier="41" id="oQg-bp-hg0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bKi-21-MGf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend41" translatesAutoresizingMaskIntoConstraints="NO" id="172-jl-vuQ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UaZ-GP-h1l">
+                                <rect key="frame" x="0.0" y="581" width="414" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">苏轼《渡海帖》
+
+
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="172-jl-vuQ" firstAttribute="trailing" secondItem="wOb-no-Efd" secondAttribute="trailing" id="5fE-xp-6WU"/>
+                            <constraint firstItem="172-jl-vuQ" firstAttribute="bottom" secondItem="wOb-no-Efd" secondAttribute="bottom" id="Vge-Sn-vYF"/>
+                            <constraint firstItem="172-jl-vuQ" firstAttribute="leading" secondItem="wOb-no-Efd" secondAttribute="leading" id="i98-9d-xyV"/>
+                            <constraint firstItem="172-jl-vuQ" firstAttribute="top" secondItem="bKi-21-MGf" secondAttribute="top" id="noc-TP-Qf1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wOb-no-Efd"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nV9-C4-Frk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5593" y="-1404"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="f6o-U6-trQ">
+            <objects>
+                <viewController storyboardIdentifier="50" id="HNh-zy-Gwr" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jZ8-A1-AdW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend50" translatesAutoresizingMaskIntoConstraints="NO" id="y0N-d9-sOi">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hiA-6v-Ile">
+                                <rect key="frame" x="0.0" y="572" width="414" height="164"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">《草堂十志》
+《草堂十志》小楷师法晋唐，力趋健劲。为书法爱好者学习小楷的极佳范本，亦为毛笔、硬笔书法楷书临习的上佳模本。晚年的书家，少有人者会坚持作“蝇头小楷”，一来因心境，这时候的书家大都心境冲淡平和，逸气稜稜，二来随体力，人到晚年，体力精力自然随之衰颓。而文征明于七老八十时，仍钟情于小楷，实属罕见！
+
+
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="y0N-d9-sOi" firstAttribute="trailing" secondItem="ie6-G5-m6x" secondAttribute="trailing" id="8S9-VF-Je6"/>
+                            <constraint firstItem="y0N-d9-sOi" firstAttribute="bottom" secondItem="ie6-G5-m6x" secondAttribute="bottom" id="OrS-8N-BQ6"/>
+                            <constraint firstItem="y0N-d9-sOi" firstAttribute="leading" secondItem="ie6-G5-m6x" secondAttribute="leading" id="q0T-ce-RUH"/>
+                            <constraint firstItem="y0N-d9-sOi" firstAttribute="top" secondItem="jZ8-A1-AdW" secondAttribute="top" id="stx-ei-09j"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ie6-G5-m6x"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kQ8-TQ-dib" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7313.04347826087" y="1766.576086956522"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="I0F-gQ-NIp">
+            <objects>
+                <viewController storyboardIdentifier="47" id="JWP-oV-EQT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3nP-Dj-lmn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend47" translatesAutoresizingMaskIntoConstraints="NO" id="qk8-On-aXN">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J20-Ug-S19">
+                                <rect key="frame" x="0.0" y="581" width="414" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">钟繇《宣示表》
+《宣示表》字体端整古雅，结体略呈扁形，笔画已脱隶书古意，多是真书笔法，是钟繇的杰作，也可以说是楷书之祖。此帖较钟繇其他作品，无论在笔法或结体上，都更显出一种较为成熟的楷书体态和气息，点画遒劲而显朴茂，字体宽博而多扁方，充分表现了魏晋时代正走向成熟的楷书的艺术特征。
+
+
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qk8-On-aXN" firstAttribute="bottom" secondItem="VU4-al-UdC" secondAttribute="bottom" id="MbD-TU-9TV"/>
+                            <constraint firstItem="qk8-On-aXN" firstAttribute="leading" secondItem="VU4-al-UdC" secondAttribute="leading" id="VHh-8c-fqK"/>
+                            <constraint firstItem="qk8-On-aXN" firstAttribute="top" secondItem="3nP-Dj-lmn" secondAttribute="top" id="co0-5C-flD"/>
+                            <constraint firstItem="qk8-On-aXN" firstAttribute="trailing" secondItem="VU4-al-UdC" secondAttribute="trailing" id="s1z-eE-2a5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VU4-al-UdC"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fhw-mU-jUg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7422" y="279"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="vdr-ae-dpD">
+            <objects>
+                <viewController storyboardIdentifier="34" id="WDT-Rb-1ih" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ann-wQ-oO1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend34" translatesAutoresizingMaskIntoConstraints="NO" id="t4E-dS-fiR">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NTT-L3-7Kf">
+                                <rect key="frame" x="0.0" y="581" width="414" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">《蒙诏帖》是柳公权写的一通信札，信札的大意是说自己年老体衰，能力有限，虽然有个闲官职位，可也不能为别人办什么大事，请谅解自己的难处。
+
+
+
+
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="t4E-dS-fiR" firstAttribute="leading" secondItem="MrW-3o-29o" secondAttribute="leading" id="8AA-me-szC"/>
+                            <constraint firstItem="t4E-dS-fiR" firstAttribute="top" secondItem="ann-wQ-oO1" secondAttribute="top" id="Tng-Ih-4E5"/>
+                            <constraint firstItem="t4E-dS-fiR" firstAttribute="trailing" secondItem="MrW-3o-29o" secondAttribute="trailing" id="jIH-4T-a0g"/>
+                            <constraint firstItem="t4E-dS-fiR" firstAttribute="bottom" secondItem="MrW-3o-29o" secondAttribute="bottom" id="oFW-ly-dVh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MrW-3o-29o"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TM8-RY-dtI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4116" y="567"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="qaR-gc-dbJ">
+            <objects>
+                <viewController storyboardIdentifier="42" id="TTs-Zw-xQY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Fx-ji-V8E">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend42" translatesAutoresizingMaskIntoConstraints="NO" id="YPl-vE-sqq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="weR-il-CqP">
+                                <rect key="frame" x="0.0" y="581" width="414" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">赵孟頫不仅绘画创一代新风，书法更是元代第一人，如元代书法名家鲜于枢所评：“子昂篆、隶、真、行、颠草为当今第一。”赵氏所创书风，遒媚、秀逸，结体严整、笔法圆熟，后人称之为“赵体”。
+赵孟頫传世书迹较多，代表作有《千字文》《洛神赋》《汲黯传》《胆巴碑》《归去来兮辞》。
+
+
+
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YPl-vE-sqq" firstAttribute="top" secondItem="5Fx-ji-V8E" secondAttribute="top" id="Jhb-Kd-qS2"/>
+                            <constraint firstItem="YPl-vE-sqq" firstAttribute="bottom" secondItem="Ebj-fa-caQ" secondAttribute="bottom" id="YEf-Bf-aBg"/>
+                            <constraint firstItem="YPl-vE-sqq" firstAttribute="leading" secondItem="Ebj-fa-caQ" secondAttribute="leading" id="cVt-X0-Xdk"/>
+                            <constraint firstItem="YPl-vE-sqq" firstAttribute="trailing" secondItem="Ebj-fa-caQ" secondAttribute="trailing" id="kiO-8n-gFF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ebj-fa-caQ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZJM-tj-IeJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6425" y="-1405"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="77E-sS-McT">
+            <objects>
+                <viewController storyboardIdentifier="45" id="ND2-tI-7n3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zi9-AH-KHC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend45" translatesAutoresizingMaskIntoConstraints="NO" id="uaK-dB-3eg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RQ9-1I-mSe">
+                                <rect key="frame" x="0.0" y="572" width="414" height="164"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">《归去来兮辞》
+赵孟頫《归去来辞》，大德元年（公元1297年）作。行书，纸本长卷，纵46.7厘米，横453.5厘米。共48行，行10字左右。藏上海博物馆。卷前有其弟所绘陶潜像一幅并有题记，并盖有“古鉴阁中铭心绝品”、“经协久远期无限”、“韵篁馆赏图书“和“秦文钤”等印。该帖为中期作品，以行书为主，间以草法，用笔珠圆玉润，宛转流美，神气充足。
+
+
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uaK-dB-3eg" firstAttribute="trailing" secondItem="KTx-ut-fkb" secondAttribute="trailing" id="CT3-aZ-Q92"/>
+                            <constraint firstItem="uaK-dB-3eg" firstAttribute="leading" secondItem="KTx-ut-fkb" secondAttribute="leading" id="Hgr-uP-P62"/>
+                            <constraint firstItem="uaK-dB-3eg" firstAttribute="top" secondItem="Zi9-AH-KHC" secondAttribute="top" id="Y1W-Fu-5sR"/>
+                            <constraint firstItem="uaK-dB-3eg" firstAttribute="bottom" secondItem="KTx-ut-fkb" secondAttribute="bottom" id="qtL-2Q-X4Z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KTx-ut-fkb"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1FO-5A-VGc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7511.594202898551" y="-661.14130434782612"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="m32-Ou-uxG">
+            <objects>
+                <viewController storyboardIdentifier="40" id="dYd-IN-6no" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Brw-ys-E09">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend40" translatesAutoresizingMaskIntoConstraints="NO" id="d2H-aE-nLO">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MDp-wG-kfN">
+                                <rect key="frame" x="0.0" y="581" width="414" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">苏轼《东武帖》
+
+
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="d2H-aE-nLO" firstAttribute="trailing" secondItem="DCo-eP-g8k" secondAttribute="trailing" id="3Do-Ir-6bq"/>
+                            <constraint firstItem="d2H-aE-nLO" firstAttribute="top" secondItem="Brw-ys-E09" secondAttribute="top" id="C2P-xO-wUV"/>
+                            <constraint firstItem="d2H-aE-nLO" firstAttribute="bottom" secondItem="DCo-eP-g8k" secondAttribute="bottom" id="MAH-bt-Rdu"/>
+                            <constraint firstItem="d2H-aE-nLO" firstAttribute="leading" secondItem="DCo-eP-g8k" secondAttribute="leading" id="tiS-xO-crw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DCo-eP-g8k"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LvJ-Kw-FYk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4672" y="-1459"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ZeZ-9t-AnT">
+            <objects>
+                <viewController storyboardIdentifier="43" id="JjY-GJ-c9v" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3vP-oh-wg9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend43" translatesAutoresizingMaskIntoConstraints="NO" id="u45-Gj-8vh">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IQF-7W-9mh">
+                                <rect key="frame" x="0.0" y="581" width="414" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">赵孟頫《前后赤壁赋》
+该帖分行布白疏朗从容，用笔圆润遒劲，宛转流美，风骨内含，神彩飘逸，尽得魏晋风流遗韵。
+
+
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="u45-Gj-8vh" firstAttribute="top" secondItem="3vP-oh-wg9" secondAttribute="top" id="NSU-uW-tsF"/>
+                            <constraint firstItem="u45-Gj-8vh" firstAttribute="leading" secondItem="Pxm-T2-2N2" secondAttribute="leading" id="T0D-8x-jdg"/>
+                            <constraint firstItem="u45-Gj-8vh" firstAttribute="trailing" secondItem="Pxm-T2-2N2" secondAttribute="trailing" id="apl-hc-KB8"/>
+                            <constraint firstItem="u45-Gj-8vh" firstAttribute="bottom" secondItem="Pxm-T2-2N2" secondAttribute="bottom" id="hMr-Sn-NzF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Pxm-T2-2N2"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H3v-hf-DWZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7113" y="-1331"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="8Iw-lL-sBO">
+            <objects>
+                <viewController storyboardIdentifier="49" id="V50-XQ-GG6" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yzz-ZG-3oP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend49" translatesAutoresizingMaskIntoConstraints="NO" id="6nl-an-hcr">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RA1-49-XYn">
+                                <rect key="frame" x="0.0" y="581" width="414" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">《琴赋》
+文微明的书法沉实劲健，无论是行草，还是小楷，都无轻滑处。他的书法不激不厉，沉劲入骨，至垂 暮之年，其笔力弥坚，亦无丝毫衰弱气象。文征明的成就，一方面是缘于他用功精勤，一方面是他的思想谨守儒家之中 庸之道，不激不厉，正道而行之。他笔力坚实，既是深厚功力之体现，亦是思想认真坚定之反映。
+
+
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6nl-an-hcr" firstAttribute="bottom" secondItem="lpb-nW-xxo" secondAttribute="bottom" id="0B3-Tz-nnz"/>
+                            <constraint firstItem="6nl-an-hcr" firstAttribute="trailing" secondItem="lpb-nW-xxo" secondAttribute="trailing" id="HH8-PS-PHY"/>
+                            <constraint firstItem="6nl-an-hcr" firstAttribute="leading" secondItem="lpb-nW-xxo" secondAttribute="leading" id="W69-P4-UNP"/>
+                            <constraint firstItem="6nl-an-hcr" firstAttribute="top" secondItem="Yzz-ZG-3oP" secondAttribute="top" id="u18-GW-L6X"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lpb-nW-xxo"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eDG-rF-fb2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7854" y="1335"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Bvs-53-0Kb">
+            <objects>
+                <viewController storyboardIdentifier="44" id="772-Jb-8jh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mck-zK-Pmr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend44" translatesAutoresizingMaskIntoConstraints="NO" id="l9A-SI-ngV">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qtK-5j-hoS">
+                                <rect key="frame" x="0.0" y="581" width="414" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">赵孟頫《洛神赋》
+《洛神赋》即为赵氏行书代表作。《洛神赋》原名《感甄赋》，其写作牵涉到曹植与魏文帝曹丕之妃甄氏之间的一段错综复杂的感情。赵孟頫《洛神赋》，行中兼楷的结体、点画，深得二王遗意。
+
+
+
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="l9A-SI-ngV" firstAttribute="bottom" secondItem="W4p-AS-zZP" secondAttribute="bottom" id="gIv-gD-NWz"/>
+                            <constraint firstItem="l9A-SI-ngV" firstAttribute="top" secondItem="mck-zK-Pmr" secondAttribute="top" id="hKZ-1T-Bsp"/>
+                            <constraint firstItem="l9A-SI-ngV" firstAttribute="trailing" secondItem="W4p-AS-zZP" secondAttribute="trailing" id="ilJ-at-nPS"/>
+                            <constraint firstItem="l9A-SI-ngV" firstAttribute="leading" secondItem="W4p-AS-zZP" secondAttribute="leading" id="jNr-B6-IhJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="W4p-AS-zZP"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xrG-Pg-fKU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7854" y="-1331"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="KpQ-Fc-Lay">
+            <objects>
+                <viewController storyboardIdentifier="48" id="dAw-3u-EeR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pgb-TO-myT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend48" translatesAutoresizingMaskIntoConstraints="NO" id="tDW-7C-gfN">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8vl-hk-G7Z">
+                                <rect key="frame" x="0.0" y="576" width="414" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">文徵明的书画造诣极为全面，诗、文、书、画无一不精，人称是"四绝"的全才。在诗文上，与祝允明、唐寅、徐祯卿 并称“吴中四才子”。文征明书法初师李应祯，后广泛学习前代名迹，尤擅长行书和小楷，温润秀劲，法度谨严而意态生动。虽无雄浑的气势，却具晋唐书法的风致，也有自己的一定风貌。小楷笔划婉转，节奏缓和，与他的绘画风格谐和，有“明朝第一”之称，对后世影响极大。
+
+
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tDW-7C-gfN" firstAttribute="top" secondItem="pgb-TO-myT" secondAttribute="top" id="9KF-qx-ogK"/>
+                            <constraint firstItem="tDW-7C-gfN" firstAttribute="trailing" secondItem="nQF-Ca-aIj" secondAttribute="trailing" id="kc3-kS-iNv"/>
+                            <constraint firstItem="tDW-7C-gfN" firstAttribute="leading" secondItem="nQF-Ca-aIj" secondAttribute="leading" id="mIl-hi-iPE"/>
+                            <constraint firstItem="tDW-7C-gfN" firstAttribute="bottom" secondItem="nQF-Ca-aIj" secondAttribute="bottom" id="zKE-1u-OgB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nQF-Ca-aIj"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oee-oB-jv7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8111.594202898551" y="659.51086956521749"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="VBG-Ak-efe">
+            <objects>
+                <viewController storyboardIdentifier="51" id="bU2-fT-LfD" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z7Z-Oe-rin">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend51" translatesAutoresizingMaskIntoConstraints="NO" id="3c7-Oz-5Zy">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aa1-tV-ekP">
+                                <rect key="frame" x="0.0" y="581" width="414" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">《赤壁賦》
+
+
+
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3c7-Oz-5Zy" firstAttribute="leading" secondItem="MnN-dd-3p2" secondAttribute="leading" id="c1C-Yl-zvU"/>
+                            <constraint firstItem="3c7-Oz-5Zy" firstAttribute="trailing" secondItem="MnN-dd-3p2" secondAttribute="trailing" id="e2x-cW-s5P"/>
+                            <constraint firstItem="3c7-Oz-5Zy" firstAttribute="bottom" secondItem="MnN-dd-3p2" secondAttribute="bottom" id="xJS-Lg-99G"/>
+                            <constraint firstItem="3c7-Oz-5Zy" firstAttribute="top" secondItem="z7Z-Oe-rin" secondAttribute="top" id="xQW-od-Ci8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MnN-dd-3p2"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eFJ-DI-9J4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8229" y="2111"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="8eL-gk-IWb">
+            <objects>
+                <viewController storyboardIdentifier="46" id="gIw-id-0I6" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xP9-0s-1k5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commend46" translatesAutoresizingMaskIntoConstraints="NO" id="fYq-zK-wzf">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IeR-al-Jmo">
+                                <rect key="frame" x="0.0" y="552" width="414" height="184"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">钟繇工书，师法曹喜、蔡邕，博取众长，兼善各体，尤精于楷，形成了由隶入楷的新貌。与王羲之齐名，并称“钟王”。唐张怀瑾《书断》称他：“真书绝世，刚柔备焉，点画之间，多有异趣，可谓幽深无际，古雅有余，秦、汉以来，一人而已。”钟繇篆、隶、真、行、草多种书体兼工，写得最好的是楷书，被后世尊为"楷书鼻祖"。
+其代表作有《贺捷表》《力命表》《宣示表》《荐季直表》等。
+
+
+
+</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fYq-zK-wzf" firstAttribute="trailing" secondItem="paR-iO-sU8" secondAttribute="trailing" id="cqu-FQ-TlW"/>
+                            <constraint firstItem="fYq-zK-wzf" firstAttribute="top" secondItem="xP9-0s-1k5" secondAttribute="top" id="g62-2q-kQP"/>
+                            <constraint firstItem="fYq-zK-wzf" firstAttribute="leading" secondItem="paR-iO-sU8" secondAttribute="leading" id="k81-zt-Azz"/>
+                            <constraint firstItem="fYq-zK-wzf" firstAttribute="bottom" secondItem="paR-iO-sU8" secondAttribute="bottom" id="zq3-IW-QCv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="paR-iO-sU8"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rm7-7B-b3W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8331.8840579710159" y="-141.03260869565219"/>
+        </scene>
     </scenes>
     <resources>
         <image name="1-白色宣纸" width="375" height="667"/>
@@ -817,13 +2646,61 @@
         <image name="back_golden" width="21" height="24"/>
         <image name="back_white" width="15" height="18"/>
         <image name="capture" width="44" height="44"/>
+        <image name="commend1" width="345" height="378"/>
+        <image name="commend10" width="448" height="809"/>
+        <image name="commend11" width="396" height="663"/>
+        <image name="commend12" width="666" height="1181"/>
+        <image name="commend13" width="473" height="319"/>
+        <image name="commend14" width="511" height="762"/>
+        <image name="commend15" width="666" height="417"/>
+        <image name="commend16" width="408" height="715"/>
+        <image name="commend17" width="666" height="316"/>
+        <image name="commend18" width="666" height="977"/>
+        <image name="commend19" width="358" height="464"/>
+        <image name="commend2" width="624" height="848"/>
+        <image name="commend20" width="666" height="464"/>
+        <image name="commend21" width="522" height="391"/>
+        <image name="commend22" width="666" height="1142"/>
+        <image name="commend23" width="274" height="2002"/>
+        <image name="commend24" width="279" height="352"/>
+        <image name="commend25" width="666" height="136"/>
+        <image name="commend26" width="666" height="417"/>
+        <image name="commend27" width="598" height="441"/>
+        <image name="commend28" width="474" height="433"/>
+        <image name="commend29" width="624" height="518"/>
+        <image name="commend3" width="448" height="753"/>
+        <image name="commend30" width="359" height="417"/>
+        <image name="commend31" width="666" height="372"/>
+        <image name="commend32" width="621" height="528"/>
+        <image name="commend33" width="666" height="937"/>
+        <image name="commend34" width="666" height="326"/>
+        <image name="commend35" width="399" height="372"/>
+        <image name="commend36" width="546" height="356"/>
+        <image name="commend37" width="666" height="215"/>
+        <image name="commend38" width="666" height="590"/>
+        <image name="commend39" width="666" height="602"/>
+        <image name="commend4" width="525" height="719"/>
+        <image name="commend40" width="467" height="719"/>
+        <image name="commend41" width="666" height="447"/>
+        <image name="commend42" width="279" height="401"/>
+        <image name="commend43" width="666" height="708"/>
+        <image name="commend44" width="598" height="469"/>
+        <image name="commend45" width="607" height="372"/>
+        <image name="commend46" width="321" height="389"/>
+        <image name="commend47" width="628" height="1324"/>
+        <image name="commend48" width="253" height="373"/>
+        <image name="commend49" width="255" height="523"/>
+        <image name="commend5" width="666" height="525"/>
+        <image name="commend50" width="666" height="570"/>
+        <image name="commend51" width="108" height="1604"/>
+        <image name="commend6" width="666" height="576"/>
+        <image name="commend7" width="365" height="408"/>
+        <image name="commend8" width="556" height="938"/>
+        <image name="commend9" width="624" height="1033"/>
         <image name="delete" width="28" height="28"/>
         <image name="download" width="36" height="36"/>
         <image name="pic1" width="88" height="93"/>
         <image name="底图" width="375" height="667"/>
-        <image name="文字底图1" width="241" height="311"/>
-        <image name="文字底图2" width="241" height="311"/>
-        <image name="文字底图3" width="254" height="327"/>
         <image name="砚台" width="314" height="154"/>
         <image name="笔触粗细" width="314" height="38"/>
         <image name="装饰-圆" width="333" height="271"/>
