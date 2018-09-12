@@ -150,7 +150,7 @@ class DecorateViewController: UIViewController {
         {
         //传入初始图片
         case -1:
-            ImageView = UIImageView(frame: CGRect(x: wordView.frame.minX, y: wordView.frame.minY, width: wordView.frame.size.width, height: wordView.frame.size.height))
+            ImageView = UIImageView(frame: CGRect(x: wordView.frame.minX * 0.4, y: wordView.frame.minY * 0.6, width: wordView.frame.size.width, height: wordView.frame.size.height))
             ImageView.image = paintedImage
             self.wordView.addSubview(ImageView)
             wordLabel.text = ""

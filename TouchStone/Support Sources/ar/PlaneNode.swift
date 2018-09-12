@@ -3,11 +3,13 @@ import UIKit
 import SceneKit
 
 class PlaneNode: SCNNode {
-    init(anchor: ARPlaneAnchor?) {
+    var theDraw : UIImage!
+    init(anchor: ARPlaneAnchor?, image: UIImage!) {
         super.init()
         // 创建材质并用于平面
+        theDraw = image
         let material = SCNMaterial()
-        material.diffuse.contents = UIImage(named: "plane")
+        material.diffuse.contents = theDraw
         // 创建平面
         let planeGeometry = SCNPlane(width: CGFloat(anchor?.extent.x ?? 0.0), height: CGFloat(anchor?.extent.z ?? 0.0))
         planeGeometry.materials = [material]

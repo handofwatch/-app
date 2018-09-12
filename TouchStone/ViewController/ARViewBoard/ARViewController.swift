@@ -15,16 +15,10 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet weak var gestureButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var ARView: ARSCNView!
+    var draw:UIImage!
     
-    //TODO::ARKit
-//    private var _scnView: ARSCNView?
-//    private var scnView: ARSCNView? {
-//        if nil == _scnView {
-//            // 创建AR视图
-//            _scnView = ARSCNView(frame: view.bounds)
-//        }
-//        return _scnView
-//    }
+
+  
     // 会话配置
     private var sessionConfiguration: ARConfiguration?
     // 遮罩视图
@@ -57,7 +51,8 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        sharebutton.setBackgroundImage(UIImage(named: "Share"), for: UIControlState.normal)
+        
+       sharebutton.setBackgroundImage(UIImage(named: "Share"), for: UIControlState.normal)
         // Do any additional setup after loading the view.
         if let aView = ARView {
             view.addSubview(aView)
@@ -72,13 +67,20 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         ARView?.delegate = self
         // 显示视图的FPS信息
         ARView?.showsStatistics = true
-        // 显示检测到的特征点
-        ARView?.debugOptions = ARSCNDebugOptions.showFeaturePoints
-        // 添加手势
-        addGestureOfSceneView()
+        
         self.view.bringSubview(toFront: backButton)
         self.view.bringSubview(toFront: gestureButton)
         self.view.bringSubview(toFront: sharebutton)
+            let scene = SCNScene()
+        ARView.scene = scene
+        let box = SCNBox(width: 0.4, height: 1, length: 0, chamferRadius: 0)
+        let boxMaterial = SCNMaterial()
+        boxMaterial.diffuse.contents = draw
+        box.materials = [boxMaterial]
+
+        let boxNode = SCNNode(geometry: box)
+        boxNode.position = SCNVector3(0, 0, -1.5)
+        scene.rootNode.addChildNode(boxNode)
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -92,73 +94,21 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         ARView?.session.pause()
     }
     
-    // MARK: - TapGesture
-    func addGestureOfSceneView() {
-        // 添加单击手势
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ARViewController.addARGeometry(fromGesture:)))
-        tapGesture.numberOfTapsRequired = 1
-        ARView?.addGestureRecognizer(tapGesture)
-    }
-    @objc func addARGeometry(fromGesture tapGestureRecognizer: UITapGestureRecognizer?) {
-        let point: CGPoint? = tapGestureRecognizer?.location(in: ARView)
-        // 命中测试，类型为已存在的平面
-        let resultArray = ARView?.hitTest(point ?? CGPoint.zero, types: .existingPlaneUsingExtent)
-        if nil != resultArray && (resultArray?.count ?? 0) > 0 {
-            // 拿到命中测试结果，取出位置
-            let result: ARHitTestResult? = resultArray?.first
-            var vector: SCNVector3? = nil
-            if let aTransform = result?.worldTransform {
-                vector = position(withWorldTransform: aTransform)
-            }
-            // 获取模型场景
-            let scene = SCNScene(named: "scene.scn")
-            let node = scene?.rootNode.clone()
-            if let aVector = vector {
-                node?.position = aVector
-            }
-            // 添加到根节点中
-            if let aNode = node {
-                ARView?.scene.rootNode.addChildNode(aNode)
-            }
-        }
-    }
+
+    @IBAction func gestureButtonTapped(_ sender: Any) {
+            let scene = SCNScene()
+        ARView.scene = scene
+        let box = SCNBox(width: 0.4, height: 1, length: 0, chamferRadius: 0)
+        let boxMaterial = SCNMaterial()
+        boxMaterial.diffuse.contents = draw
+        box.materials = [boxMaterial]
+        
+        let boxNode = SCNNode(geometry: box)
+        boxNode.position = SCNVector3(0, 0, -1.5)
     
-    // MARK: - Utils
-    func position(withWorldTransform worldTransform: matrix_float4x4) -> SCNVector3 {
-        // 从世界坐标系中的一个位姿中提取位置
-        return SCNVector3Make(worldTransform.columns.3.x, worldTransform.columns.3.y, worldTransform.columns.3.z)
+        scene.rootNode.addChildNode(boxNode)
     }
-    
-    // MARK: - ARARViewDelegate
-    func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
-        // 判断场景内添加的锚点是否为平面锚点
-        if (anchor is ARPlaneAnchor) {
-            // 如果是平面锚点，则自定义节点加入平面图片
-            let node = PlaneNode(anchor: anchor as? ARPlaneAnchor)
-            DispatchQueue.main.async(execute: {
-                self.tipLabel?.text = "检测到平面并已添加到场景中"
-            })
-            return node
-        }
-        return nil
-    }
-    
-    func renderer(_ renderer: SCNSceneRenderer, willUpdate node: SCNNode, for anchor: ARAnchor) {
-        // 判断场景内更新的锚点是否为平面锚点
-        if (anchor is ARPlaneAnchor) {
-            // 如果是平面锚点，则更新节点
-            (node as? PlaneNode)?.update(with: anchor as? ARPlaneAnchor)
-        }
-    }
-    
-    func renderer(_ renderer: SCNSceneRenderer, didRemove node: SCNNode, for anchor: ARAnchor) {
-        // 判断场景内删除的锚点是否为平面锚点
-        if (anchor is ARPlaneAnchor) {
-            // 如果是平面锚点，则删除节点
-            (node as? PlaneNode)?.remove(with: anchor as? ARPlaneAnchor)
-        }
-    }
-    
+   
     func session(_ session: ARSession, cameraDidChangeTrackingState camera: ARCamera) {
         switch camera.trackingState {
         case ARCamera.TrackingState.notAvailable:
@@ -258,6 +208,8 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         let activities = [activity]
         let activityController = UIActivityViewController(activityItems: activityItems,            applicationActivities: activities)
         activityController.excludedActivityTypes = [UIActivityType.copyToPasteboard,UIActivityType.assignToContact]
+        activityController.popoverPresentationController?.sourceView = self.view
+
         self.present(activityController, animated: true, completion: {()-> Void in})
     }
     override func didReceiveMemoryWarning() {

@@ -37,7 +37,7 @@ class CommendBoardViewController: UIPageViewController, UIPageViewControllerData
             return nil
         }
         
-        let nextIndex = viewControllerIndex + Int(arc4random() % 4)
+        let nextIndex = viewControllerIndex + 1
         let orderedViewControllersCount = allViewControllers.count
         
         //翻到底时返回第一张图片

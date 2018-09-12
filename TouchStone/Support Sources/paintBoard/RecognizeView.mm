@@ -15,7 +15,7 @@
 #define BUTTON_HEIGHT 50
 #define RESULT_WIDTH 50
 
-#define BACKGROUND_COLOR [UIColor whiteColor];
+#define BACKGROUND_COLOR [UIColor clearColor];
 
 
 HandWriteRecognizer::Recognizer hwRecognizer;

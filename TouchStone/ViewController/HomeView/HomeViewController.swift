@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import AVKit
 class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     @IBOutlet weak var HomeCollectionView: UICollectionView!
@@ -32,6 +32,9 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+    override func viewDidAppear(_ animated: Bool) {
         //MARK::是否需要下拉说明框效果
         
         //添加HomeCollectionViewCell
@@ -51,6 +54,8 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         HomeCollectionView.delegate=self
         HomeCollectionView.dataSource=self
     }
+    
+    
     
     //返回CollectionView的Cell的个数
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -82,6 +87,9 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             print("Wrong!")
         }
     }
+    
+    
+    
     
     //在每次滑动页面改变cell时调用的方法
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {

@@ -25,6 +25,8 @@ class PaintBoardViewController: UIViewController {
 //    @IBOutlet weak var backAStepButton: UIButton!
     
     var words = [String]()
+    
+    var yourDrawToPass:UIImage!
     //下方毛笔墨盘的图片
     @IBOutlet weak var controller: UIImageView!
     
@@ -52,7 +54,7 @@ class PaintBoardViewController: UIViewController {
         super.viewDidLoad()
         
         recognize.frame = drawView.frame
-        recognize.backgroundColor = UIColor.white
+        recognize.backgroundColor = UIColor.clear
         recognize.reset()
         self.view.addSubview(recognize)
             
@@ -394,6 +396,7 @@ class PaintBoardViewController: UIViewController {
     //为recognize面板准备搭桥
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
+        yourDrawToPass = recognize.getSignature()
         //设置画板的颜色与recognize面板颜色一致
         recognize.backgroundColor = UIColor(red: 49/255, green: 49/255, blue: 49/255, alpha: 1)
         
@@ -404,6 +407,7 @@ class PaintBoardViewController: UIViewController {
         if segue.identifier == "recognize"{
             let vc = segue.destination as! RecognizeViewController
             vc.yourDraw = yourDraw
+            vc.yourDrawToRecognize = yourDrawToPass
             vc.words = words
             recognize.reset()
         }

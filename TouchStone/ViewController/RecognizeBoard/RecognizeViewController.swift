@@ -138,7 +138,7 @@ class RecognizeViewController: UIViewController, UICollectionViewDelegate, UICol
         ttfCollectionView.delegate = self
         ttfCollectionView.dataSource = self
         
-        originalImage = yourDraw
+        originalImage = yourDrawToRecognize
         order = nil
     }
     

@@ -39,6 +39,8 @@ class PreviewViewController: UIViewController {
         let activities = [activity]
         let activityController = UIActivityViewController(activityItems: activityItems,            applicationActivities: activities)
         activityController.excludedActivityTypes = [UIActivityType.copyToPasteboard,UIActivityType.assignToContact]
+        activityController.popoverPresentationController?.sourceView = self.view
+
         self.present(activityController, animated: true, completion: {()-> Void in})
     }
     
@@ -92,10 +94,27 @@ class PreviewViewController: UIViewController {
         let image = getImage
         let data:Data = UIImagePNGRepresentation(image!)!
         try? data.write(to: URL(fileURLWithPath: filePath))
-        _ = #selector(PreviewViewController.onCompleteCapture(image:error:contextInfo:))
+        let alertController1 = UIAlertController(title: "", message: "收藏成功", preferredStyle: .alert)
+        self.present(alertController1,animated: true,completion: nil)
+        //显示一秒后自动消失
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+            self.presentedViewController?.dismiss(animated: false, completion: nil)
+            
+        }
 //        performSegue(withIdentifier: "collectPaint", sender: nil)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "GoAR"
+        {
+            let vc = segue.destination as! ARViewController
+            vc.draw = getImage
+        }
+    }
+    
+    @IBAction func ARButtonTapped(_ sender: Any) {
+        performSegue(withIdentifier: "GoAR", sender: nil)
+    }
     //返回方法
     @IBAction func close(Segue:UIStoryboardSegue)
     {

@@ -44,6 +44,10 @@
 		90AA2AB621477F280071F9A9 /* HandWriteRecognizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 90AA2AB421477F280071F9A9 /* HandWriteRecognizer.cpp */; };
 		90AA2AB721477F280071F9A9 /* handwrite.model in Resources */ = {isa = PBXBuildFile; fileRef = 90AA2AB521477F280071F9A9 /* handwrite.model */; };
 		90AA2ABA21478E0B0071F9A9 /* RecognizeView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 90AA2AB821478E0B0071F9A9 /* RecognizeView.mm */; };
+		90AA2ABD214925DB0071F9A9 /* Scroll.dae in Resources */ = {isa = PBXBuildFile; fileRef = 90AA2ABC214925DA0071F9A9 /* Scroll.dae */; };
+		90AA2ABF2149302D0071F9A9 /* 触墨-闪屏1080-Wang.mov in Resources */ = {isa = PBXBuildFile; fileRef = 90AA2ABE2149302C0071F9A9 /* 触墨-闪屏1080-Wang.mov */; };
+		90AA2AC32149373B0071F9A9 /* LoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AA2AC22149373B0071F9A9 /* LoadViewController.swift */; };
+		90AA2AC621493A8D0071F9A9 /* scene.scn in Resources */ = {isa = PBXBuildFile; fileRef = 90AA2AC521493A8D0071F9A9 /* scene.scn */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +114,10 @@
 		90AA2AB821478E0B0071F9A9 /* RecognizeView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RecognizeView.mm; sourceTree = "<group>"; };
 		90AA2AB921478E0B0071F9A9 /* RecognizeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecognizeView.h; sourceTree = "<group>"; };
 		90AA2ABB21478F180071F9A9 /* HandWriteRecognizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HandWriteRecognizer.h; sourceTree = "<group>"; };
+		90AA2ABC214925DA0071F9A9 /* Scroll.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = Scroll.dae; sourceTree = "<group>"; };
+		90AA2ABE2149302C0071F9A9 /* 触墨-闪屏1080-Wang.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "触墨-闪屏1080-Wang.mov"; sourceTree = "<group>"; };
+		90AA2AC22149373B0071F9A9 /* LoadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadViewController.swift; sourceTree = "<group>"; };
+		90AA2AC521493A8D0071F9A9 /* scene.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = scene.scn; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				90AA2A9E2144C65E0071F9A9 /* materals.png */,
+				90AA2ABC214925DA0071F9A9 /* Scroll.dae */,
 				9034D6CB20FE4B040012A6A5 /* TouchStone */,
 				9034D6E020FE4B050012A6A5 /* TouchStoneTests */,
 				9034D6EB20FE4B050012A6A5 /* TouchStoneUITests */,
@@ -253,6 +262,7 @@
 				909E048D210480D900D025BD /* Support Sources */,
 				909E048E2104810600D025BD /* ViewController */,
 				9034D6D020FE4B040012A6A5 /* Main.storyboard */,
+				90AA2ABE2149302C0071F9A9 /* 触墨-闪屏1080-Wang.mov */,
 				9034D6D320FE4B040012A6A5 /* Assets.xcassets */,
 			);
 			path = TouchStone;
@@ -279,6 +289,7 @@
 		909E048D210480D900D025BD /* Support Sources */ = {
 			isa = PBXGroup;
 			children = (
+				90AA2AC521493A8D0071F9A9 /* scene.scn */,
 				90AA2AA02146C5C30071F9A9 /* 柳公权体.ttf */,
 				90AA2AAA2146C6060071F9A9 /* 郑板桥体.ttf */,
 				90AA2AA82146C5FB0071F9A9 /* 颜真卿体.ttf */,
@@ -308,6 +319,7 @@
 				90178702210EEF9E00A4A8DF /* DecorateBoard */,
 				90178703210EEFA800A4A8DF /* PreviewBoard */,
 				90178704210EEFB500A4A8DF /* ARViewBoard */,
+				90AA2AC4214937400071F9A9 /* LoadView */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -331,6 +343,14 @@
 				90AA2A9C2144C46D0071F9A9 /* PlaneNode.swift */,
 			);
 			path = ar;
+			sourceTree = "<group>";
+		};
+		90AA2AC4214937400071F9A9 /* LoadView */ = {
+			isa = PBXGroup;
+			children = (
+				90AA2AC22149373B0071F9A9 /* LoadViewController.swift */,
+			);
+			path = LoadView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -441,7 +461,10 @@
 				90AA2AA32146C5DC0071F9A9 /* 行书.TTF in Resources */,
 				90AA2A9F2144C65E0071F9A9 /* materals.png in Resources */,
 				90AA2AAB2146C6070071F9A9 /* 郑板桥体.ttf in Resources */,
+				90AA2ABF2149302D0071F9A9 /* 触墨-闪屏1080-Wang.mov in Resources */,
 				90AA2AA72146C5EF0071F9A9 /* 隶书.ttf in Resources */,
+				90AA2ABD214925DB0071F9A9 /* Scroll.dae in Resources */,
+				90AA2AC621493A8D0071F9A9 /* scene.scn in Resources */,
 				90AA2AB721477F280071F9A9 /* handwrite.model in Resources */,
 				9034D6D720FE4B040012A6A5 /* LaunchScreen.storyboard in Resources */,
 				9034D6D420FE4B040012A6A5 /* Assets.xcassets in Resources */,
@@ -488,6 +511,7 @@
 				9034D70421033E5C0012A6A5 /* CollectionBoardViewController.swift in Sources */,
 				9034D70621033E720012A6A5 /* CommendBoardViewController.swift in Sources */,
 				9034D6CD20FE4B040012A6A5 /* AppDelegate.swift in Sources */,
+				90AA2AC32149373B0071F9A9 /* LoadViewController.swift in Sources */,
 				9034D6FF20FF961C0012A6A5 /* UPCarouselFlowLayout.swift in Sources */,
 				901786F5210E31CA00A4A8DF /* PreviewViewController.swift in Sources */,
 				901786F3210E1D5000A4A8DF /* extentionUIImage.swift in Sources */,
@@ -673,6 +697,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -695,6 +720,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
