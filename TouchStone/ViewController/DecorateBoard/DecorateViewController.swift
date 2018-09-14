@@ -90,17 +90,17 @@ class DecorateViewController: UIViewController {
         switch(word)
         {
         case"墨":
-            return "丰沛曾为社稷臣，赐书名画墨犹新。"
+            return "丰沛曾为社稷臣\r赐书名画墨犹新"
         case"书":
-            return "故书不厌百回读，熟读深思子自知。"
+            return "故书不厌百回读\r熟读深思子自知"
         case"笔":
-            return "宣城之人采为笔，千万毛中拣一毫。"
+            return "宣城之人采为笔\r千万毛中拣一毫"
         case"真":
-            return "真子今将命，苍生福可传。"
+            return "真子今将命\r苍生福可传"
         case"情":
-            return "暗淡轻黄体性柔，情疏迹远只香留。"
+            return "暗淡轻黄体性柔\r情疏迹远只香留"
         default:
-            return "一笔书画，一份传承。"
+            return "一笔书画\r一份传承"
         }
     }
     
@@ -138,7 +138,7 @@ class DecorateViewController: UIViewController {
         
         //诗的内容根据文字改变
         poemTextView.text = changePoem(word: getWord)
-        
+        poemTextView.font = UIFont(name: "DFPRareBook", size: 35)
         //将上方选择条隐藏，下方选择条置于顶部
         self.view.bringSubview(toFront: selectToolBar)
         self.view.bringSubview(toFront: viewButton)

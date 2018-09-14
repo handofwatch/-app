@@ -42,8 +42,9 @@
 		90AA2AB621477F280071F9A9 /* HandWriteRecognizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 90AA2AB421477F280071F9A9 /* HandWriteRecognizer.cpp */; };
 		90AA2AB721477F280071F9A9 /* handwrite.model in Resources */ = {isa = PBXBuildFile; fileRef = 90AA2AB521477F280071F9A9 /* handwrite.model */; };
 		90AA2ABA21478E0B0071F9A9 /* RecognizeView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 90AA2AB821478E0B0071F9A9 /* RecognizeView.mm */; };
-		90AA2ABF2149302D0071F9A9 /* 触墨-闪屏1080-Wang.mov in Resources */ = {isa = PBXBuildFile; fileRef = 90AA2ABE2149302C0071F9A9 /* 触墨-闪屏1080-Wang.mov */; };
 		90AA2AC32149373B0071F9A9 /* LoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AA2AC22149373B0071F9A9 /* LoadViewController.swift */; };
+		90AA2AD2214B34B00071F9A9 /* 触墨-闪屏1080-Wang.mov in Resources */ = {isa = PBXBuildFile; fileRef = 90AA2AD1214B34B00071F9A9 /* 触墨-闪屏1080-Wang.mov */; };
+		90AA2AD4214B37D90071F9A9 /* HuaKangGuJiMuLan-Regular-2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90AA2AD3214B368C0071F9A9 /* HuaKangGuJiMuLan-Regular-2.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,8 +109,9 @@
 		90AA2AB821478E0B0071F9A9 /* RecognizeView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RecognizeView.mm; sourceTree = "<group>"; };
 		90AA2AB921478E0B0071F9A9 /* RecognizeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecognizeView.h; sourceTree = "<group>"; };
 		90AA2ABB21478F180071F9A9 /* HandWriteRecognizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HandWriteRecognizer.h; sourceTree = "<group>"; };
-		90AA2ABE2149302C0071F9A9 /* 触墨-闪屏1080-Wang.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "触墨-闪屏1080-Wang.mov"; sourceTree = "<group>"; };
 		90AA2AC22149373B0071F9A9 /* LoadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadViewController.swift; sourceTree = "<group>"; };
+		90AA2AD1214B34B00071F9A9 /* 触墨-闪屏1080-Wang.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "触墨-闪屏1080-Wang.mov"; sourceTree = "<group>"; };
+		90AA2AD3214B368C0071F9A9 /* HuaKangGuJiMuLan-Regular-2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "HuaKangGuJiMuLan-Regular-2.ttf"; path = "../../../../Downloads/HuaKangGuJiMuLan-Regular/HuaKangGuJiMuLan-Regular-2.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,7 +254,7 @@
 				909E048D210480D900D025BD /* Support Sources */,
 				909E048E2104810600D025BD /* ViewController */,
 				9034D6D020FE4B040012A6A5 /* Main.storyboard */,
-				90AA2ABE2149302C0071F9A9 /* 触墨-闪屏1080-Wang.mov */,
+				90AA2AD1214B34B00071F9A9 /* 触墨-闪屏1080-Wang.mov */,
 				9034D6D320FE4B040012A6A5 /* Assets.xcassets */,
 			);
 			path = TouchStone;
@@ -286,6 +288,7 @@
 				90AA2AA42146C5E40071F9A9 /* 草书.ttf */,
 				90AA2AA22146C5DB0071F9A9 /* 行书.TTF */,
 				90AA2AB021477CE00071F9A9 /* 楷书.TTF */,
+				90AA2AD3214B368C0071F9A9 /* HuaKangGuJiMuLan-Regular-2.ttf */,
 				909E04902105A6F500D025BD /* paintBoard */,
 				90178705210EF01300A4A8DF /* CollectionViewController */,
 				90178706210EF03100A4A8DF /* UIImage */,
@@ -438,9 +441,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90AA2AD2214B34B00071F9A9 /* 触墨-闪屏1080-Wang.mov in Resources */,
 				90AA2AA32146C5DC0071F9A9 /* 行书.TTF in Resources */,
 				90AA2AAB2146C6070071F9A9 /* 郑板桥体.ttf in Resources */,
-				90AA2ABF2149302D0071F9A9 /* 触墨-闪屏1080-Wang.mov in Resources */,
 				90AA2AA72146C5EF0071F9A9 /* 隶书.ttf in Resources */,
 				90AA2AB721477F280071F9A9 /* handwrite.model in Resources */,
 				9034D6D720FE4B040012A6A5 /* LaunchScreen.storyboard in Resources */,
@@ -453,6 +456,7 @@
 				909E051421086A8A00D025BD /* ttfCollectionViewCell.xib in Resources */,
 				90AA2AA12146C5C30071F9A9 /* 柳公权体.ttf in Resources */,
 				90AA2AA52146C5E50071F9A9 /* 草书.ttf in Resources */,
+				90AA2AD4214B37D90071F9A9 /* HuaKangGuJiMuLan-Regular-2.ttf in Resources */,
 				90AA2AB121477CE10071F9A9 /* 楷书.TTF in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

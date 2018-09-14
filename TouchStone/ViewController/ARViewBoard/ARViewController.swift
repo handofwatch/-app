@@ -12,7 +12,6 @@ import UIKit
 class ARViewController: UIViewController, ARSCNViewDelegate {
     
     @IBOutlet weak var sharebutton: UIButton!
-    @IBOutlet weak var gestureButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var ARView: ARSCNView!
     var draw:UIImage!
@@ -69,9 +68,9 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         ARView?.showsStatistics = true
         
         self.view.bringSubview(toFront: backButton)
-        self.view.bringSubview(toFront: gestureButton)
         self.view.bringSubview(toFront: sharebutton)
-            let scene = SCNScene()
+        
+        let scene = SCNScene()
         ARView.scene = scene
         let box = SCNBox(width: 0.4, height: 1, length: 0, chamferRadius: 0)
         let boxMaterial = SCNMaterial()
@@ -92,21 +91,6 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         super.viewWillDisappear(animated)
         // 暂停会话
         ARView?.session.pause()
-    }
-    
-
-    @IBAction func gestureButtonTapped(_ sender: Any) {
-            let scene = SCNScene()
-        ARView.scene = scene
-        let box = SCNBox(width: 0.4, height: 1, length: 0, chamferRadius: 0)
-        let boxMaterial = SCNMaterial()
-        boxMaterial.diffuse.contents = draw
-        box.materials = [boxMaterial]
-        
-        let boxNode = SCNNode(geometry: box)
-        boxNode.position = SCNVector3(0, 0, -1.5)
-    
-        scene.rootNode.addChildNode(boxNode)
     }
    
     func session(_ session: ARSession, cameraDidChangeTrackingState camera: ARCamera) {
@@ -135,7 +119,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
             self.tipLabel?.text = title + reason
             self.maskView?.alpha = 0.6
         case ARCamera.TrackingState.normal:
-            self.tipLabel?.text = "正常跟踪"
+            self.tipLabel?.text = ""
             self.maskView?.alpha = 0.0
         default:
             self.tipLabel?.text = "未知错误"
@@ -193,18 +177,10 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     }
 
     @IBAction func shareButtonTapped(_ sender: Any) {
-        UIGraphicsBeginImageContext(CGSize(width: self.ARView.bounds.size.width,
-                                           height: self.ARView.bounds.size.height))
-        self.ARView.layer.render(in: UIGraphicsGetCurrentContext()!)
-        let ARImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        
-        print("getARImage!")
-        
         let myWeb = NSURL(string: "http://www.touchStone.com")
         let shareString = "一起来用触墨创造作品吧！"
         let activity = UIActivity()
-        let activityItems = [ARImage, shareString, myWeb as Any] as [Any]
+        let activityItems = [UIImage(named: "FULL")!, shareString, myWeb as Any] as [Any]
         let activities = [activity]
         let activityController = UIActivityViewController(activityItems: activityItems,            applicationActivities: activities)
         activityController.excludedActivityTypes = [UIActivityType.copyToPasteboard,UIActivityType.assignToContact]
