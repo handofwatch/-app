@@ -14,7 +14,7 @@ class PreviewViewController: UIViewController {
     @IBOutlet weak var imageVIew: UIImageView!
     
     //分享按钮
-    @IBOutlet weak var shareButton: UIButton!
+    //@IBOutlet weak var shareButton: UIButton!
     
     //获得的图片
     var getImage : UIImage!
@@ -24,7 +24,7 @@ class PreviewViewController: UIViewController {
         super.viewDidLoad()
         
         //分享按钮设置样式
-        shareButton.setBackgroundImage(UIImage(named: "Share"), for: UIControlState.normal)
+//        shareButton.setBackgroundImage(UIImage(named: "Share"), for: UIControlState.normal)
         
         //将图片装入容器
         imageVIew.image = getImage

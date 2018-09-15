@@ -10,8 +10,10 @@ import UIKit
 import AVKit
 
 class LoadViewController: UIViewController {
-    
+    @IBOutlet weak var button: UIButton!
+    var timer : Timer!
     var player: AVPlayer?
+    var order : Int!
     private func loadVideo() {
         
         //this line is important to prevent background music stop
@@ -19,7 +21,7 @@ class LoadViewController: UIViewController {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
         } catch { }
         
-        let path = Bundle.main.path(forResource: "触墨-闪屏1080-Wang", ofType:"mov")
+        let path = Bundle.main.path(forResource: "改-触墨-闪屏1080-Wang", ofType:"mov")
         
         player = AVPlayer(url: URL(fileURLWithPath: path!) as URL)
         let playerLayer = AVPlayerLayer(player: player)
@@ -35,11 +37,32 @@ class LoadViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        order = 0
+        button.alpha = 0
         self.loadVideo()
-        
-        // Do any additional setup after loading the view.
+        timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(showButton), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 7,
+                                     target:self,selector:#selector(tickDown),
+                                                       userInfo:nil,repeats:true)
     }
 
+    
+    @objc func tickDown()
+    {
+        if(order == 0)
+        {
+            performSegue(withIdentifier: "goHome", sender: nil)
+            order = 1
+        }
+        else
+        {
+            
+        }
+    }
+    @objc func showButton()
+    {
+        button.alpha = 1
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

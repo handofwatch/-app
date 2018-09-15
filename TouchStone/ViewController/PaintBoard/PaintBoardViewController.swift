@@ -10,6 +10,24 @@ import UIKit
 
 class PaintBoardViewController: UIViewController {
     
+    @IBOutlet weak var blackButtonMode: UIButton!
+    
+    @IBOutlet weak var recognizeButton: UIButton!
+    @IBOutlet weak var clearButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var grayButtonMode: UIButton!
+    
+    @IBOutlet weak var blueButtonMode: UIButton!
+    
+    @IBOutlet weak var greenButtonMode: UIButton!
+    
+    @IBOutlet weak var purpleButtonMode: UIButton!
+    
+    @IBOutlet weak var redButtonMode: UIButton!
+    
+    @IBOutlet weak var yellowButtonMode: UIButton!
+    
+    @IBOutlet weak var brownButtonMode: UIButton!
     //用于绘制的画板View
     @IBOutlet weak var drawView: UIView!
     
@@ -57,9 +75,10 @@ class PaintBoardViewController: UIViewController {
         recognize.backgroundColor = UIColor.clear
         recognize.reset()
         self.view.addSubview(recognize)
-            
-//        self.view.sendSubview(toBack: RecognizeViewer)
-        
+         recognize.pathColor = UIColor(red: 188 / 255, green: 159 / 255, blue: 115 / 255, alpha: 1)//        self.view.sendSubview(toBack: RecognizeViewer)
+        self.view.bringSubview(toFront: clearButton)
+        self.view.bringSubview(toFront: backButton)
+        self.view.bringSubview(toFront: recognizeButton)
         
         //笔触选择器添加事件
         SliderForThickness.addTarget(self, action:#selector(ThicknessChanged(_:)), for: UIControlEvents.valueChanged)
@@ -70,6 +89,7 @@ class PaintBoardViewController: UIViewController {
         //笔触选择器的圆点改变样式
         SliderForThickness.setThumbImage(UIImage(named: "capture"), for: UIControlState.normal)
         
+        colorButton.backgroundColor = UIColor(red: 188 / 255, green: 159 / 255, blue: 115 / 255, alpha: 1)
         //颜色选择按钮设置为圆形
         colorButton.layer.cornerRadius = colorButton.frame.height/2
         
@@ -78,44 +98,44 @@ class PaintBoardViewController: UIViewController {
         
         //各种颜色的按钮添加到颜色选择器对应位置并设置为透明
         //各种颜色按钮添加点击事件
-        blackButton = UIButton(frame: CGRect(x: Double(colorSelector.frame.minX + colorSelector.frame.size.width * 0.08), y: Double(colorSelector.frame.minY * 1), width: Double(colorSelector.frame.size.width / 10), height: Double(colorSelector.frame.size.height * 9 / 10)))
+        blackButton = UIButton(frame: blackButtonMode.frame)
         blackButton.backgroundColor = UIColor.clear
         blackButton.addTarget(self, action:#selector(blackButtonTapped(_:)), for: UIControlEvents.touchUpInside)
         
         
-        grayButton = UIButton(frame: CGRect(x: Double(colorSelector.frame.minX + colorSelector.frame.size.width * 0.18), y: Double(colorSelector.frame.minY * 1), width: Double(colorSelector.frame.size.width / 10), height: Double(colorSelector.frame.size.height * 9 / 10)))
+        grayButton = UIButton(frame: grayButtonMode.frame)
         
         grayButton.backgroundColor = UIColor.clear
         grayButton.addTarget(self, action:#selector(grayButtonTapped(_:)), for: UIControlEvents.touchUpInside)
         
         
-        blueButton = UIButton(frame: CGRect(x: Double(colorSelector.frame.minX + colorSelector.frame.size.width * 0.291), y: Double(colorSelector.frame.minY * 1), width: Double(colorSelector.frame.size.width / 10), height: Double(colorSelector.frame.size.height * 9 / 10)))
+        blueButton = UIButton(frame: blueButtonMode.frame)
             
         blueButton.backgroundColor = UIColor.clear
         blueButton.addTarget(self, action:#selector(blueButtonTapped(_:)), for: UIControlEvents.touchUpInside)
         
         
-        greenButton = UIButton(frame: CGRect(x: Double(colorSelector.frame.minX + colorSelector.frame.size.width * 0.4), y: Double(colorSelector.frame.minY * 1), width: Double(colorSelector.frame.size.width / 10), height: Double(colorSelector.frame.size.height * 9 / 10)))
+        greenButton = UIButton(frame: greenButtonMode.frame)
         greenButton.backgroundColor = UIColor.clear
         greenButton.addTarget(self, action:#selector(greenButtonTapped(_:)), for: UIControlEvents.touchUpInside)
         
         
-        purpleButton = UIButton(frame: CGRect(x: Double(colorSelector.frame.minX + colorSelector.frame.size.width * 0.5), y: Double(colorSelector.frame.minY * 1), width: Double(colorSelector.frame.size.width / 10), height: Double(colorSelector.frame.size.height * 9 / 10)))
+        purpleButton = UIButton(frame: purpleButtonMode.frame)
         purpleButton.backgroundColor = UIColor.clear
         purpleButton.addTarget(self, action:#selector(purpleButtonTapped(_:)), for: UIControlEvents.touchUpInside)
         
         
-        redButton = UIButton(frame: CGRect(x: Double(colorSelector.frame.minX + colorSelector.frame.size.width * 0.616), y: Double(colorSelector.frame.minY * 1), width: Double(colorSelector.frame.size.width / 10), height: Double(colorSelector.frame.size.height * 9 / 10)))
+        redButton = UIButton(frame: redButtonMode.frame)
         redButton.backgroundColor = UIColor.clear
         redButton.addTarget(self, action:#selector(redButtonTapped(_:)), for: UIControlEvents.touchUpInside)
         
         
-        yellowButton = UIButton(frame: CGRect(x: Double(colorSelector.frame.minX + colorSelector.frame.size.width * 0.712), y: Double(colorSelector.frame.minY * 1), width: Double(colorSelector.frame.size.width / 10), height: Double(colorSelector.frame.size.height * 9 / 10)))
+        yellowButton = UIButton(frame: yellowButtonMode.frame)
         yellowButton.backgroundColor = UIColor.clear
         yellowButton.addTarget(self, action:#selector(yellowButtonTapped(_:)), for: UIControlEvents.touchUpInside)
         
         
-        brownButton = UIButton(frame: CGRect(x: Double(colorSelector.frame.minX + colorSelector.frame.size.width * 0.83), y: Double(colorSelector.frame.minY * 1), width: Double(colorSelector.frame.size.width / 10), height: Double(colorSelector.frame.size.height * 9 / 10)))
+        brownButton = UIButton(frame: brownButtonMode.frame)
         brownButton.backgroundColor = UIColor.clear
         brownButton.addTarget(self, action:#selector(brownButtonTapped(_:)), for: UIControlEvents.touchUpInside)
         
@@ -144,6 +164,15 @@ class PaintBoardViewController: UIViewController {
         self.view.sendSubview(toBack: redButton)
         self.view.sendSubview(toBack: yellowButton)
         self.view.sendSubview(toBack: brownButton)
+        
+        self.view.sendSubview(toBack: blackButtonMode)
+        self.view.sendSubview(toBack: grayButtonMode)
+        self.view.sendSubview(toBack: blueButtonMode)
+        self.view.sendSubview(toBack: greenButtonMode)
+        self.view.sendSubview(toBack: purpleButtonMode)
+        self.view.sendSubview(toBack: redButtonMode)
+        self.view.sendSubview(toBack: yellowButtonMode)
+        self.view.sendSubview(toBack: brownButtonMode)
     }
     
     //响应笔触选择器改变的方法
@@ -291,7 +320,7 @@ class PaintBoardViewController: UIViewController {
     @objc func brownButtonTapped(_ sender:UIButton)
     {
         print("brownButtonTapped")
-        colorButton.backgroundColor = UIColor(red: 175 / 255, green: 149 / 255, blue: 113 / 255, alpha: 1)
+        colorButton.backgroundColor = UIColor(red: 188 / 255, green: 159 / 255, blue: 115 / 255, alpha: 1)
         colorSelector.alpha = 0
         SliderForThickness.alpha = 1
         SliderBackground.alpha = 1

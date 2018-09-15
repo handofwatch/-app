@@ -19,9 +19,9 @@ class HomeCollectionViewCell: UICollectionViewCell {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
+        self.layer.backgroundColor = UIColor.clear.cgColor
         //添加圆角
-        self.layer.cornerRadius = 15.0
+        self.layer.cornerRadius = 0
         self.layer.shouldRasterize = true
     }
     

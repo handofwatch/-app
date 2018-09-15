@@ -38,10 +38,13 @@ HandWriteRecognizer::Character hwCharacter;
 
 @property(nonatomic, assign) size_t handWriteID;
 @property(nonatomic, strong) NSMutableArray *points;
+//@property(nonatomic, strong) NSMutableArray *lineColors;
+//@property(nonatomic, strong) NSMutableArray *lineWidths;
 //@property(nonatomic, strong) UITableView *resultTableView;
 //@property(nonatomic, strong) NSMutableArray *results;
 @property(nonatomic) dispatch_source_t timer;
 @property(nonatomic) std::vector<std::string> words;
+//@property(nonatomic) std::vector<NSMutableArray> lines;
 @end
 
 @implementation RecognizeView
@@ -52,7 +55,7 @@ HandWriteRecognizer::Character hwCharacter;
         [self initViews];
     }
     self.lineWidth = 5.0;
-    self.pathColor = UIColor.blackColor;
+    self.pathColor = [UIColor colorWithRed:188 green:159 blue:115 alpha:1];
     self.signatureBackgroundColor = UIColor.clearColor;
     return self;
 }
@@ -89,6 +92,8 @@ HandWriteRecognizer::Character hwCharacter;
     hwRecognizer.loadModelFile([[[NSBundle mainBundle] pathForResource:@"handwrite" ofType:@"model"] cStringUsingEncoding:NSUTF8StringEncoding]);
     _points = [NSMutableArray new];
     _results = [NSMutableArray new];
+//    _lineColors = [NSMutableArray new];
+//    _lineWidths = [NSMutableArray new];
 }
 
 - (void)recognize{
@@ -145,6 +150,8 @@ HandWriteRecognizer::Character hwCharacter;
     });
     dispatch_resume(_timer);
 //    NSLog( _results[0],_results[1],_results[2],_results[3],_results[4]);
+
+    
 }
 
 

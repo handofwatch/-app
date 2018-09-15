@@ -28,7 +28,7 @@ class RecognizeViewController: UIViewController, UICollectionViewDelegate, UICol
     
     
     //MARK::字体
-    var ttfs = ["默认字体", "行书","草书","隶书","颜真卿体","柳公权体","郑板桥体","楷书"]
+    var ttfs = ["颜真卿体","柳公权体","行草", "行书","草书","隶书","楷书","行楷"]
     
     
     //字的CollectionView
@@ -62,7 +62,7 @@ class RecognizeViewController: UIViewController, UICollectionViewDelegate, UICol
         switch(word)
         {
         case"墨":
-            return "墨，是形声字，从土黑声，本义为书写用的黑色颜料，《说文》，“墨，书墨也”。墨也是黑色的别称，《广雅》，“墨，黑也”。引申为文墨、贪墨、绳墨等。墨刑为古代五刑之一，即脸上刺字并涂以黑色颜料。另有墨家学派，为诸子百家之一。又有墨姓。"
+            return "墨，是形声字，从土黑声，本义为书写用的黑色颜料，《说文》，“墨，书墨也”。墨也是黑色的别称，《广雅》，“墨，黑也”。引申为文墨、贪墨、绳墨等。墨刑为古代五刑之一，即脸上刺字并涂以黑色颜料。"
         case"书":
             return "《说文》:“书,箸也。”箸(著)即显明。合起来表示用笔使文字显明,“者、箸”音近,故“者”有表意作用。本义:书写,记录,记载。"
         case"笔":
@@ -72,7 +72,7 @@ class RecognizeViewController: UIViewController, UICollectionViewDelegate, UICol
         case"情":
             return "外界事物所引起的喜、怒、爱、憎、哀、惧等心理状态。形声字。从心,青声。本义:感情"
         default:
-            return "这个字我们没有收录"
+            return "从古⼈到今⼈。\r书法艺术的精魄依然是透过了层层纸张，穿越了模糊的记忆，留了下来。\r一笔书画，一笔传承"
         }
     }
     
@@ -102,11 +102,13 @@ class RecognizeViewController: UIViewController, UICollectionViewDelegate, UICol
         //把yourDrawView显示在最前
         self.view.bringSubview(toFront: yourDrawView)
         
-        //返回按键设置
-        backButton.setBackgroundImage(UIImage(named: "back_white"), for: UIControlState.normal)
+//        //返回按键设置
+//        backButton.setBackgroundImage(UIImage(named: "back_white"), for: UIControlState.normal)
         
         //设置解释文字为不可交互
-        textForInstruct.isUserInteractionEnabled = false
+        textForInstruct.isUserInteractionEnabled = true
+        textForInstruct.isEditable = false
+        textForInstruct.isSelectable = false
         
         //添加wordCollectionViewCell
         wordCollectionView.register(UINib.init(nibName: "wordCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "wordIdentifier")
@@ -120,14 +122,14 @@ class RecognizeViewController: UIViewController, UICollectionViewDelegate, UICol
         flowLayout.scrollDirection = .horizontal
         flowLayout.sideItemScale = 1
         flowLayout.sideItemAlpha = 1
-        flowLayout.spacingMode = .fixed(spacing: 20.0)
+        flowLayout.spacingMode = .fixed(spacing: 5.0)
         
         let flowLayout1 = UPCarouselFlowLayout()
-        flowLayout1.itemSize = CGSize(width: ttfCollectionView.frame.size.width * 0.645, height: ttfCollectionView.frame.size.height)
+        flowLayout1.itemSize = CGSize(width: ttfCollectionView.frame.size.height * 0.8, height: ttfCollectionView.frame.size.height)
         flowLayout1.scrollDirection = .horizontal
         flowLayout1.sideItemScale = 1
         flowLayout1.sideItemAlpha = 1
-        flowLayout1.spacingMode = .fixed(spacing: 20.0)
+        flowLayout1.spacingMode = .fixed(spacing: 15.0)
         
         //确定两种CollectionView的格式、数据源和代理
         wordCollectionView.collectionViewLayout = flowLayout
@@ -139,7 +141,10 @@ class RecognizeViewController: UIViewController, UICollectionViewDelegate, UICol
         ttfCollectionView.dataSource = self
         
         originalImage = yourDrawToRecognize
-        order = nil
+        order = 0
+        
+        wordsOnShow = words[0]
+        
     }
     
     
@@ -171,7 +176,7 @@ class RecognizeViewController: UIViewController, UICollectionViewDelegate, UICol
             self.view.bringSubview(toFront: cell.Wordlabel)
             cell.Wordlabel.textColor = UIColor(red: 188/255, green: 159/255, blue: 115/255, alpha: 1)
             //TODO::设置字体为第一个选择框字体
-            //cell.Wordlabel.font.familyName = ""
+            cell.Wordlabel.font = UIFont(name: "w", size: 150)
             return cell
         }
         else if collectionView == ttfCollectionView
@@ -185,22 +190,22 @@ class RecognizeViewController: UIViewController, UICollectionViewDelegate, UICol
             //TODO::添加字体文件并且改变文字的字体
             switch indexPath.row
             {
-                //            case 0:
-            //                cell.wordlabel.font.familyName = ""
+            case 0:
+                cell.wordlabel.font = UIFont(name:"w", size:60)
             case 1:
-                cell.wordlabel.font = UIFont(name: "经典行书简", size: 60)
-            case 2:
-                cell.wordlabel.font = UIFont(name: "HYSunWanMinCaoShu", size: 60)
-            case 3:
-                cell.wordlabel.font = UIFont(name: "YuWeiLiShuJT", size: 60)
-            case 4:
-                cell.wordlabel.font = UIFont(name: "w", size: 60)
-            case 5:
                 cell.wordlabel.font = UIFont(name: "FZSuXinShiLiuKaiS-R-GB", size: 60)
+            case 2:
+                cell.wordlabel.font = UIFont(name: "HYChengXingJ", size: 60)
+            case 3:
+                cell.wordlabel.font = UIFont(name: "经典行书简", size: 60)
+            case 4:
+                cell.wordlabel.font = UIFont(name: "HYSunWanMinCaoShu", size: 60)
+            case 5:
+                cell.wordlabel.font = UIFont(name: "YuWeiLiShuJT", size: 60)
             case 6:
-                cell.wordlabel.font = UIFont(name: "zktzbqxst", size: 60)
-            case 7:
                 cell.wordlabel.font = UIFont(name: "FZShengShiKaiShuS-EB-GB", size: 60)
+            case 7:
+                cell.wordlabel.font = UIFont(name: "DFPRareBook", size: 60)
             default: break
 //                cell.wordlabel.font = UIFont(name: "默认字体", size: 60)
             }

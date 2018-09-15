@@ -19,17 +19,17 @@ class DecorateViewController: UIViewController {
     //预览按钮
     @IBOutlet weak var viewButton: UIButton!
     
-    //上方的ToolBar
-    @IBOutlet weak var upSelectBar: UIToolbar!
-    
-    //上方ToolBar的Item
-    @IBOutlet weak var upBanshiButton: UIBarButtonItem!
-    
-    @IBOutlet weak var upZhizhangButton: UIBarButtonItem!
-    
-    @IBOutlet weak var upZhuangshiButton: UIBarButtonItem!
-    
-    @IBOutlet weak var upYinzhangButton: UIBarButtonItem!
+//    //上方的ToolBar
+//    @IBOutlet weak var upSelectBar: UIToolbar!
+//
+//    //上方ToolBar的Item
+//    @IBOutlet weak var upBanshiButton: UIBarButtonItem!
+//
+//    @IBOutlet weak var upZhizhangButton: UIBarButtonItem!
+//
+//    @IBOutlet weak var upZhuangshiButton: UIBarButtonItem!
+//
+//    @IBOutlet weak var upYinzhangButton: UIBarButtonItem!
     
     //下方ToolBar的四个按钮
     @IBOutlet weak var banshiButton: UIBarButtonItem!
@@ -54,9 +54,6 @@ class DecorateViewController: UIViewController {
     
     //文字文本
     @IBOutlet weak var wordLabel: UILabel!
-    
-    //诗的TextView
-    @IBOutlet weak var poemTextView: UITextView!
     
     //印章图片
     @IBOutlet weak var sealImage: UIImageView!
@@ -111,39 +108,36 @@ class DecorateViewController: UIViewController {
         isUpSelectorShowed = false
         
         //上方和下方的ToolBar全部是初始选项卡，去除系统色
-        upBanshiButton.setBackgroundImage(UIImage(named: "2-3_版式"), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
-        upBanshiButton.tintColor = UIColor.clear
-        banshiButton.setBackgroundImage(UIImage(named: "2-3_版式"), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
+//        upBanshiButton.setBackgroundImage(UIImage(named: "2-3_版式"), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
+//        upBanshiButton.tintColor = UIColor.clear
+        banshiButton.setBackgroundImage(UIImage(named: "2-3_版式")?.scaleImage(scaleSize: 1.5), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
         banshiButton.tintColor = UIColor.clear
         //为下方的按钮添加响应
         banshiButton.action = #selector(n1ButtonClicked(sender:))
         
-        upZhizhangButton.setBackgroundImage(UIImage(named: "2-3_纸张"), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
-        upZhizhangButton.tintColor = UIColor.clear
-        zhizhangButton.setBackgroundImage(UIImage(named: "2-3_纸张"), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
+//        upZhizhangButton.setBackgroundImage(UIImage(named: "2-3_纸张"), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
+//        upZhizhangButton.tintColor = UIColor.clear
+        zhizhangButton.setBackgroundImage(UIImage(named: "2-3_纸张")?.scaleImage(scaleSize: 1.5), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
         zhizhangButton.tintColor = UIColor.clear
         zhizhangButton.action = #selector(n2ButtonClicked(sender:))
         
-        upZhuangshiButton.setBackgroundImage(UIImage(named: "2-3_装饰"), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
-        upZhuangshiButton.tintColor = UIColor.clear
-        zhuangshiButton.setBackgroundImage(UIImage(named: "2-3_装饰"), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
+//        upZhuangshiButton.setBackgroundImage(UIImage(named: "2-3_装饰"), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
+//        upZhuangshiButton.tintColor = UIColor.clear
+        zhuangshiButton.setBackgroundImage(UIImage(named: "2-3_装饰")?.scaleImage(scaleSize: 1.5), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
         zhuangshiButton.tintColor = UIColor.clear
         zhuangshiButton.action = #selector(n3ButtonClicked(sender:))
         
-        upYinzhangButton.setBackgroundImage(UIImage(named: "2-3_印章"), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
-        upYinzhangButton.tintColor = UIColor.clear
-        yinzhangButton.setBackgroundImage(UIImage(named: "2-3_印章"), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
+//        upYinzhangButton.setBackgroundImage(UIImage(named: "2-3_印章"), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
+//        upYinzhangButton.tintColor = UIColor.clear
+        yinzhangButton.setBackgroundImage(UIImage(named: "2-3_印章")?.scaleImage(scaleSize: 1.5), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
         yinzhangButton.tintColor = UIColor.clear
         yinzhangButton.action = #selector(n4ButtonClicked(sender:))
-        
-        //诗的内容根据文字改变
-        poemTextView.text = changePoem(word: getWord)
-        poemTextView.font = UIFont(name: "DFPRareBook", size: 35)
+
         //将上方选择条隐藏，下方选择条置于顶部
         self.view.bringSubview(toFront: selectToolBar)
         self.view.bringSubview(toFront: viewButton)
         self.view.bringSubview(toFront: backButton)
-        self.view.sendSubview(toBack: upSelectBar)
+//        self.view.sendSubview(toBack: upSelectBar)
         
         //对于字体指令的响应
         switch order
@@ -158,25 +152,25 @@ class DecorateViewController: UIViewController {
         case 0:
             wordLabel.text = getWord
             //TODO::fontFamily字体改变
-        //wordLabel.font.familyName = ""
+        wordLabel.font = UIFont(name: "w", size: 150)
         case 1:
             wordLabel.text = getWord
-        wordLabel.font = UIFont(name: "经典行书简", size: 150)
+        wordLabel.font = UIFont(name: "FZSuXinShiLiuKaiS-R-GB", size: 150)
         case 2:
             wordLabel.text = getWord
-        wordLabel.font = UIFont(name: "HYSunWanMinCaoShu", size: 150)
+        wordLabel.font = UIFont(name: "HYChengXingJ", size: 150)
         case 3:
             wordLabel.text = getWord
-        wordLabel.font = UIFont(name: "YuWeiLiShuJT", size: 150)
+        wordLabel.font = UIFont(name: "经典行书简", size: 150)
         case 4:
             wordLabel.text = getWord
-        wordLabel.font = UIFont(name: "w", size: 150)
+        wordLabel.font = UIFont(name: "HYSunWanMinCaoShu", size: 150)
         case 5:
             wordLabel.text = getWord
-        wordLabel.font = UIFont(name: "FZSuXinShiLiuKaiS-R-GB", size: 150)
+        wordLabel.font = UIFont(name: "FZShengShiKaiShuS-EB-GB", size: 150)
         case 6:
             wordLabel.text = getWord
-        wordLabel.font = UIFont(name: "zktzbqxst", size: 150)
+        wordLabel.font = UIFont(name: "DFPRareBook", size: 150)
         case 7:
             wordLabel.text = getWord
         wordLabel.font = UIFont(name: "FZShengShiKaiShuS-EB-GB", size: 150)
@@ -211,13 +205,13 @@ class DecorateViewController: UIViewController {
             //设置选择命令为1
             selectOrder = 1
             //显示上方ToolBar
-            self.view.bringSubview(toFront: upSelectBar)
+//            self.view.bringSubview(toFront: upSelectBar)
             //下方的按钮变为边框的图片
-            banshiButton.setBackgroundImage(UIImage(named: "边框1")?.scaleImage(scaleSize: 0.1), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
+            banshiButton.setBackgroundImage(UIImage(named: "边框1")?.scaleImage(scaleSize: 0.2), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
             
-            zhizhangButton.setBackgroundImage(UIImage(named: "边框2")?.scaleImage(scaleSize: 0.1), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
+            zhizhangButton.setBackgroundImage(UIImage(named: "边框2")?.scaleImage(scaleSize: 0.2), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
             
-            zhuangshiButton.setBackgroundImage(UIImage(named: "边框3")?.scaleImage(scaleSize: 0.1), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
+            zhuangshiButton.setBackgroundImage(UIImage(named: "边框3")?.scaleImage(scaleSize: 0.2), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
             
             //第四个位置空出
             yinzhangButton.setBackgroundImage(UIImage(named: "3_add"), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
@@ -239,25 +233,24 @@ class DecorateViewController: UIViewController {
                 backgroundImage.image = UIImage(named: "1-白色宣纸")
             //装饰改变
             case 3:
-                decorateView.image = UIImage(named: "装饰-圆")
+                decorateView.image = UIImage(named: "装饰元素1")
             //印章改变
             case 4:
-                sealImage.image = UIImage(named: "pic1")
+                sealImage.image = UIImage(named: "印章1")
             default:
                 print("Wrong!")
             }
             //把上方ToolBar收起
-            self.view.sendSubview(toBack: upSelectBar)
+//            self.view.sendSubview(toBack: upSelectBar)
             //选择栏状态为收起
             isUpSelectorShowed = false
-            //下方按钮恢复为初始选择
-            banshiButton.setBackgroundImage(UIImage(named: "2-3_版式"), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
+            banshiButton.setBackgroundImage(UIImage(named: "2-3_版式")?.scaleImage(scaleSize: 1.5), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
             
-            zhizhangButton.setBackgroundImage(UIImage(named: "2-3_纸张"), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
+            zhizhangButton.setBackgroundImage(UIImage(named: "2-3_纸张")?.scaleImage(scaleSize: 1.5), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
             
-            zhuangshiButton.setBackgroundImage(UIImage(named: "2-3_装饰"), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
+            zhuangshiButton.setBackgroundImage(UIImage(named: "2-3_装饰")?.scaleImage(scaleSize: 1.5), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
             
-            yinzhangButton.setBackgroundImage(UIImage(named: "2-3_印章"), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
+            yinzhangButton.setBackgroundImage(UIImage(named: "2-3_印章")?.scaleImage(scaleSize: 1.5), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
         }
     }
     
@@ -267,10 +260,10 @@ class DecorateViewController: UIViewController {
         if isUpSelectorShowed == false
         {
             selectOrder = 2
-            self.view.bringSubview(toFront: upSelectBar)
-            banshiButton.setBackgroundImage(UIImage(named: "1-白色宣纸")?.scaleImage(scaleSize: 0.1), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
-            zhizhangButton.setBackgroundImage(UIImage(named: "2-浅黄色")?.scaleImage(scaleSize: 0.1), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
-            zhuangshiButton.setBackgroundImage(UIImage(named: "5-柳叶纸")?.scaleImage(scaleSize: 0.1), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
+//            self.view.bringSubview(toFront: upSelectBar)
+            banshiButton.setBackgroundImage(UIImage(named: "1-白色宣纸")?.scaleImage(scaleSize: 0.2), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
+            zhizhangButton.setBackgroundImage(UIImage(named: "2-浅黄色")?.scaleImage(scaleSize: 0.2), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
+            zhuangshiButton.setBackgroundImage(UIImage(named: "5-柳叶纸")?.scaleImage(scaleSize: 0.2), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
             yinzhangButton.setBackgroundImage(UIImage(named: "3_add"), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
             isUpSelectorShowed = true
         }
@@ -283,21 +276,21 @@ class DecorateViewController: UIViewController {
             case 2:
                 backgroundImage.image = UIImage(named: "2-浅黄色")
             case 3:
-                decorateView.image = UIImage(named: "装饰-山")
+                decorateView.image = UIImage(named: "装饰元素2")
             case 4:
-                sealImage.image = UIImage(named: "pic2")
+                sealImage.image = UIImage(named: "印章2")
             default:
                 print("Wrong!")
             }
-            self.view.sendSubview(toBack: upSelectBar)
+//            self.view.sendSubview(toBack: upSelectBar)
             isUpSelectorShowed = false
-            banshiButton.setBackgroundImage(UIImage(named: "2-3_版式"), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
+            banshiButton.setBackgroundImage(UIImage(named: "2-3_版式")?.scaleImage(scaleSize: 1.5), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
             
-            zhizhangButton.setBackgroundImage(UIImage(named: "2-3_纸张"), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
+            zhizhangButton.setBackgroundImage(UIImage(named: "2-3_纸张")?.scaleImage(scaleSize: 1.5), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
             
-            zhuangshiButton.setBackgroundImage(UIImage(named: "2-3_装饰"), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
+            zhuangshiButton.setBackgroundImage(UIImage(named: "2-3_装饰")?.scaleImage(scaleSize: 1.5), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
             
-            yinzhangButton.setBackgroundImage(UIImage(named: "2-3_印章"), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
+            yinzhangButton.setBackgroundImage(UIImage(named: "2-3_印章")?.scaleImage(scaleSize: 1.5), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
         }
     }
     
@@ -307,11 +300,11 @@ class DecorateViewController: UIViewController {
         if isUpSelectorShowed == false
         {
             selectOrder = 3
-            self.view.bringSubview(toFront: upSelectBar)
-            banshiButton.setBackgroundImage(UIImage(named: "装饰-圆")?.scaleImage(scaleSize: 0.3), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
-            zhizhangButton.setBackgroundImage(UIImage(named: "装饰-山")?.scaleImage(scaleSize: 0.2), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
-            zhuangshiButton.setBackgroundImage(UIImage(named: "装饰-鲤")?.scaleImage(scaleSize: 0.4), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
-            yinzhangButton.setBackgroundImage(UIImage(named: "3_add"), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
+//            self.view.bringSubview(toFront: upSelectBar)
+            banshiButton.setBackgroundImage(UIImage(named: "装饰元素1")?.scaleImage(scaleSize: 0.1), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
+            zhizhangButton.setBackgroundImage(UIImage(named: "装饰元素2")?.scaleImage(scaleSize: 0.1), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
+            zhuangshiButton.setBackgroundImage(UIImage(named: "装饰元素4")?.scaleImage(scaleSize: 0.1), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
+            yinzhangButton.setBackgroundImage(UIImage(named: "装饰元素5")?.scaleImage(scaleSize: 0.1), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
             isUpSelectorShowed = true
         }
         else
@@ -323,21 +316,21 @@ class DecorateViewController: UIViewController {
             case 2:
                 backgroundImage.image = UIImage(named: "5-柳叶纸")
             case 3:
-                decorateView.image = UIImage(named: "装饰-鲤")
+                decorateView.image = UIImage(named: "装饰元素4")
             case 4:
-                sealImage.image = UIImage(named: "pic3")
+                sealImage.image = UIImage(named: "印章3")
             default:
                 print("Wrong!")
             }
-            self.view.sendSubview(toBack: upSelectBar)
+//            self.view.sendSubview(toBack: upSelectBar)
             isUpSelectorShowed = false
-            banshiButton.setBackgroundImage(UIImage(named: "2-3_版式"), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
+            banshiButton.setBackgroundImage(UIImage(named: "2-3_版式")?.scaleImage(scaleSize: 1.5), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
             
-            zhizhangButton.setBackgroundImage(UIImage(named: "2-3_纸张"), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
+            zhizhangButton.setBackgroundImage(UIImage(named: "2-3_纸张")?.scaleImage(scaleSize: 1.5), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
             
-            zhuangshiButton.setBackgroundImage(UIImage(named: "2-3_装饰"), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
+            zhuangshiButton.setBackgroundImage(UIImage(named: "2-3_装饰")?.scaleImage(scaleSize: 1.5), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
             
-            yinzhangButton.setBackgroundImage(UIImage(named: "2-3_印章"), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
+            yinzhangButton.setBackgroundImage(UIImage(named: "2-3_印章")?.scaleImage(scaleSize: 1.5), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
         }
     }
     
@@ -347,16 +340,37 @@ class DecorateViewController: UIViewController {
         if isUpSelectorShowed == false
         {
             selectOrder = 4
-            self.view.bringSubview(toFront: upSelectBar)
-            banshiButton.setBackgroundImage(UIImage(named: "pic1")?.scaleImage(scaleSize: 0.7), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
-            zhizhangButton.setBackgroundImage(UIImage(named: "pic2")?.scaleImage(scaleSize: 0.7), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
-            zhuangshiButton.setBackgroundImage(UIImage(named: "pic3")?.scaleImage(scaleSize: 0.7), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
-            yinzhangButton.setBackgroundImage(UIImage(named: "3_add"), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
+//            self.view.bringSubview(toFront: upSelectBar)
+            banshiButton.setBackgroundImage(UIImage(named: "印章1")?.scaleImage(scaleSize: 0.3), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
+            zhizhangButton.setBackgroundImage(UIImage(named: "印章2")?.scaleImage(scaleSize: 0.3), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
+            zhuangshiButton.setBackgroundImage(UIImage(named: "印章3")?.scaleImage(scaleSize: 0.3), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
+            yinzhangButton.setBackgroundImage(UIImage(named: "印章4")?.scaleImage(scaleSize: 0.3), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
             isUpSelectorShowed = true
         }
         else
         {
+            switch selectOrder
+            {
+            case 1:return
+                //borderImage.image = UIImage(named: "边框3")
+            case 2:return
+                //backgroundImage.image = UIImage(named: "5-柳叶纸")
+            case 3:
+                decorateView.image = UIImage(named: "装饰元素5")
+            case 4:
+                sealImage.image = UIImage(named: "印章4")
+            default:
+                print("Wrong!")
+            }
+            //            self.view.sendSubview(toBack: upSelectBar)
+            isUpSelectorShowed = false
+            banshiButton.setBackgroundImage(UIImage(named: "2-3_版式")?.scaleImage(scaleSize: 1.5), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
             
+            zhizhangButton.setBackgroundImage(UIImage(named: "2-3_纸张")?.scaleImage(scaleSize: 1.5), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
+            
+            zhuangshiButton.setBackgroundImage(UIImage(named: "2-3_装饰")?.scaleImage(scaleSize: 1.5), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
+            
+            yinzhangButton.setBackgroundImage(UIImage(named: "2-3_印章")?.scaleImage(scaleSize: 1.5), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
         }
     }
     

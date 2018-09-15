@@ -16,7 +16,8 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet weak var ARView: ARSCNView!
     var draw:UIImage!
     
-
+    @IBOutlet weak var captureButton: UIButton!
+    
   
     // 会话配置
     private var sessionConfiguration: ARConfiguration?
@@ -28,7 +29,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
             _maskView = UIView(frame: view.bounds)
             _maskView?.isUserInteractionEnabled = false
             _maskView?.backgroundColor = UIColor.white
-            _maskView?.alpha = 0.6
+            _maskView?.alpha = 0
         }
         return _maskView
     }
@@ -51,7 +52,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       sharebutton.setBackgroundImage(UIImage(named: "Share"), for: UIControlState.normal)
+       //sharebutton.setBackgroundImage(UIImage(named: "Share"), for: UIControlState.normal)
         // Do any additional setup after loading the view.
         if let aView = ARView {
             view.addSubview(aView)
@@ -65,21 +66,11 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         // 设置AR视图代理
         ARView?.delegate = self
         // 显示视图的FPS信息
-        ARView?.showsStatistics = true
+        //ARView?.showsStatistics = true
         
         self.view.bringSubview(toFront: backButton)
         self.view.bringSubview(toFront: sharebutton)
-        
-        let scene = SCNScene()
-        ARView.scene = scene
-        let box = SCNBox(width: 0.4, height: 1, length: 0, chamferRadius: 0)
-        let boxMaterial = SCNMaterial()
-        boxMaterial.diffuse.contents = draw
-        box.materials = [boxMaterial]
-
-        let boxNode = SCNNode(geometry: box)
-        boxNode.position = SCNVector3(0, 0, -1.5)
-        scene.rootNode.addChildNode(boxNode)
+        self.view.bringSubview(toFront: captureButton)
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -93,38 +84,52 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         ARView?.session.pause()
     }
    
+    @IBAction func captureButtonTapped(_ sender: Any) {
+        let scene = SCNScene()
+        ARView.scene = scene
+        let box = SCNBox(width: 0.4, height: 1, length: 0, chamferRadius: 0)
+        let boxMaterial = SCNMaterial()
+       boxMaterial.diffuse.contents = draw
+//        boxMaterial.diffuse.contents = UIImage(named: "B")
+        box.materials = [boxMaterial]
+        
+        let boxNode = SCNNode(geometry: box)
+        boxNode.position = SCNVector3(0, 0, -1.5)
+        scene.rootNode.addChildNode(boxNode)
+    }
+    
     func session(_ session: ARSession, cameraDidChangeTrackingState camera: ARCamera) {
-        switch camera.trackingState {
-        case ARCamera.TrackingState.notAvailable:
-            self.tipLabel?.text = "跟踪不可用"
-            self.maskView?.alpha = 0.7
-        case ARCamera.TrackingState.limited(ARCamera.TrackingState.Reason.initializing):
-            let title = "跟踪受限\n"
-            let reason: String = "正在初始化"
-            self.tipLabel?.text = title + reason
-            self.maskView?.alpha = 0.6
-        case ARCamera.TrackingState.limited(ARCamera.TrackingState.Reason.excessiveMotion):
-            let title = "跟踪受限\n"
-            let reason: String = "设备移动过快，少侠手速惊人"
-            self.tipLabel?.text = title + reason
-            self.maskView?.alpha = 0.6
-        case ARCamera.TrackingState.limited(ARCamera.TrackingState.Reason.insufficientFeatures):
-            let title = "跟踪受限\n"
-            let reason: String = "提取不到足够的特征点，请先移动设备"
-            self.tipLabel?.text = title + reason
-            self.maskView?.alpha = 0.6
-        case ARCamera.TrackingState.limited(ARCamera.TrackingState.Reason.relocalizing):
-            let title = "跟踪受限\n"
-            let reason: String = "Relocating..."
-            self.tipLabel?.text = title + reason
-            self.maskView?.alpha = 0.6
-        case ARCamera.TrackingState.normal:
-            self.tipLabel?.text = ""
-            self.maskView?.alpha = 0.0
-        default:
-            self.tipLabel?.text = "未知错误"
-            self.maskView?.alpha = 0.5
-        }
+//        switch camera.trackingState {
+//        case ARCamera.TrackingState.notAvailable:
+////            self.tipLabel?.text = "跟踪不可用"
+////            self.maskView?.alpha = 0.7
+//        case ARCamera.TrackingState.limited(ARCamera.TrackingState.Reason.initializing):
+//            let title = "跟踪受限\n"
+//            let reason: String = "正在初始化"
+////            self.tipLabel?.text = title + reason
+////            self.maskView?.alpha = 0.6
+//        case ARCamera.TrackingState.limited(ARCamera.TrackingState.Reason.excessiveMotion):
+//            let title = "跟踪受限\n"
+//            let reason: String = "设备移动过快，少侠手速惊人"
+//            self.tipLabel?.text = title + reason
+//            self.maskView?.alpha = 0.6
+//        case ARCamera.TrackingState.limited(ARCamera.TrackingState.Reason.insufficientFeatures):
+//            let title = "跟踪受限\n"
+//            let reason: String = "提取不到足够的特征点，请先移动设备"
+//            self.tipLabel?.text = title + reason
+//            self.maskView?.alpha = 0.6
+//        case ARCamera.TrackingState.limited(ARCamera.TrackingState.Reason.relocalizing):
+//            let title = "跟踪受限\n"
+//            let reason: String = "Relocating..."
+//            self.tipLabel?.text = title + reason
+//            self.maskView?.alpha = 0.6
+//        case ARCamera.TrackingState.normal:
+//            self.tipLabel?.text = ""
+//            self.maskView?.alpha = 0.0
+//        default:
+//            self.tipLabel?.text = "未知错误"
+//            self.maskView?.alpha = 0.5
+//        }
     }
     
     func session(_ session: ARSession, didFailWithError error: Error) {

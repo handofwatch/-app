@@ -12,6 +12,8 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     @IBOutlet weak var HomeCollectionView: UICollectionView!
     
+    @IBOutlet weak var background: UIImageView!
+    
     //下方的显示文字
     @IBOutlet weak var showLayout: UILabel!
     
@@ -22,7 +24,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     //文字的字符串数组
-    let showLayoutArray = ["创作","收集","推荐"]
+    let showLayoutArray = ["创作","收藏","欣赏"]
     
     fileprivate var pageSize: CGSize {
         let layout = self.HomeCollectionView.collectionViewLayout as! UPCarouselFlowLayout
@@ -32,7 +34,18 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let url = Bundle.main.path(forResource:"bg3", ofType: "gif")!
+        let data = NSData(contentsOfFile: url)!
+        let src = CGImageSourceCreateWithData(data, nil)!
+        var images = [UIImage]()
+        let count = CGImageSourceGetCount(src)
+        for index in 0..<count {
+            let cgImage = CGImageSourceCreateImageAtIndex(src, index, nil)
+            images.append(UIImage(cgImage: cgImage!))
+            background.image = UIImage.animatedImage(with: images, duration: 8)
+        }
+        self.view.layer.backgroundColor = UIColor.clear.cgColor
+        HomeCollectionView.layer.backgroundColor = UIColor.clear.cgColor
     }
     override func viewDidAppear(_ animated: Bool) {
         //MARK::是否需要下拉说明框效果
@@ -42,7 +55,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         //设置CollectionView格式
         let flowLayout = UPCarouselFlowLayout()
-        flowLayout.itemSize = CGSize(width: UIScreen.main.bounds.size.width - 122, height: HomeCollectionView.frame.size.height )
+        flowLayout.itemSize = CGSize(width: UIScreen.main.bounds.size.width - 98, height: HomeCollectionView.frame.size.height )
         flowLayout.scrollDirection = .horizontal
         flowLayout.sideItemScale = 0.8
         flowLayout.sideItemAlpha = 0.6
@@ -66,9 +79,15 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = HomeCollectionView.dequeueReusableCell(withReuseIdentifier: "HomeIdentifier", for: indexPath) as! HomeCollectionViewCell
-        
-        cell.backgroundImageView.image = UIImage(named: "文字底图\(indexPath.row + 1)")
-        
+
+        switch indexPath.row
+        {
+        case 0: cell.backgroundImageView.image = UIImage(named: "兰亭墨池")
+        case 1:cell.backgroundImageView.image = UIImage(named: "颜筋柳骨")
+        case 2: cell.backgroundImageView.image = UIImage(named: "字画雅言")
+        default: cell.backgroundImageView.image = UIImage(named: "兰亭墨池")
+        }
+        cell.backgroundColor = UIColor.clear
         return cell
     }
     

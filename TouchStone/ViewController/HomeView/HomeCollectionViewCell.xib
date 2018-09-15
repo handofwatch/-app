@@ -23,11 +23,11 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MUG-tk-caM">
                         <rect key="frame" x="0.0" y="0.0" width="254" height="327"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="文字底图1" translatesAutoresizingMaskIntoConstraints="NO" id="95B-Df-all">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="兰亭墨池" translatesAutoresizingMaskIntoConstraints="NO" id="95B-Df-all">
                                 <rect key="frame" x="-8" y="-8" width="254" height="327"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="95B-Df-all" firstAttribute="top" secondItem="MUG-tk-caM" secondAttribute="top" constant="-8" id="0qR-p8-zCs"/>
                             <constraint firstItem="95B-Df-all" firstAttribute="bottom" secondItem="MUG-tk-caM" secondAttribute="bottomMargin" id="1eD-gi-Deq"/>
@@ -53,6 +53,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="文字底图1" width="241" height="311"/>
+        <image name="兰亭墨池" width="316" height="456"/>
     </resources>
 </document>
