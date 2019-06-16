@@ -50,7 +50,8 @@ class PreviewViewController: UIViewController {
         
         self.imageVIew.layer.render(in:UIGraphicsGetCurrentContext()!)
         
-        let image1 = UIGraphicsGetImageFromCurrentImageContext()
+//        let image1 = UIGraphicsGetImageFromCurrentImageContext()
+         let image1 = getImage
         
         UIGraphicsEndImageContext()
         

@@ -768,13 +768,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 89J4K2FXJ7;
+				DEVELOPMENT_TEAM = N6YTT9B53E;
 				INFOPLIST_FILE = "TouchStone/Support Sources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.tongji.sse.1353246.TouchStone;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.tongji.sse.1753202.TouchStone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TouchStone/Support Sources/paintBoard/TouchStone-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -790,13 +790,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 89J4K2FXJ7;
+				DEVELOPMENT_TEAM = N6YTT9B53E;
 				INFOPLIST_FILE = "TouchStone/Support Sources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.tongji.sse.1353246.TouchStone;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.tongji.sse.1753202.TouchStone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TouchStone/Support Sources/paintBoard/TouchStone-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;

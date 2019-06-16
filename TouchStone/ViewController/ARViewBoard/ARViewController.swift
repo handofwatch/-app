@@ -10,8 +10,7 @@ import SceneKit
 import UIKit
 
 class ARViewController: UIViewController, ARSCNViewDelegate {
-    
-    @IBOutlet weak var sharebutton: UIButton!
+
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var ARView: ARSCNView!
     var draw:UIImage!
@@ -69,7 +68,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         //ARView?.showsStatistics = true
         
         self.view.bringSubview(toFront: backButton)
-        self.view.bringSubview(toFront: sharebutton)
+        
         self.view.bringSubview(toFront: captureButton)
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -87,7 +86,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     @IBAction func captureButtonTapped(_ sender: Any) {
         let scene = SCNScene()
         ARView.scene = scene
-        let box = SCNBox(width: 0.4, height: 1, length: 0, chamferRadius: 0)
+        let box = SCNBox(width: 0.001*draw.size.width, height: 0.001*draw.size.height, length: 0, chamferRadius: 0)
         let boxMaterial = SCNMaterial()
        boxMaterial.diffuse.contents = draw
 //        boxMaterial.diffuse.contents = UIImage(named: "B")
@@ -181,18 +180,6 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         return sessionConfiguration
     }
 
-    @IBAction func shareButtonTapped(_ sender: Any) {
-        let myWeb = NSURL(string: "http://www.touchStone.com")
-        let shareString = "一起来用触墨创造作品吧！"
-        let activity = UIActivity()
-        let activityItems = [UIImage(named: "FULL")!, shareString, myWeb as Any] as [Any]
-        let activities = [activity]
-        let activityController = UIActivityViewController(activityItems: activityItems,            applicationActivities: activities)
-        activityController.excludedActivityTypes = [UIActivityType.copyToPasteboard,UIActivityType.assignToContact]
-        activityController.popoverPresentationController?.sourceView = self.view
-
-        self.present(activityController, animated: true, completion: {()-> Void in})
-    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

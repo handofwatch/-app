@@ -40,6 +40,8 @@ class contentViewController: UIViewController {
         ARButton.setImage(UIImage(named: "AR"), for: UIControlState.normal)
         downloadButton = UIButton(frame: CGRect(x: self.view.frame.width * 0.33, y: 680, width: 35, height: 35))
         downloadButton.setImage(UIImage(named:"download"), for: UIControlState.normal)
+        downloadButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action:#selector(tapDownloadButton(_:))))
+            
         self.view.addSubview(ARButton)
         self.view.bringSubview(toFront: ARButton)
         
@@ -56,6 +58,24 @@ class contentViewController: UIViewController {
         
     }
     
+    
+    //点击下载按钮
+    @objc func tapDownloadButton(_ sender: Any) {
+        UIGraphicsBeginImageContextWithOptions(self.image.frame.size,false,UIScreen.main.scale)
+        
+        self.image.layer.render(in:UIGraphicsGetCurrentContext()!)
+        
+        let image1 = UIGraphicsGetImageFromCurrentImageContext()
+        
+        UIGraphicsEndImageContext()
+        
+        //保存完后调用的方法
+        let selector = #selector(contentViewController.onCompleteCapture(image:error:contextInfo:))
+        //保存
+        UIImageWriteToSavedPhotosAlbum(image1!, self, selector, nil)
+    }
+    
+    //保存之后调用方法，用于提示用户
     @objc func onCompleteCapture(image: UIImage, error:NSError?, contextInfo: UnsafeRawPointer) {
         if error == nil {
             //保存成功
@@ -74,22 +94,6 @@ class contentViewController: UIViewController {
                 self.presentedViewController?.dismiss(animated: false, completion: nil)
             }
         }
-    }
-    
-    //点击下载按钮
-    @IBAction func tapDownloadButton(_ sender: Any) {
-        UIGraphicsBeginImageContextWithOptions(self.image.frame.size,false,UIScreen.main.scale)
-        
-        self.image.layer.render(in:UIGraphicsGetCurrentContext()!)
-        
-        let image1 = UIGraphicsGetImageFromCurrentImageContext()
-        
-        UIGraphicsEndImageContext()
-        
-        //保存完后调用的方法
-        let selector = #selector(contentViewController.onCompleteCapture(image:error:contextInfo:))
-        //保存
-        UIImageWriteToSavedPhotosAlbum(image1!, self, selector, nil)
     }
     
     @objc func tapHandler(sender:UIGestureRecognizer)

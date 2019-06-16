@@ -55,7 +55,7 @@ HandWriteRecognizer::Character hwCharacter;
         [self initViews];
     }
     self.lineWidth = 5.0;
-    self.pathColor = [UIColor colorWithRed:188 green:159 blue:115 alpha:1];
+    self.pathColor = [UIColor colorWithRed:188/255 green:159/255 blue:115/255 alpha:1];
     self.signatureBackgroundColor = UIColor.clearColor;
     return self;
 }
